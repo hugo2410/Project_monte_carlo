@@ -15,7 +15,6 @@
 #include "Modules/UniformReader.h"
 
 int main(int argc, char *argv[]) {
-    std::cout << "Hello, World!" << std::endl;
     const char *file_name;
     const char *dist_type;
     if(argc == 3){
