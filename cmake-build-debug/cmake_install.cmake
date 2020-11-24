@@ -1,4 +1,4 @@
-# Install script for directory: /home/hugo/MA3/pcsc/Project_Monte_carlo
+# Install script for directory: /home/hugo/MA3/Project_Monte_carlo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hugo/MA3/pcsc/Project_Monte_carlo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/hugo/MA3/Project_Monte_carlo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
