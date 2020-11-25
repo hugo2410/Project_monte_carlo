@@ -21,6 +21,6 @@ void UniformReader::read_file(const char *file) {
     read_input >> vectorSize;
     read_input >> a;
     read_input >> b;
-
+    std::cout << "J'ai fini de lire une uniforme" << std::endl;
     // Creer une classe uniform avec ses informations
 }

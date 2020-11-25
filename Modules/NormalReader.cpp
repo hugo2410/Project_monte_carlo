@@ -21,5 +21,5 @@ void NormalReader::read_file(const char *file){
     read_input >> vectorSize;
     read_input >> mean;
     read_input >> var;
-    // Creer une classe normal avec ses informations
+    std::cout << "J'ai fini de lire une normale" << std::endl;
 }
