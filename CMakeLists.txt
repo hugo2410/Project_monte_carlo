@@ -3,4 +3,9 @@ project(Project_Monte_carlo)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main.cpp Modules/NormalReader.cpp Modules/NormalReader.h Modules/UniformReader.cpp Modules/UniformReader.h Modules/AbstractReader.cpp Modules/AbstractReader.h Modules/Error.hpp)
+include_directories(Modules)
+add_subdirectory(Modules)
+set(SOURCE_FILES main.cpp)
+add_executable(monte_carlo_run ${SOURCE_FILES})
+
+target_link_libraries(monte_carlo_run Modules)

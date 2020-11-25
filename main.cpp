@@ -11,10 +11,10 @@
 #include <cstring>
 #include <string>
 
-#include "Modules/AbstractReader.h"
-#include "Modules/NormalReader.h"
-#include "Modules/UniformReader.h"
-#include "Modules/Error.hpp"
+#include "AbstractReader.h"
+#include "NormalReader.h"
+#include "UniformReader.h"
+#include "Error.hpp"
 
 using namespace std;
 
