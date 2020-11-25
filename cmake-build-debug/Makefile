@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
+RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hugo/MA3/Project_Monte_carlo
+CMAKE_SOURCE_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hugo/MA3/Project_Monte_carlo/cmake-build-debug
+CMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/hugo/MA3/Project_Monte_carlo/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/app/extra/clion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_Monte_carlo/cmake-build-debug/CMakeFiles /home/hugo/MA3/Project_Monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_Monte_carlo/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Project_Monte_carlo
+# Target rules for targets named main.cpp
 
 # Build rule for target.
-Project_Monte_carlo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Project_Monte_carlo
-.PHONY : Project_Monte_carlo
+main.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main.cpp
+.PHONY : main.cpp
 
 # fast build rule for target.
-Project_Monte_carlo/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/build
-.PHONY : Project_Monte_carlo/fast
+main.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/build
+.PHONY : main.cpp/fast
 
 Modules/AbstractReader.o: Modules/AbstractReader.cpp.o
 
@@ -149,7 +149,7 @@ Modules/AbstractReader.o: Modules/AbstractReader.cpp.o
 
 # target to build an object file
 Modules/AbstractReader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/Modules/AbstractReader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Modules/AbstractReader.cpp.o
 .PHONY : Modules/AbstractReader.cpp.o
 
 Modules/AbstractReader.i: Modules/AbstractReader.cpp.i
@@ -158,7 +158,7 @@ Modules/AbstractReader.i: Modules/AbstractReader.cpp.i
 
 # target to preprocess a source file
 Modules/AbstractReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/Modules/AbstractReader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Modules/AbstractReader.cpp.i
 .PHONY : Modules/AbstractReader.cpp.i
 
 Modules/AbstractReader.s: Modules/AbstractReader.cpp.s
@@ -167,7 +167,7 @@ Modules/AbstractReader.s: Modules/AbstractReader.cpp.s
 
 # target to generate assembly for a file
 Modules/AbstractReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/Modules/AbstractReader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Modules/AbstractReader.cpp.s
 .PHONY : Modules/AbstractReader.cpp.s
 
 Modules/NormalReader.o: Modules/NormalReader.cpp.o
@@ -176,7 +176,7 @@ Modules/NormalReader.o: Modules/NormalReader.cpp.o
 
 # target to build an object file
 Modules/NormalReader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/Modules/NormalReader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Modules/NormalReader.cpp.o
 .PHONY : Modules/NormalReader.cpp.o
 
 Modules/NormalReader.i: Modules/NormalReader.cpp.i
@@ -185,7 +185,7 @@ Modules/NormalReader.i: Modules/NormalReader.cpp.i
 
 # target to preprocess a source file
 Modules/NormalReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/Modules/NormalReader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Modules/NormalReader.cpp.i
 .PHONY : Modules/NormalReader.cpp.i
 
 Modules/NormalReader.s: Modules/NormalReader.cpp.s
@@ -194,7 +194,7 @@ Modules/NormalReader.s: Modules/NormalReader.cpp.s
 
 # target to generate assembly for a file
 Modules/NormalReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/Modules/NormalReader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Modules/NormalReader.cpp.s
 .PHONY : Modules/NormalReader.cpp.s
 
 Modules/UniformReader.o: Modules/UniformReader.cpp.o
@@ -203,7 +203,7 @@ Modules/UniformReader.o: Modules/UniformReader.cpp.o
 
 # target to build an object file
 Modules/UniformReader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/Modules/UniformReader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Modules/UniformReader.cpp.o
 .PHONY : Modules/UniformReader.cpp.o
 
 Modules/UniformReader.i: Modules/UniformReader.cpp.i
@@ -212,7 +212,7 @@ Modules/UniformReader.i: Modules/UniformReader.cpp.i
 
 # target to preprocess a source file
 Modules/UniformReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/Modules/UniformReader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Modules/UniformReader.cpp.i
 .PHONY : Modules/UniformReader.cpp.i
 
 Modules/UniformReader.s: Modules/UniformReader.cpp.s
@@ -221,35 +221,8 @@ Modules/UniformReader.s: Modules/UniformReader.cpp.s
 
 # target to generate assembly for a file
 Modules/UniformReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/Modules/UniformReader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.cpp.dir/build.make CMakeFiles/main.cpp.dir/Modules/UniformReader.cpp.s
 .PHONY : Modules/UniformReader.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -259,7 +232,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Project_Monte_carlo"
+	@echo "... main.cpp"
 	@echo "... Modules/AbstractReader.o"
 	@echo "... Modules/AbstractReader.i"
 	@echo "... Modules/AbstractReader.s"
@@ -269,9 +242,6 @@ help:
 	@echo "... Modules/UniformReader.o"
 	@echo "... Modules/UniformReader.i"
 	@echo "... Modules/UniformReader.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 
