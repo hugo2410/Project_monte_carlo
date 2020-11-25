@@ -88,6 +88,9 @@
 		<Unit filename="/home/hugo/MA3/Project_Monte_carlo/Modules/AbstractReader.h">
 			<Option target="Project_Monte_carlo"/>
 		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_Monte_carlo/Modules/Error.hpp">
+			<Option target="Project_Monte_carlo"/>
+		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_Monte_carlo/Modules/NormalReader.cpp">
 			<Option target="Project_Monte_carlo"/>
 		</Unit>

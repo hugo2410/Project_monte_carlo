@@ -12,7 +12,7 @@ NormalReader::~NormalReader(){}
 void NormalReader::read_file(const char *file){
     std::ifstream read_input(file);
     if(!read_input.is_open()){
-        std::cout << "File can't be open" << std::endl;
+        throw Error("Couldn't open it  ", "FILE");
     }
     read_input.clear();
     int vectorSize;
