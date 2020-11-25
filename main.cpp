@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     const char *file_name;
     const char *dist_type;
     AbstractReader *pReader;
-    cout <<  "WESH" << endl;
+    cout <<  "Probleme" << endl;
     if(argc == 3){
 
         file_name = argv[1];
