@@ -10,7 +10,8 @@ UniformReader::UniformReader(){}
 UniformReader::~UniformReader(){}
 
 void UniformReader::read_file(const char *file) {
-    std::ifstream read_input(file);
+    std::ifstream read_input (file);
+    std::cout<< "File = "<< file<< std::endl;
     if (!read_input.is_open()) {
         throw Error("Couldn't open it  ", "FILE");
     }

@@ -22,6 +22,8 @@ int main(int argc, char *argv[]) {
 
     const char *file_name;
     const char *dist_type;
+    string file;
+    string input;
     AbstractReader *pReader;
 
     if(argc == 3){
@@ -52,7 +54,7 @@ int main(int argc, char *argv[]) {
     }
     if (argc < 3 ) {
         if (argc == 1){
-            string file;
+
             cerr << "Missing File name to read from. Please refer to README" << endl;
             cout << "Please enter the file name: " << endl;
             cin >> file;
@@ -64,12 +66,10 @@ int main(int argc, char *argv[]) {
             argc = 2;
 
         }if (argc == 2) {
-            //file_name = argv[1];
-            string input;
+
             cerr << "Missing distribution type. Please refer to README" << endl;
             cout << "Please enter the distribution type: [U/N] " << endl;
             cin >> input;
-
             if (input == "U")
                 pReader = new UniformReader;
             else if (input == "N")
@@ -80,6 +80,7 @@ int main(int argc, char *argv[]) {
             }
         }
     }
+    cout<< "file = "<< file_name<< endl;
     try{
         pReader->read_file(file_name);
     }catch(Error& e){

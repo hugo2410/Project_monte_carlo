@@ -10,7 +10,7 @@ NormalReader::NormalReader(){}
 NormalReader::~NormalReader(){}
 
 void NormalReader::read_file(const char *file){
-    std::ifstream read_input(file);
+    std::ifstream read_input (file);
     if(!read_input.is_open()){
         throw Error("Couldn't open it  ", "FILE");
     }

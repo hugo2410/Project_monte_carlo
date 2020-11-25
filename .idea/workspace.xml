@@ -34,7 +34,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/NormalReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalReader.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/UniformReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformReader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
@@ -101,12 +101,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.monte_carlo_run">
-    <configuration name="Modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Modules" CONFIG_NAME="Debug">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Modules" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -219,26 +219,26 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="813" y="346" width="424" height="496" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1606238171505" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1606328073940">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1802" height="256" key="GridCell.Tab.0.bottom" timestamp="1606332210198">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1606328073940" />
-    <state width="1802" height="256" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1606316794529" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1606328073939">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1802" height="256" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1606332210198" />
+    <state width="1802" height="256" key="GridCell.Tab.0.center" timestamp="1606332210197">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1606328073939" />
-    <state width="1802" height="256" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1606316794528" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1606328073939">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1802" height="256" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1606332210197" />
+    <state width="1802" height="256" key="GridCell.Tab.0.left" timestamp="1606332210197">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1606328073939" />
-    <state width="1802" height="256" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1606316794528" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1606328073940">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1802" height="256" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1606332210197" />
+    <state width="1802" height="256" key="GridCell.Tab.0.right" timestamp="1606332210198">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1606328073940" />
-    <state width="1802" height="256" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1606316794528" />
+    <state width="1802" height="256" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1606332210198" />
     <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1606326339704">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
