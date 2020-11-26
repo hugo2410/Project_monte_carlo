@@ -14,6 +14,7 @@
 #include "AbstractReader.h"
 #include "NormalReader.h"
 #include "UniformReader.h"
+#include "AbstractVariable.h"
 #include "Error.hpp"
 
 using namespace std;
@@ -22,6 +23,7 @@ int main(int argc, char *argv[]) {
 
     const char *file_name;
     const char *dist_type;
+    AbstractVariable *pRandom = 0;
     string file;
     string input;
     AbstractReader *pReader;
@@ -82,10 +84,14 @@ int main(int argc, char *argv[]) {
     }
     cout<< "file = "<< file_name<< endl;
     try{
-        pReader->read_file(file_name);
+        pReader->read_file(file_name,pRandom);
     }catch(Error& e){
         cerr << "Exception thrown: " << e.getErrorTag() << e.what() << endl;
         return -1;
     }
+    delete pReader;
+    //Calculer l'expectation selon le pRandom
+
+
     return 0;
 }

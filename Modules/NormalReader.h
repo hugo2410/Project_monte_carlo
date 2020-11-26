@@ -7,12 +7,13 @@
 
 
 #include "AbstractReader.h"
+#include "AbstractVariable.h"
 
 class NormalReader:public AbstractReader{
 public:
     NormalReader();
     ~NormalReader() override;
-    void read_file(const char *file) override;
+    void read_file(const char *file,AbstractVariable *pRandomNormal) override ;
 };
 
 
