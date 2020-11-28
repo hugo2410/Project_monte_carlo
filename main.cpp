@@ -10,6 +10,9 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include <MonteCarloExpectation.h>
+#include <AbstractExpectation.h>
+#include <NormalDist.h>
 
 #include "AbstractReader.h"
 #include "AbstractFunc.h"
@@ -22,14 +25,14 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-
+/*
     const char *file_name;
     const char *dist_type;
     AbstractVariable *pRandom = 0;
     string file;
     string input;
     AbstractReader *pReader;
-    AbstractFunc *pFunction;
+    //AbstractFunc *pFunction;
 
     if(argc == 3){
 
@@ -92,9 +95,19 @@ int main(int argc, char *argv[]) {
         cerr << "Exception thrown: " << e.getErrorTag() << e.what() << endl;
         return -1;
     }
-    delete pReader;
-    //Calculer l'expectation selon le pRandom
+    delete pReader;*/
+    AbstractVariable *pRandom = 0;
+
+    AbstractFunc *pFunction = 0;
+    AbstractExpectation *pExpectation = 0;
+    pRandom = new NormalDist(3,0,3);
+    for(int i =0; i<3;++i)
+        cout << pRandom->get_vector()[i] << endl;
     pFunction = new PolynomlFunc(1,2,3);
+    pExpectation = new MonteCarloExpectation(pFunction,pRandom);
+    //Calculer l'expectation selon le pRandom
+    //pFunction = new PolynomlFunc(1,2,3);
+    cout << pExpectation->getExpectation() << endl;
 
     return 0;
 }

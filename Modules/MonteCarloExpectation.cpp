@@ -1,0 +1,25 @@
+//
+// Created by mehdi on 28/11/20.
+//
+
+
+#include "MonteCarloExpectation.h"
+#include "AbstractVariable.h"
+#include "AbstractFunc.h"
+
+MonteCarloExpectation ::MonteCarloExpectation() {}
+MonteCarloExpectation ::~MonteCarloExpectation(){}
+
+MonteCarloExpectation::MonteCarloExpectation( AbstractFunc *pFunction, const AbstractVariable *pRandom)
+{
+    monteCarloExpectation = evaluateExpectation(pFunction,pRandom);
+}
+
+
+double MonteCarloExpectation::evaluateExpectation( AbstractFunc *pFunction, const AbstractVariable *pRandom){
+    double sum = 0.;
+    for(int i=0;i<pRandom->get_size();++i){
+        sum += pFunction->evaluate(pRandom->get_vector()[i]);
+    }
+    return sum/3;
+}

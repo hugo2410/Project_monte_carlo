@@ -4,6 +4,7 @@
 
 #include "NormalDist.h"
 #include "random"
+//#include "boost/math/distributions/normal.hpp"
 
 NormalDist::NormalDist(){}
 

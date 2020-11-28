@@ -15,6 +15,7 @@ public:
     virtual std::vector<double> get_vector()  const{ return uniformSamples;}
     virtual double get_mean() const{ return mean;};
     virtual double get_var() const{ return var;};
+    virtual double get_size() const{return uniformSamples.size(); }
 
 private:
     std::vector<double> uniformSamples;
