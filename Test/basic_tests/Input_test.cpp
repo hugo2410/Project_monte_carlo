@@ -11,7 +11,7 @@
 #include "UniformReader.h"
 
 
-#define TEST_PATH "TestNormal.dat"
+#define TEST_PATH "11.txt"
 #define TEST_PATH_SIZE "TestNormal_size.dat"
 #define TEST_PATH_MEAN "TestNormal_mean.dat"
 #define TEST_PATH_VAR "TestNormal_var.dat"
@@ -38,8 +38,8 @@ protected:
 public:
     InputTestFixture() : Test() {
 
-        pInput_normal = new UniformReader;
-        pInput_uniform = new NormalReader ;
+        pInput_normal = new NormalReader;
+        pInput_uniform =  new UniformReader;
                 
         
 
@@ -60,8 +60,8 @@ public:
     int order_bad ;
 };
 
-TEST_F(InputTestFixture, input_normal_size_check) {
-    ASSERT_THROW( pInput_normal ->read_file(TEST_PATH_SIZE, pRandomsample),Error);
+TEST_F(InputTestFixture, Exception_nofile) {
+    ASSERT_THROW( pInput_normal ->read_file(TEST_PATH, pRandomsample),Error);
 }
 TEST_F(InputTestFixture, input_normal_variance_check) {
     ASSERT_THROW(pInput_normal ->read_file(TEST_PATH_VAR, pRandomsample),Error);

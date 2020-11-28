@@ -12,6 +12,8 @@
 #include <string>
 
 #include "AbstractReader.h"
+#include "AbstractFunc.h"
+#include "PolynomlFunc.h"
 #include "NormalReader.h"
 #include "UniformReader.h"
 #include "AbstractVariable.h"
@@ -27,6 +29,7 @@ int main(int argc, char *argv[]) {
     string file;
     string input;
     AbstractReader *pReader;
+    AbstractFunc *pFunction;
 
     if(argc == 3){
 
@@ -91,7 +94,7 @@ int main(int argc, char *argv[]) {
     }
     delete pReader;
     //Calculer l'expectation selon le pRandom
-
+    pFunction = new PolynomlFunc(1,2,3);
 
     return 0;
 }

@@ -11,6 +11,7 @@ NormalReader::~NormalReader()= default;
 
 void NormalReader::read_file(const char *file,AbstractVariable *pRandomNormal ){
     std::ifstream read_input (file);
+    std::cout<< "File = "<< file<< std::endl;
     if(!read_input.is_open()){
         throw Error("Couldn't open it  ", "FILE");
     }

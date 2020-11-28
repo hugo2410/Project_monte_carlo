@@ -280,6 +280,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h">
+			<Option target="Modules"/>
+		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.cpp">
 			<Option target="Modules"/>
 		</Unit>
@@ -292,6 +298,12 @@
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/Error.hpp">
 			<Option target="Modules"/>
 		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/ExpFunc.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/ExpFunc.h">
+			<Option target="Modules"/>
+		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.cpp">
 			<Option target="Modules"/>
 		</Unit>
@@ -302,6 +314,18 @@
 			<Option target="Modules"/>
 		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalReader.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.h">
 			<Option target="Modules"/>
 		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.cpp">
