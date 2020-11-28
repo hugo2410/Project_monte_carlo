@@ -1,4 +1,24 @@
-/app/extra/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
--- Configuring done
--- Generating done
--- Build files have been written to: /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
+/snap/clion/129/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/hugo/MA3/Project_monte_carlo
+CMake Error at Test/CMakeLists.txt:3 (add_subdirectory):
+  add_subdirectory given source "basic_test" which is not an existing
+  directory.
+
+
+CMake Warning at Test/lib/googletest/CMakeLists.txt:54 (project):
+  VERSION keyword not followed by a value or was followed by a value that
+  expanded to nothing.
+
+
+-- Found PythonInterp: /usr/bin/python (found version "2.7.18") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring incomplete, errors occurred!
+See also "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/CMakeError.log".
