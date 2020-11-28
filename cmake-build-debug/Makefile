@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
+CMAKE_SOURCE_DIR = /home/hugo/MA3/Project_monte_carlo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
+CMAKE_BINARY_DIR = /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/app/extra/clion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,110 @@ monte_carlo_run: cmake_check_build_system
 monte_carlo_run/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/build
 .PHONY : monte_carlo_run/fast
+
+#=============================================================================
+# Target rules for targets named StandardCentralLimitThm_test
+
+# Build rule for target.
+StandardCentralLimitThm_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 StandardCentralLimitThm_test
+.PHONY : StandardCentralLimitThm_test
+
+# fast build rule for target.
+StandardCentralLimitThm_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/StandardCentralLimitThm_test.dir/build.make Test/basic_tests/CMakeFiles/StandardCentralLimitThm_test.dir/build
+.PHONY : StandardCentralLimitThm_test/fast
+
+#=============================================================================
+# Target rules for targets named MonteCarloExpectation_test
+
+# Build rule for target.
+MonteCarloExpectation_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MonteCarloExpectation_test
+.PHONY : MonteCarloExpectation_test
+
+# fast build rule for target.
+MonteCarloExpectation_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/MonteCarloExpectation_test.dir/build.make Test/basic_tests/CMakeFiles/MonteCarloExpectation_test.dir/build
+.PHONY : MonteCarloExpectation_test/fast
+
+#=============================================================================
+# Target rules for targets named runAllTests
+
+# Build rule for target.
+runAllTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runAllTests
+.PHONY : runAllTests
+
+# fast build rule for target.
+runAllTests/fast:
+	$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/runAllTests.dir/build.make Test/basic_tests/CMakeFiles/runAllTests.dir/build
+.PHONY : runAllTests/fast
+
+#=============================================================================
+# Target rules for targets named Uniform_test
+
+# Build rule for target.
+Uniform_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Uniform_test
+.PHONY : Uniform_test
+
+# fast build rule for target.
+Uniform_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Uniform_test.dir/build.make Test/basic_tests/CMakeFiles/Uniform_test.dir/build
+.PHONY : Uniform_test/fast
+
+#=============================================================================
+# Target rules for targets named Input_test
+
+# Build rule for target.
+Input_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Input_test
+.PHONY : Input_test
+
+# fast build rule for target.
+Input_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Input_test.dir/build.make Test/basic_tests/CMakeFiles/Input_test.dir/build
+.PHONY : Input_test/fast
+
+#=============================================================================
+# Target rules for targets named Normal_test
+
+# Build rule for target.
+Normal_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Normal_test
+.PHONY : Normal_test
+
+# fast build rule for target.
+Normal_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Normal_test.dir/build.make Test/basic_tests/CMakeFiles/Normal_test.dir/build
+.PHONY : Normal_test/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make Test/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
 #=============================================================================
 # Target rules for targets named Modules
@@ -191,8 +295,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Input_test"
 	@echo "... Modules"
+	@echo "... MonteCarloExpectation_test"
+	@echo "... Normal_test"
+	@echo "... StandardCentralLimitThm_test"
+	@echo "... Uniform_test"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... monte_carlo_run"
+	@echo "... runAllTests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
