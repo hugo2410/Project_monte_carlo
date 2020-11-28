@@ -46,6 +46,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/129/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
   "/snap/clion/129/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
   "/snap/clion/129/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfigVersion.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config-version.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config.cmake"
   )
 
 # The corresponding makefile is:
@@ -66,12 +70,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/monte_carlo_run.dir/DependInfo.cmake"
-  "Test/basic_tests/CMakeFiles/StandardCentralLimitThm_test.dir/DependInfo.cmake"
-  "Test/basic_tests/CMakeFiles/MonteCarloExpectation_test.dir/DependInfo.cmake"
-  "Test/basic_tests/CMakeFiles/runAllTests.dir/DependInfo.cmake"
-  "Test/basic_tests/CMakeFiles/Uniform_test.dir/DependInfo.cmake"
   "Test/basic_tests/CMakeFiles/Input_test.dir/DependInfo.cmake"
-  "Test/basic_tests/CMakeFiles/Normal_test.dir/DependInfo.cmake"
   "Test/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "Test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "Modules/CMakeFiles/Modules.dir/DependInfo.cmake"
