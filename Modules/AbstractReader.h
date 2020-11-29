@@ -13,7 +13,7 @@ public:
     AbstractReader();
 
     virtual ~AbstractReader();
-    virtual void read_file(const char *file_name,AbstractVariable *pRandomVariable) = 0;
+    virtual void read_file(const char *file_name,AbstractVariable* &pRandomVariable) = 0;
 };
 
 

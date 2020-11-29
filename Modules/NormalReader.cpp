@@ -9,7 +9,7 @@
 NormalReader::NormalReader()= default;
 NormalReader::~NormalReader()= default;
 
-void NormalReader::read_file(const char *file,AbstractVariable *pRandomNormal ){
+void NormalReader::read_file(const char *file,AbstractVariable* &pRandomNormal ){
     std::ifstream read_input (file);
     std::cout<< "File = "<< file<< std::endl;
     if(!read_input.is_open()){
@@ -34,8 +34,5 @@ void NormalReader::read_file(const char *file,AbstractVariable *pRandomNormal ){
     std::cout << "J'ai fini de lire une normale" << std::endl;
     pRandomNormal = new NormalDist(vectorSize,mean,var);
     std::cout << "J'ai fini de calculer une normale" << std::endl;
-    for(int i =0; i<vectorSize;++i) {
-        std::cout << pRandomNormal->get_vector()[i] << ' ' ;
-    }
 
 }

@@ -12,14 +12,16 @@ MonteCarloExpectation ::~MonteCarloExpectation(){}
 
 MonteCarloExpectation::MonteCarloExpectation( AbstractFunc *pFunction, const AbstractVariable *pRandom)
 {
-    monteCarloExpectation = evaluateExpectation(pFunction,pRandom);
+    userFunction = pFunction;
+    monteCarloExpectation = evaluateExpectation(pRandom);
 }
 
 
-double MonteCarloExpectation::evaluateExpectation( AbstractFunc *pFunction, const AbstractVariable *pRandom){
+double MonteCarloExpectation::evaluateExpectation( const AbstractVariable *pRandom){
     double sum = 0.;
     for(int i=0;i<pRandom->get_size();++i){
-        sum += pFunction->evaluate(pRandom->get_vector()[i]);
+        sum += userFunction->evaluate(pRandom->get_vector()[i]);
     }
-    return sum/3;
+
+    return sum/pRandom->get_size();
 }

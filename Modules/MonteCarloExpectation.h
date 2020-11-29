@@ -16,8 +16,9 @@ public:
     ~MonteCarloExpectation();
     MonteCarloExpectation( AbstractFunc *pFunction,const AbstractVariable *pRandom);
     double getExpectation() const{ return monteCarloExpectation;};
-    double evaluateExpectation( AbstractFunc *pFunction, const AbstractVariable *pRandom);
+    double evaluateExpectation(const AbstractVariable *pRandom);
 private:
+    AbstractFunc *userFunction;
     double monteCarloExpectation;
 
 };

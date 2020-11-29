@@ -18,7 +18,7 @@ public:
     virtual std::vector<double> get_vector() const { return normalSamples;}
     virtual double get_mean() const{ return mean;}
     virtual double get_var() const { return var;}
-    virtual double get_size() const{return normalSamples.size(); }
+    virtual int get_size() const { return normalSamples.size(); }
 
 private:
     std::vector<double> normalSamples ;

@@ -15,7 +15,7 @@ class UniformReader: public AbstractReader{
 public:
     UniformReader();
     ~UniformReader() override;
-    void read_file(const char *file,AbstractVariable *pRandomVariable) override;
+    void read_file(const char *file,AbstractVariable* &pRandomVariable) override;
 };
 
 

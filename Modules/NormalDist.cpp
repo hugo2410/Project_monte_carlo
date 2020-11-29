@@ -2,6 +2,7 @@
 // Created by mehdi on 26/11/20.
 //
 
+
 #include "NormalDist.h"
 #include "random"
 //#include "boost/math/distributions/normal.hpp"
@@ -16,6 +17,7 @@ NormalDist::NormalDist(const int N, const double mean, const double var)
     {
         normalSamples.push_back(distribution(generator));
     }
+
 }
 NormalDist::NormalDist(const int N): mean(0.0),var(1.0)
 {

@@ -9,7 +9,7 @@
 UniformReader::UniformReader(){}
 UniformReader::~UniformReader(){}
 
-void UniformReader::read_file(const char *file,AbstractVariable *pRandomUniform) {
+void UniformReader::read_file(const char *file,AbstractVariable* &pRandomUniform) {
     std::ifstream read_input (file);
     std::cout<< "File = "<< file<< std::endl;
     if (!read_input.is_open()) {

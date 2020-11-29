@@ -334,6 +334,12 @@
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.h">
 			<Option target="Modules"/>
 		</Unit>
+		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/StatisticalMoment.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/StatisticalMoment.h">
+			<Option target="Modules"/>
+		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.cpp">
 			<Option target="Modules"/>
 		</Unit>

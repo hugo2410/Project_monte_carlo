@@ -13,6 +13,6 @@ public:
     virtual std::vector<double> get_vector() const = 0;
     virtual double get_mean() const = 0;
     virtual double get_var() const = 0;
-    virtual double get_size() const =0;
+    virtual int get_size() const =0;
 };
 #endif //PROJECT_MONTE_CARLO_ABSTRACTVARIABLE_H

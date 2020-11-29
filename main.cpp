@@ -13,6 +13,7 @@
 #include <MonteCarloExpectation.h>
 #include <AbstractExpectation.h>
 #include <NormalDist.h>
+#include <StatisticalMoment.h>
 
 #include "AbstractReader.h"
 #include "AbstractFunc.h"
@@ -25,13 +26,16 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-/*
+
     const char *file_name;
     const char *dist_type;
     AbstractVariable *pRandom = 0;
+    char functionType;
     string file;
     string input;
     AbstractReader *pReader;
+    AbstractFunc *pFunction ;
+    AbstractExpectation *pExpectation;
     //AbstractFunc *pFunction;
 
     if(argc == 3){
@@ -95,19 +99,57 @@ int main(int argc, char *argv[]) {
         cerr << "Exception thrown: " << e.getErrorTag() << e.what() << endl;
         return -1;
     }
-    delete pReader;*/
-    AbstractVariable *pRandom = 0;
+    delete pReader;
 
-    AbstractFunc *pFunction = 0;
-    AbstractExpectation *pExpectation = 0;
-    pRandom = new NormalDist(3,0,3);
-    for(int i =0; i<3;++i)
-        cout << pRandom->get_vector()[i] << endl;
-    pFunction = new PolynomlFunc(1,2,3);
+//////////////////////////////////////FUNCTION//////////////////////////////////////////////////
+    bool selectedFunction = false;
+    while(!selectedFunction)
+    {
+        cout << "Please choose the type of function for expectation calculation : [P/E/T] " << endl;
+        cin >> functionType;
+
+        switch(functionType)
+        {
+            case 'P' :
+            {
+                cout << "Please enter the polynomial coefficients : [a*x2+b*x+c] :\n " ;cin.ignore();
+                int a,b,c;
+                cin >> a;
+                cin >> b;
+                cin >> c;
+                pFunction = new PolynomlFunc(a,b,c);
+                selectedFunction = true;
+                break;
+            }
+            case 'E':
+            {
+                cout << "Please enter the exponential coefficients : [A*exp(b*x)] " << endl;
+                selectedFunction = true;
+                break;
+            }
+            case 'T':
+            {
+                cout << "Please enter the trigonometric coefficients : [A*cos(b*x)] " << endl;
+                selectedFunction = true;
+                break;
+            }
+            default:
+            {
+                cout << "You didn't choose an implemented function " << endl;
+                break;
+            }
+        }
+    }
+    cout << "Calulating Expectation" << endl;
     pExpectation = new MonteCarloExpectation(pFunction,pRandom);
-    //Calculer l'expectation selon le pRandom
-    //pFunction = new PolynomlFunc(1,2,3);
+    cout << "Expectation Calculated" << endl;
     cout << pExpectation->getExpectation() << endl;
+
+    //////////////////////////////////////MOMENT//////////////////////////////////////////////////
+    StatisticalMoment *pMoment = new StatisticalMoment(pRandom);
+    pMoment->write_csv("moments.csv");
+    cout << "Moment written !" << endl;
+
 
     return 0;
 }

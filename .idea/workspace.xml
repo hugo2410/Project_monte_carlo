@@ -33,29 +33,25 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="added test">
-      <change afterPath="$PROJECT_DIR$/Modules/AbstractExpectation.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/AbstractExpectation.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/MonteCarloExpectation.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/MonteCarloExpectation.h" afterDir="false" />
+    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="Casser tout / Expectation noramelment ok">
+      <change afterPath="$PROJECT_DIR$/Modules/StatisticalMoment.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/StatisticalMoment.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/AbstractReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractReader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/AbstractVariable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractVariable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/MonteCarloExpectation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/MonteCarloExpectation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/MonteCarloExpectation.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/MonteCarloExpectation.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/NormalDist.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalDist.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/NormalDist.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalDist.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/NormalReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalReader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/NormalReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalReader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/UniformDist.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformDist.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/UniformReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformReader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/UniformReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformReader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,6 +105,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.monte_carlo_run">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Input_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Input_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="Input_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -116,11 +117,6 @@
       </method>
     </configuration>
     <configuration name="Modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Modules" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -171,6 +167,7 @@
       <workItem from="1606238314808" duration="63000" />
       <workItem from="1606323398421" duration="3009000" />
       <workItem from="1606326886474" duration="621000" />
+      <workItem from="1606657266405" duration="8586000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606232472143</created>
@@ -228,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606587614954</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Casser tout / Expectation noramelment ok">
+      <created>1606600141173</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606600141173</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +261,8 @@
     <MESSAGE value="Cmake for boost" />
     <MESSAGE value="Cmake for boost update" />
     <MESSAGE value="added test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test" />
+    <MESSAGE value="Casser tout / Expectation noramelment ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Casser tout / Expectation noramelment ok" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606588203438">
@@ -280,25 +285,25 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="813" y="311" width="424" height="496" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1606588201424" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1606600079071">
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1606667172184">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1606600079071" />
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1606667172184" />
     <state width="1802" height="256" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439592" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1606600079070">
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1606667172183">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1606600079070" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1606667172183" />
     <state width="1802" height="256" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1606600079069">
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1606667172182">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1606600079069" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1606667172182" />
     <state width="1802" height="256" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1606600079071">
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1606667172183">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1606600079071" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1606667172183" />
     <state width="1802" height="256" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
     <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1606326339704">
       <screen x="67" y="27" width="1853" height="1053" />
@@ -320,15 +325,15 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="519" y="218" width="1016" height="742" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1606593961419" />
-    <state x="594" y="247" width="800" height="540" key="Vcs.Push.Dialog.v2" timestamp="1606587620558">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="590" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1606600148142">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="590" y="262" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1606326099880" />
+    <state x="590" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1606600148142" />
     <state x="594" y="247" width="800" height="540" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1606587620558" />
-    <state x="780" y="431" width="438" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606587451497">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="777" y="441" width="438" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606600115302">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="777" y="441" width="438" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1606393382141" />
+    <state x="777" y="441" width="438" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1606600115302" />
     <state x="780" y="431" width="431" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1606587451497" />
     <state x="772" y="338" width="432" height="429" key="refactoring.ChangeSignatureDialog" timestamp="1606597368165">
       <screen x="67" y="27" width="1853" height="1053" />
