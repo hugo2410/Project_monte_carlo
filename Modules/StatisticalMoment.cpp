@@ -14,7 +14,7 @@ StatisticalMoment::StatisticalMoment(AbstractVariable* pRandom) {
     randomNumbers = pRandom;
 }
 
-void StatisticalMoment::write_csv(const char* file){
+void StatisticalMoment::write_csv(const char* file,int order){
 
     std::ofstream outputFile;
     outputFile.open(file);
@@ -22,7 +22,7 @@ void StatisticalMoment::write_csv(const char* file){
     double mean = randomNumbers->get_mean();
     //order = 6 ? ou on le fixe avec l'utilisateur
     outputFile << "Order;Statistical Moment\n";
-    for(int i = 0; i < 6 ; ++i)
+    for(int i = 0; i < order ; ++i)
     {
         double sum = 0.;
         for(auto sample :randomNumbers->get_vector())

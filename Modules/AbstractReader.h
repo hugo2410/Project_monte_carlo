@@ -6,6 +6,7 @@
 #define PROJECT_MONTE_CARLO_ABSTRACTREADER_H
 #include "Error.hpp"
 #include "AbstractVariable.h"
+#include "AbstractFunc.h"
 
 class AbstractReader {
 public:
@@ -14,6 +15,7 @@ public:
 
     virtual ~AbstractReader();
     virtual void read_file(const char *file_name,AbstractVariable* &pRandomVariable) = 0;
+
 };
 
 

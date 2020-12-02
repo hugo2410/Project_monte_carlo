@@ -14,6 +14,7 @@
 #include <AbstractExpectation.h>
 #include <NormalDist.h>
 #include <StatisticalMoment.h>
+#include <FunctReader.h>
 
 #include "AbstractReader.h"
 #include "AbstractFunc.h"
@@ -28,20 +29,26 @@ using namespace std;
 int main(int argc, char *argv[]) {
 
     const char *file_name;
+    const char *function_file_name;
     const char *dist_type;
     AbstractVariable *pRandom = 0;
-    char functionType;
     string file;
     string input;
     AbstractReader *pReader;
+    FunctReader *pFunReader;
     AbstractFunc *pFunction ;
     AbstractExpectation *pExpectation;
-    //AbstractFunc *pFunction;
+    int order;
 
-    if(argc == 3){
+    if(argc == 4){
 
         file_name = argv[1];
-        dist_type = argv[2];
+        function_file_name = argv[2];
+        dist_type = argv[3];
+
+        pFunReader = new FunctReader;
+        pFunReader ->read_file(function_file_name,pFunction,order);
+
         if( strcmp(dist_type , "N") == 0 ) {
             pReader = new NormalReader;
         }
@@ -61,35 +68,6 @@ int main(int argc, char *argv[]) {
                 cerr << "Input invalid !" << endl;
                 return -1;
             }
-
-        }
-    }
-    if (argc < 3 ) {
-        if (argc == 1){
-
-            cerr << "Missing File name to read from. Please refer to README" << endl;
-            cout << "Please enter the file name: " << endl;
-            cin >> file;
-            if(file == ""){
-                cerr << "You pressed enter without typing anything" << endl;
-                return -1;
-            }
-            file_name = file.c_str();
-            argc = 2;
-
-        }if (argc == 2) {
-
-            cerr << "Missing distribution type. Please refer to README" << endl;
-            cout << "Please enter the distribution type: [U/N] " << endl;
-            cin >> input;
-            if (input == "U")
-                pReader = new UniformReader;
-            else if (input == "N")
-                pReader = new NormalReader;
-            else {
-                cerr << "Input invalid !" << endl;
-                return -1;
-            }
         }
     }
     cout<< "file = "<< file_name<< endl;
@@ -102,44 +80,7 @@ int main(int argc, char *argv[]) {
     delete pReader;
 
 //////////////////////////////////////FUNCTION//////////////////////////////////////////////////
-    bool selectedFunction = false;
-    while(!selectedFunction)
-    {
-        cout << "Please choose the type of function for expectation calculation : [P/E/T] " << endl;
-        cin >> functionType;
 
-        switch(functionType)
-        {
-            case 'P' :
-            {
-                cout << "Please enter the polynomial coefficients : [a*x2+b*x+c] :\n " ;cin.ignore();
-                int a,b,c;
-                cin >> a;
-                cin >> b;
-                cin >> c;
-                pFunction = new PolynomlFunc(a,b,c);
-                selectedFunction = true;
-                break;
-            }
-            case 'E':
-            {
-                cout << "Please enter the exponential coefficients : [A*exp(b*x)] " << endl;
-                selectedFunction = true;
-                break;
-            }
-            case 'T':
-            {
-                cout << "Please enter the trigonometric coefficients : [A*cos(b*x)] " << endl;
-                selectedFunction = true;
-                break;
-            }
-            default:
-            {
-                cout << "You didn't choose an implemented function " << endl;
-                break;
-            }
-        }
-    }
     cout << "Calulating Expectation" << endl;
     pExpectation = new MonteCarloExpectation(pFunction,pRandom);
     cout << "Expectation Calculated" << endl;
@@ -147,7 +88,7 @@ int main(int argc, char *argv[]) {
 
     //////////////////////////////////////MOMENT//////////////////////////////////////////////////
     StatisticalMoment *pMoment = new StatisticalMoment(pRandom);
-    pMoment->write_csv("moments.csv");
+    pMoment->write_csv("moments.csv",order);
     cout << "Moment written !" << endl;
 
 

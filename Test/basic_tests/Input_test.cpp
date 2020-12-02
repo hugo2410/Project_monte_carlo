@@ -40,8 +40,6 @@ public:
 
         pInput_normal = new NormalReader;
         pInput_uniform =  new UniformReader;
-                
-        
 
     }
 

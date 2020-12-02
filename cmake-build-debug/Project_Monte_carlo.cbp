@@ -310,6 +310,12 @@
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.h">
 			<Option target="Modules"/>
 		</Unit>
+		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.h">
+			<Option target="Modules"/>
+		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/MonteCarloExpectation.cpp">
 			<Option target="Modules"/>
 		</Unit>

@@ -21,6 +21,6 @@ set(SOURCE_FILES
         AbstractReader.cpp
         NormalReader.cpp
         UniformReader.cpp
-        UniformDist.cpp NormalDist.cpp   AbstractFunc.cpp  TrigoFunc.cpp  PolynomlFunc.cpp  ExpFunc.cpp AbstractExpectation.cpp StatisticalMoment.cpp StatisticalMoment.h)
+        UniformDist.cpp NormalDist.cpp   AbstractFunc.cpp  TrigoFunc.cpp  PolynomlFunc.cpp  ExpFunc.cpp AbstractExpectation.cpp StatisticalMoment.cpp StatisticalMoment.h FunctReader.cpp FunctReader.h)
 
 add_library(Modules STATIC ${SOURCE_FILES} ${HEADER_FILES})

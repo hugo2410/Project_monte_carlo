@@ -15,7 +15,7 @@ public:
     StatisticalMoment(AbstractVariable *pRandom);
 
     ~StatisticalMoment();
-    void write_csv(const char* file);
+    void write_csv(const char* file,int order);
 
 private:
     AbstractVariable *randomNumbers;

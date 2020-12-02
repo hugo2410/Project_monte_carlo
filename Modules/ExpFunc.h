@@ -9,7 +9,7 @@
 
 class ExpFunc : public AbstractFunc{
 public:
-    ExpFunc();
+    ExpFunc(int i, int i1);
     ~ExpFunc();
     void build();
     double evaluate(double x);
