@@ -18,9 +18,10 @@ public:
     virtual int get_size() const{return uniformSamples.size(); }
 
 private:
-    std::vector<double> uniformSamples;
     double mean;
     double var;
+protected:
+    std::vector<double> uniformSamples;
 };
 
 

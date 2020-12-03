@@ -7,10 +7,10 @@
 
 
 #include <vector>
-#include "AbstractVariable.h"
+#include "UniformDist.h"
 
 
-class NormalDist: public AbstractVariable{
+class NormalDist: public UniformDist{
 public:
     NormalDist();
     NormalDist(const int N, const double mean, const double var);

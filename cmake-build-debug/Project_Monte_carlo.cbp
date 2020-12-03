@@ -301,6 +301,12 @@
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h">
 			<Option target="Modules"/>
 		</Unit>
+		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/CentralLimitThm.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/CentralLimitThm.h">
+			<Option target="Modules"/>
+		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp">
 			<Option target="Modules"/>
 		</Unit>

@@ -6,11 +6,14 @@
 #define PROJECT_MONTE_CARLO_ABSTRACTEXPECTATION_H
 
 
+#include "AbstractVariable.h"
+
 class AbstractExpectation {
 public:
     AbstractExpectation();
     virtual ~AbstractExpectation();
     virtual double getExpectation() const = 0;
+    virtual double evaluateExpectation( const AbstractVariable *pRandom)=0;
 };
 
 

@@ -34,5 +34,6 @@ void NormalReader::read_file(const char *file,AbstractVariable* &pRandomNormal )
     std::cout << "J'ai fini de lire une normale" << std::endl;
     pRandomNormal = new NormalDist(vectorSize,mean,var);
     std::cout << "J'ai fini de calculer une normale" << std::endl;
-
 }
+
+void NormalReader::read_file(const char* file, AbstractFunc* &pFunction,int &order){}

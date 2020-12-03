@@ -15,6 +15,7 @@
 #include <NormalDist.h>
 #include <StatisticalMoment.h>
 #include <FunctReader.h>
+#include <CentralLimitThm.h>
 
 #include "AbstractReader.h"
 #include "AbstractFunc.h"
@@ -38,6 +39,7 @@ int main(int argc, char *argv[]) {
     FunctReader *pFunReader;
     AbstractFunc *pFunction ;
     AbstractExpectation *pExpectation;
+    CentralLimitThm *pCThm;
     int order;
 
     if(argc == 4){
@@ -46,8 +48,8 @@ int main(int argc, char *argv[]) {
         function_file_name = argv[2];
         dist_type = argv[3];
 
-        pFunReader = new FunctReader;
-        pFunReader ->read_file(function_file_name,pFunction,order);
+        pReader = new FunctReader;
+        pReader ->read_file(function_file_name,pFunction,order);
 
         if( strcmp(dist_type , "N") == 0 ) {
             pReader = new NormalReader;
@@ -90,6 +92,8 @@ int main(int argc, char *argv[]) {
     StatisticalMoment *pMoment = new StatisticalMoment(pRandom);
     pMoment->write_csv("moments.csv",order);
     cout << "Moment written !" << endl;
+
+    //pCThm = new CentralLimitThm(pRandom);
 
 
     return 0;

@@ -37,8 +37,9 @@ void UniformReader::read_file(const char *file,AbstractVariable* &pRandomUniform
     std::cout << "J'ai fini de lire une uniforme" << std::endl;
     // Creer une classe uniform avec ses informations
     pRandomUniform = new UniformDist(vectorSize,a,b);
-    std::cout << "J'ai fini de calculer une normale" << std::endl;
+    std::cout << "J'ai fini de calculer une uniforme" << std::endl;
     for(int i =0; i<vectorSize;++i)
         std::cout << pRandomUniform->get_vector()[i] << ' ';
-
 }
+
+void UniformReader::read_file(const char* file, AbstractFunc* &pFunction,int &order){}
