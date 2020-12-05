@@ -15,13 +15,13 @@ FunctReader::~FunctReader()= default;
 void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &order)
 {
     std::ifstream read_input (file);
-    std::cout<< "File = "<< file<< std::endl;
     if(!read_input.is_open()){
-        throw Error("Couldn't open it  ", "FILE");
+        throw FileError();
     }
     read_input.clear();
     char functionType;
     read_input >> functionType;
+    std::cout<< "functionType = "<<functionType<<std::endl;
     switch(functionType)
     {
         case 'P' :
@@ -30,9 +30,8 @@ void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &orde
             int a,b,c;
             read_input >> a;
             read_input >> b;
-            read_input >> c;
             read_input >> order;
-            pFunction = new PolynomlFunc(a,b,c);
+            pFunction = new PolynomFunc(a,b,order);
             break;
         }
         case 'E':
@@ -42,7 +41,7 @@ void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &orde
             read_input >> a;
             read_input >> b;
             read_input >> order;
-            //pFunction = new ExpFunc(a, b);
+            pFunction = new ExpFunc(a, b,order);
             break;
         }
         case 'T':
@@ -53,7 +52,7 @@ void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &orde
             read_input >> b;
             read_input >> order;
             break;
-            //pFunction = new TrigoFunc(a, b);
+            pFunction = new TrigoFunc(a, b,order);
         }
         default:
         {

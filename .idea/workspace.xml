@@ -20,38 +20,53 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Project_Monte_carlo" targetName="gtest_main" />
       <config projectName="Project_Monte_carlo" targetName="monte_carlo_run" />
+      <config projectName="Project_Monte_carlo" targetName="Input_test" />
       <config projectName="Project_Monte_carlo" targetName="gtest" />
       <config projectName="Project_Monte_carlo" targetName="Modules" />
-      <config projectName="Project_Monte_carlo" targetName="Input_test" />
+      <config projectName="Project_Monte_carlo" targetName="gtest_main" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="Function reader  + order set by user">
+      <change afterPath="$PROJECT_DIR$/Modules/AbstractError.hpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Modules/CentralLimitThm.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Modules/CentralLimitThm.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/AbstractExpectation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractExpectation.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/AbstractExpectation.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractExpectation.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/AbstractFunc.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractFunc.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/AbstractReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractReader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/ExpFunc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/ExpFunc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/ExpFunc.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/ExpFunc.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/FunctReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/FunctReader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/FunctReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/FunctReader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/NormalDist.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalDist.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/NormalDist.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalDist.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/NormalReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalReader.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/NormalReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalReader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/PolynomlFunc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/PolynomlFunc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/PolynomlFunc.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/PolynomlFunc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/TrigoFunc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/TrigoFunc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/TrigoFunc.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/TrigoFunc.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/UniformDist.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformDist.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/UniformDist.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformDist.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/UniformReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformReader.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/UniformReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformReader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/basic_tests/Input_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/basic_tests/Input_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/basic_tests/MonteCarloExpectation_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/basic_tests/MonteCarloExpectation_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/basic_tests/Normal_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/basic_tests/Normal_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/basic_tests/StandardCentralLimitThm_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/basic_tests/StandardCentralLimitThm_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/basic_tests/Uniform_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/basic_tests/Uniform_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/include/gtest/gtest.h" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/include/gtest/gtest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/include/gtest/internal/gtest-port.h" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/include/gtest/internal/gtest-port.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -108,49 +123,49 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.monte_carlo_run">
-    <configuration name="Input_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Input_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="Input_test" TEST_MODE="SUITE_TEST">
+    <configuration name="Input_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Input_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="Input_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Modules" CONFIG_NAME="Debug">
+    <configuration name="Modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Modules" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="gtest" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+    <configuration name="monte_carlo_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="monte_carlo_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="monte_carlo_run">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="monte_carlo_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="monte_carlo_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="monte_carlo_run">
+    <configuration name="test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/Test/basic_tests/Input_test" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/Test/basic_tests/Input_test" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Google Test.Input_test" />
       <item itemvalue="CMake Application.Modules" />
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="CMake Application.monte_carlo_run" />
       <item itemvalue="CMake Application.test" />
+      <item itemvalue="Google Test.Input_test" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -282,85 +297,5 @@
     <MESSAGE value="Moment done" />
     <MESSAGE value="Function reader  + order set by user" />
     <option name="LAST_COMMIT_MESSAGE" value="Function reader  + order set by user" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="458" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606588203438">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="458" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1606588203438" />
-    <state x="652" y="354" width="672" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606325198379">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="652" y="354" width="672" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1606325198379" />
-    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606325194378">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1606325194378" />
-    <state x="536" y="98" width="916" height="898" key="CommitChangelistDialog2" timestamp="1606238144394">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="536" y="98" width="916" height="898" key="CommitChangelistDialog2/72.27.1848.1053@72.27.1848.1053" timestamp="1606238144394" />
-    <state x="813" y="311" width="424" height="496" key="FileChooserDialogImpl" timestamp="1606588201424">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="813" y="311" width="424" height="496" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1606588201424" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1607016573719">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1607016573719" />
-    <state width="1802" height="256" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439592" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1607016573719">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1607016573719" />
-    <state width="1802" height="256" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1607016573718">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1607016573718" />
-    <state width="1802" height="256" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1607016573719">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1607016573719" />
-    <state width="1802" height="256" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1606326339704">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1606326339704" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1606326339704">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1606326339704" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1606326339704">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1606326339704" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1606326339704">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1606326339704" />
-    <state x="519" y="218" width="1016" height="742" key="SettingsEditor" timestamp="1606593961419">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="519" y="218" width="1016" height="742" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1606593961419" />
-    <state x="590" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1606931427115">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="590" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1606931427115" />
-    <state x="594" y="247" width="800" height="540" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1606587620558" />
-    <state x="777" y="441" width="438" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606600115302">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="777" y="441" width="438" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1606600115302" />
-    <state x="780" y="431" width="431" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1606587451497" />
-    <state x="772" y="338" width="432" height="429" key="refactoring.ChangeSignatureDialog" timestamp="1606597368165">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="772" y="338" width="432" height="429" key="refactoring.ChangeSignatureDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1606597368165" />
-    <state x="660" y="249" key="run.anything.popup" timestamp="1606326937389">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="660" y="249" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1606326937389" />
   </component>
 </project>

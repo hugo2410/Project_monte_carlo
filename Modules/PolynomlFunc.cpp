@@ -5,14 +5,11 @@
 #include <iostream>
 #include "PolynomlFunc.h"
 
-PolynomlFunc::PolynomlFunc() {}
-PolynomlFunc::~PolynomlFunc() {}
+PolynomFunc::PolynomFunc() {}
+PolynomFunc::~PolynomFunc() {}
 
-PolynomlFunc::PolynomlFunc(int a, int b, int c):coef_a(a),coef_b(b),coef_c(c){
-    std::cout<< "You have built the following polynomial: "<< coef_a<<"* x² + "<<coef_b<<"* x + "<< coef_c<<std::endl;
 
-}
 
-double PolynomlFunc:: evaluate(double x){
-    return coef_a*x*x + coef_b*x +coef_c;
+double PolynomFunc:: evaluate(double x){
+    return coef_a*x + coef_b;
 };

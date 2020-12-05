@@ -22,8 +22,9 @@
 #include "PolynomlFunc.h"
 #include "NormalReader.h"
 #include "UniformReader.h"
+#include "ExpFunc.h"
 #include "AbstractVariable.h"
-#include "Error.hpp"
+#include "AbstractError.hpp"
 
 using namespace std;
 
@@ -72,11 +73,10 @@ int main(int argc, char *argv[]) {
             }
         }
     }
-    cout<< "file = "<< file_name<< endl;
     try{
         pReader->read_file(file_name,pRandom);
-    }catch(Error& e){
-        cerr << "Exception thrown: " << e.getErrorTag() << e.what() << endl;
+    }catch(AbstractError& e){
+        cerr << "Exception thrown: " << e.what() << endl;
         return -1;
     }
     delete pReader;

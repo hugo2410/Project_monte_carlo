@@ -7,19 +7,13 @@
 
 #include "AbstractFunc.h"
 
-class PolynomlFunc: public AbstractFunc {
+class PolynomFunc: public AbstractFunc {
 
 public:
-    PolynomlFunc();
-    ~PolynomlFunc() override;
-    PolynomlFunc(int a, int b, int c);
-
+    PolynomFunc();
+    ~PolynomFunc() override;
+    PolynomFunc(int a, int b, int o):AbstractFunc(a,b,o){}
     double evaluate(double x);
-
-private:
-int coef_a;
-int coef_b;
-int coef_c;
 };
 
 
