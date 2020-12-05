@@ -87,13 +87,16 @@ int main(int argc, char *argv[]) {
     pExpectation = new MonteCarloExpectation(pFunction,pRandom);
     cout << "Expectation Calculated" << endl;
     cout << pExpectation->getExpectation() << endl;
-
+    //cout << pExpectation->evaluateExpectation(pRandom) << endl;
     //////////////////////////////////////MOMENT//////////////////////////////////////////////////
     StatisticalMoment *pMoment = new StatisticalMoment(pRandom);
     pMoment->write_csv("moments.csv",order);
     cout << "Moment written !" << endl;
 
-    //pCThm = new CentralLimitThm(pRandom);
+    for (int i = 1; i <= 5; ++i)
+        pRandom = new NormalDist(i*pRandom->get_initial_size(),pRandom->get_mean(),pRandom->get_var());
+        pCThm = new CentralLimitThm();
+
 
 
     return 0;

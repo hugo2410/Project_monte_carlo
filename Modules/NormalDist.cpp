@@ -31,6 +31,18 @@ double NormalCDFInverse(double p)
         return RationalApproximation( sqrt(-2.0*log(1-p)) );
     }
 }
+float myErfInv2(float x){
+    float tt1, tt2, lnx, sgn;
+    sgn = (x < 0) ? -1.0f : 1.0f;
+
+    x = (1 - x)*(1 + x);        // x = 1 - x*x;
+    lnx = logf(x);
+
+    tt1 = 2/(3.14*0.147) + 0.5f * lnx;
+    tt2 = 1/(0.147) * lnx;
+
+    return(sgn*sqrtf(-tt1 + sqrtf(tt1*tt1 - tt2)));
+}
 
 NormalDist::NormalDist(){}
 
@@ -43,12 +55,13 @@ NormalDist::NormalDist(const int N, const double mean, const double var):Uniform
     for (int i =0;i < N; ++i )
     {
         //std::cout<<uniformSamples[i]<<std::endl;
-        std::cout<<NormalCDFInverse(uniformSamples[i])<<std::endl;
-        normalSamples.push_back(distribution(generator));
+        //std::cout<<sqrt(2)*myErfInv2(2*uniformSamples[i]-1)<<std::endl;
+        normalSamples.push_back(sqrt(var)*sqrt(2)*myErfInv2(2*uniformSamples[i]-1)+mean);
+        //normalSamples.push_back(distribution(generator));
     }
 
 }
-NormalDist::NormalDist(const int N): mean(0.0),var(1.0)
+NormalDist::NormalDist(const int N): mean(0.0),var(1.0),initial_sample_size(N)
 {
     std::default_random_engine generator;
     std::normal_distribution<double> distribution(mean,sqrt(var));
@@ -58,3 +71,11 @@ NormalDist::NormalDist(const int N): mean(0.0),var(1.0)
     }
 }
 
+void NormalDist::getMoreSamples(const int multiples){
+    for (int j = 0; j < multiples;++j){
+        for (int i = 0; i < initial_sample_size; ++i) {
+            normalSamples.push_back(sqrt(var)*sqrt(2)*myErfInv2(2*uniformSamples[i]-1)+mean);
+
+        }
+    }
+}

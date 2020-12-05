@@ -14,5 +14,7 @@ public:
     virtual double get_mean() const = 0;
     virtual double get_var() const = 0;
     virtual int get_size() const =0;
+    virtual int get_initial_size() const =0 ;
+    //virtual void getMoreSamples(const int multiples) const = 0;
 };
 #endif //PROJECT_MONTE_CARLO_ABSTRACTVARIABLE_H

@@ -14,6 +14,7 @@ public:
     virtual ~AbstractExpectation();
     virtual double getExpectation() const = 0;
     virtual double evaluateExpectation( const AbstractVariable *pRandom)=0;
+    virtual double computeMean( const AbstractVariable *pRandom) = 0 ;
 };
 
 
