@@ -48,24 +48,9 @@ struct VectSizeError : public AbstractError{
         return "Vector size must be a positive integer !";
     }
 };
-struct MeanError : public AbstractError{
-    const char * what () const throw () override {
-        return "Mean must a float number!";
-    }
-};
 struct VarError : public AbstractError{
     const char * what () const throw () override {
         return "Variance must a positive float number!";
-    }
-};
-struct LowerError : public AbstractError{
-    const char * what () const throw () override {
-        return "Lower bound needs to be a float!";
-    }
-};
-struct UpperError : public AbstractError{
-    const char * what () const throw () override {
-        return "Upper bound needs to a float!";
     }
 };
 struct BoundError : public AbstractError{

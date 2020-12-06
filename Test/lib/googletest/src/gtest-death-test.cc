@@ -359,7 +359,7 @@ static void FailFromInternalError(int fd) {
     GTEST_LOG_(FATAL) << error.GetString();
   } else {
     const int last_error = errno;
-    GTEST_LOG_(FATAL) << "Error while reading death test internal: "
+    GTEST_LOG_(FATAL) << "AbstractError while reading death test internal: "
                       << GetLastErrnoDescription() << " [" << last_error << "]";
   }
 }
@@ -579,15 +579,15 @@ bool DeathTestImpl::Passed(bool status_ok) {
   switch (outcome()) {
     case LIVED:
       buffer << "    Result: failed to die.\n"
-             << " Error msg:\n" << FormatDeathTestOutput(error_message);
+             << " AbstractError msg:\n" << FormatDeathTestOutput(error_message);
       break;
     case THREW:
       buffer << "    Result: threw an exception.\n"
-             << " Error msg:\n" << FormatDeathTestOutput(error_message);
+             << " AbstractError msg:\n" << FormatDeathTestOutput(error_message);
       break;
     case RETURNED:
       buffer << "    Result: illegal return in test statement.\n"
-             << " Error msg:\n" << FormatDeathTestOutput(error_message);
+             << " AbstractError msg:\n" << FormatDeathTestOutput(error_message);
       break;
     case DIED:
       if (status_ok) {

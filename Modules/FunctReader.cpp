@@ -12,7 +12,7 @@
 FunctReader::FunctReader()= default;
 FunctReader::~FunctReader()= default;
 
-void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &order)
+void FunctReader::read_file(const char* file, AbstractFunc* &pFunction)
 {
     std::ifstream read_input (file);
     if(!read_input.is_open()){
@@ -22,37 +22,33 @@ void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &orde
     char functionType;
     read_input >> functionType;
     std::cout<< "functionType = "<<functionType<<std::endl;
+    int a,b,order;
+    read_input >> a;
+    read_input >> b;
+    read_input >> order;
+    std::cout<< "order = "<<order<<std::endl;
+    if (order<0){
+        throw OrderError();
+    }
     switch(functionType)
     {
         case 'P' :
         {
             std::cout << "Reading polynomiale coef:\n " ;
-            int a,b,c;
-            read_input >> a;
-            read_input >> b;
-            read_input >> order;
             pFunction = new PolynomFunc(a,b,order);
             break;
         }
         case 'E':
         {
             std::cout << "Reading Exponential coef:\n " ;
-            int a,b;
-            read_input >> a;
-            read_input >> b;
-            read_input >> order;
             pFunction = new ExpFunc(a, b,order);
             break;
         }
         case 'T':
         {
             std::cout << "Reading Trigonometric coef:\n " ;
-            int a,b;
-            read_input >> a;
-            read_input >> b;
-            read_input >> order;
-            break;
             pFunction = new TrigoFunc(a, b,order);
+            break;
         }
         default:
         {

@@ -12,10 +12,12 @@
 #include "FunctReader.h"
 
 
-#define TEST_PATH_NO_FILE " .txt"
-#define TEST_PATH_SIZE "TestNormal_size.dat"
-#define TEST_PATH_MEAN "TestNormal_mean.dat"
-#define TEST_PATH_VAR "TestNormal_var.dat"
+#define TEST_PATH_NO_FILE "a.txt"
+#define TEST_PATH_SIZE "TestVectSize.txt"
+#define TEST_PATH_VAR "TestNormalVar.txt"
+#define TEST_PATH_ORDER "TestOrder.txt"
+#define TEST_PATH_BOUND "TestBound.txt"
+
 
 #define TEST_PATH_UNIFORM "DefaultUniform.dat"
 
@@ -56,6 +58,7 @@ public:
     AbstractReader *pNormal ;
     AbstractReader* pUniform ;
     AbstractReader* pFunc;
+    AbstractFunc * pFunction ;
     double alpha ;
     double alpha_bad ;
     int order ;
@@ -68,27 +71,16 @@ TEST_F(InputTestFixture, nofile_error) {
 TEST_F(InputTestFixture, normal_variance_error) {
     ASSERT_THROW(pNormal ->read_file(TEST_PATH_VAR, pRandomsample), VarError);
 }
-TEST_F(InputTestFixture, normal_mean_error) {
-    ASSERT_THROW(pNormal ->read_file(TEST_PATH_MEAN,pRandomsample), MeanError);
-}
 TEST_F(InputTestFixture, normal_size_error) {
-    ASSERT_THROW(pNormal ->read_file(TEST_PATH_VECT, pRandomsample), VectSizeError);
+    ASSERT_THROW(pNormal ->read_file(TEST_PATH_SIZE, pRandomsample), VectSizeError);
 }
 TEST_F(InputTestFixture, func_order_error) {
-    ASSERT_THROW(pFunc ->read_file(TEST_PATH_ORDER,pRandomsample), OrderError);
+    ASSERT_THROW(pFunc ->read_file(TEST_PATH_ORDER,pFunction), OrderError);
 }
 TEST_F(InputTestFixture, input_uniform_size_check) {
-    ASSERT_THROW(pInput_uniform ->read_file(TEST_PATH_SIZE, pRandomsample), AbstractError);
+    ASSERT_THROW(pUniform ->read_file(TEST_PATH_SIZE, pRandomsample), VectSizeError);
 }
-TEST_F(InputTestFixture, input_uniform_lower_bound_check) {
-    ASSERT_THROW(pInput_uniform ->read_file( TEST_PATH_MEAN,pRandomsample), AbstractError);
+TEST_F(InputTestFixture, uniform_lower_bound_errpr) {
+    ASSERT_THROW(pUniform ->read_file(TEST_PATH_BOUND,pRandomsample), BoundError);
 }
-TEST_F(InputTestFixture, input_uniform_upper_bound_check) {
-    ASSERT_THROW(pInput_uniform ->read_file(TEST_PATH_VAR, pRandomsample), AbstractError);
-}
-TEST_F(InputTestFixture, input_uniform_alpha_check) {
-    ASSERT_THROW(pInput_uniform ->read_file(TEST_PATH_UNIFORM, pRandomsample), AbstractError);
-}
-TEST_F(InputTestFixture, input_uniform_order_check) {
-    ASSERT_THROW(pInput_uniform ->read_file(TEST_PATH_UNIFORM, pRandomsample), AbstractError);
-}*/
+

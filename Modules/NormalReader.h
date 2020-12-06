@@ -18,7 +18,7 @@ public:
     NormalReader();
     ~NormalReader() override;
     void read_file(const char *file,AbstractVariable* &pRandomNormal) override ;
-    void read_file(const char* file, AbstractFunc* &pFunction,int &order) override;
+    void read_file(const char* file, AbstractFunc* &pFunction) override;
 };
 
 

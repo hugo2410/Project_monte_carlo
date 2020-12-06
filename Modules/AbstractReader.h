@@ -15,7 +15,7 @@ public:
 
     virtual ~AbstractReader();
     virtual void read_file(const char *file_name,AbstractVariable* &pRandomVariable) = 0;
-    virtual void read_file(const char* file, AbstractFunc* &pFunction,int &order) = 0;
+    virtual void read_file(const char* file, AbstractFunc* &pFunction) = 0;
 };
 
 
