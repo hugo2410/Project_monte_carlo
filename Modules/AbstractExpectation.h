@@ -10,10 +10,30 @@
 
 class AbstractExpectation {
 public:
+    /**
+     * \brief Default Constructor
+     */
     AbstractExpectation();
+    /**
+     * \brief Default Destructor
+     */
     virtual ~AbstractExpectation();
+    /**
+     * \brief Abstract function to get the computed expectation of the user defined function
+     * @return The computed expectation
+     */
     virtual double getExpectation() const = 0;
+    /**
+     * \brief Abstract function to compute the expectation
+     * @param pRandom : Pointer to a random variables. Used to evaluate the user function
+     * @return The expectation of the user defined function
+     */
     virtual double evaluateExpectation( const AbstractVariable *pRandom)=0;
+    /**
+     * \brief Abstract function to compute the mean of random samples
+     * @param pRandom : pRandom : Pointer to a random variables.
+     * @return The mean of the random samples.
+     */
     virtual double computeMean( const AbstractVariable *pRandom) = 0 ;
 };
 

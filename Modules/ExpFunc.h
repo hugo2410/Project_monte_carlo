@@ -11,7 +11,7 @@ class ExpFunc : public AbstractFunc{
 public:
     ExpFunc();
     ~ExpFunc();
-    ExpFunc(int a, int b, int o):AbstractFunc(a,b,o){}
+    ExpFunc(int a, int b):AbstractFunc(a,b){}
     double evaluate(double x);
 };
 

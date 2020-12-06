@@ -17,6 +17,7 @@ MonteCarloExpectation::MonteCarloExpectation( AbstractFunc *pFunction, const Abs
 }
 
 double MonteCarloExpectation::evaluateExpectation( const AbstractVariable *pRandom) {
+
     double sum = 0.;
     double var = 0.;
     for (int i = 0; i < pRandom->get_size(); ++i) {

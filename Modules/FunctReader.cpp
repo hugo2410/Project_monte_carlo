@@ -35,20 +35,20 @@ void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &orde
     {
         case 'P' :
         {
-            std::cout << "Reading polynomiale coef:\n " ;
-            pFunction = new PolynomFunc(a,b,order);
+            std::cout << "Reading polynomiale coef\n " ;
+            pFunction = new PolynomFunc(a,b);
             break;
         }
         case 'E':
         {
-            std::cout << "Reading Exponential coef:\n " ;
-            pFunction = new ExpFunc(a, b,order);
+            std::cout << "Reading Exponential coef\n " ;
+            pFunction = new ExpFunc(a, b);
             break;
         }
         case 'T':
         {
-            std::cout << "Reading Trigonometric coef:\n " ;
-            pFunction = new TrigoFunc(a, b,order);
+            std::cout << "Reading Trigonometric coef\n " ;
+            pFunction = new TrigoFunc(a, b);
             break;
         }
         default:

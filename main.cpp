@@ -83,8 +83,10 @@ int main(int argc, char *argv[]) {
     StatisticalMoment *pMoment = new StatisticalMoment(pRandom);
     pMoment->write_csv("moments.csv",order);
     cout << "Moment written !" << endl;
-
+    delete pMoment;
+    delete pFunction;
     //////////////////////////////////////CTL//////////////////////////////////////////////////
+    cout << "Verifying Central Limit Theorem !" << endl;
     for(int j = 1;j<=10;++j) {
         pCThm = new CentralLimitThm(pRandom,j);
         for (int i = 1; i <= 100; ++i) {
@@ -92,5 +94,11 @@ int main(int argc, char *argv[]) {
             pCThm ->verify_thm(pRandomCTL,pExpectation);
         }
     }
+    cout << "Verification done. Please launch the visualization script !" << endl;
+
+    delete pRandom;
+    delete pRandomCTL;
+    delete pExpectation;
+
     return 0;
 }
