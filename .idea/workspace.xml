@@ -33,27 +33,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="All readers' constructors are inherited from the mother's">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/AbstractError.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractError.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/AbstractReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Error.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/FunctReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/FunctReader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/FunctReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/FunctReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/NormalReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalReader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/NormalReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/UniformReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformReader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/UniformReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/basic_tests/Input_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/basic_tests/Input_test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/src/gtest-death-test.cc" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/src/gtest-death-test.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="Gtest works for inputs, modified readfile for function and AbstractFunc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -251,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607181079077</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Gtest works for inputs, modified readfile for function and AbstractFunc">
+      <created>1607249700875</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607249700875</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +271,7 @@
     <MESSAGE value="Moment done" />
     <MESSAGE value="Function reader  + order set by user" />
     <MESSAGE value="All readers' constructors are inherited from the mother's" />
-    <option name="LAST_COMMIT_MESSAGE" value="All readers' constructors are inherited from the mother's" />
+    <MESSAGE value="Gtest works for inputs, modified readfile for function and AbstractFunc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gtest works for inputs, modified readfile for function and AbstractFunc" />
   </component>
 </project>
