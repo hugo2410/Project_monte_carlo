@@ -6,31 +6,31 @@
 #include <fstream>
 #include "CentralLimitThm.h"
 
-void open_csv(std::string file, double theoritical_mean);
+void open_csv(std::string file, double theoritical_mean, double theoritical_var);
 
-void write_csv(double sample_mean);
+void write_csv(std::string file,double sample_mean);
 
-void verify_thm(AbstractVariable *pRandom,AbstractExpectation* pExpectation){
-    double theoritical_mean = pRandom->get_mean();
-    double theoritical_var = pRandom->get_var();
-    double sample_mean = 0 ;
-    open_csv("sample means" + std::to_string(pRandom->get_size()), theoritical_mean);
-    for(int i = 0;i<1000;++i)
-    {
-        sample_mean = pExpectation->computeMean(pRandom);
-        write_csv(sample_mean);
-    }
+CentralLimitThm::CentralLimitThm(AbstractVariable *pRandom,int multiples){
+    std::string file_name = "sample_means_" + std::to_string(multiples*pRandom->get_size())+".csv";
+    open_csv(file_name, pRandom->get_mean(),pRandom->get_var());
 }
 
-void open_csv(const char* file, double theoritical_mean){
+void CentralLimitThm::verify_thm(AbstractVariable *pRandom,AbstractExpectation* pExpectation){
+    double sample_mean = 0 ;
+    std::string file_name = "sample_means_" + std::to_string(pRandom->get_size())+".csv";
+    sample_mean = pExpectation->computeMean(pRandom);
+    write_csv(file_name,sample_mean);
+}
 
+void open_csv(std::string file, double theoritical_mean, double theoritical_var){
     std::ofstream outputFile;
     outputFile.open(file);
-    outputFile.setf(std::ios::scientific);
-    outputFile << "Means of size of samples = " << "\n";
     outputFile << theoritical_mean << "\n";
+    outputFile << theoritical_var << "\n";
 }
 
-void write_csv(double sample_mean){
-    outputFile << sample_mean << "\n"
+void write_csv(std::string file, double sample_mean){
+    std::ofstream outputFile;
+    outputFile.open(file,std::ios_base::app);
+    outputFile << sample_mean << "\n";
 }

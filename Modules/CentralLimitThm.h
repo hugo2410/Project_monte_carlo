@@ -12,7 +12,8 @@
 class CentralLimitThm {
 public:
     CentralLimitThm();
-    virtual ~CentralLimitThm();
+    ~CentralLimitThm();
+    CentralLimitThm(AbstractVariable *pRandom, int multiples);
     void verify_thm(AbstractVariable *pRandom,AbstractExpectation *pExpectation);
 
 private:

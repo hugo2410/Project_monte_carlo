@@ -142,9 +142,22 @@ Modules/CMakeFiles/Modules.dir/UniformDist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Modules.dir/UniformDist.cpp.s"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.cpp -o CMakeFiles/Modules.dir/UniformDist.cpp.s
 
+Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
+Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/FunctReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o"
+	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/FunctReader.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.cpp
+
+Modules/CMakeFiles/Modules.dir/FunctReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Modules.dir/FunctReader.cpp.i"
+	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.cpp > CMakeFiles/Modules.dir/FunctReader.cpp.i
+
+Modules/CMakeFiles/Modules.dir/FunctReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Modules.dir/FunctReader.cpp.s"
+	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.cpp -o CMakeFiles/Modules.dir/FunctReader.cpp.s
+
 Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
 Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o: ../Modules/NormalDist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/NormalDist.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.cpp
 
 Modules/CMakeFiles/Modules.dir/NormalDist.cpp.i: cmake_force
@@ -157,7 +170,7 @@ Modules/CMakeFiles/Modules.dir/NormalDist.cpp.s: cmake_force
 
 Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
 Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o: ../Modules/AbstractFunc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/AbstractFunc.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.cpp
 
 Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.i: cmake_force
@@ -170,7 +183,7 @@ Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.s: cmake_force
 
 Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
 Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o: ../Modules/TrigoFunc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/TrigoFunc.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.cpp
 
 Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.i: cmake_force
@@ -183,7 +196,7 @@ Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.s: cmake_force
 
 Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
 Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: ../Modules/PolynomlFunc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/PolynomlFunc.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.cpp
 
 Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.i: cmake_force
@@ -196,7 +209,7 @@ Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.s: cmake_force
 
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: ../Modules/ExpFunc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/ExpFunc.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.cpp
 
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.i: cmake_force
@@ -209,7 +222,7 @@ Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.s: cmake_force
 
 Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
 Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o: ../Modules/AbstractExpectation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/AbstractExpectation.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractExpectation.cpp
 
 Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.i: cmake_force
@@ -222,7 +235,7 @@ Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.s: cmake_force
 
 Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
 Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o: ../Modules/StatisticalMoment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/StatisticalMoment.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/StatisticalMoment.cpp
 
 Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.i: cmake_force
@@ -232,19 +245,6 @@ Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.i: cmake_force
 Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Modules.dir/StatisticalMoment.cpp.s"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/StatisticalMoment.cpp -o CMakeFiles/Modules.dir/StatisticalMoment.cpp.s
-
-Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
-Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/FunctReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o"
-	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/FunctReader.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.cpp
-
-Modules/CMakeFiles/Modules.dir/FunctReader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Modules.dir/FunctReader.cpp.i"
-	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.cpp > CMakeFiles/Modules.dir/FunctReader.cpp.i
-
-Modules/CMakeFiles/Modules.dir/FunctReader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Modules.dir/FunctReader.cpp.s"
-	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.cpp -o CMakeFiles/Modules.dir/FunctReader.cpp.s
 
 Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
 Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o: ../Modules/CentralLimitThm.cpp
@@ -266,6 +266,7 @@ Modules_OBJECTS = \
 "CMakeFiles/Modules.dir/NormalReader.cpp.o" \
 "CMakeFiles/Modules.dir/UniformReader.cpp.o" \
 "CMakeFiles/Modules.dir/UniformDist.cpp.o" \
+"CMakeFiles/Modules.dir/FunctReader.cpp.o" \
 "CMakeFiles/Modules.dir/NormalDist.cpp.o" \
 "CMakeFiles/Modules.dir/AbstractFunc.cpp.o" \
 "CMakeFiles/Modules.dir/TrigoFunc.cpp.o" \
@@ -273,7 +274,6 @@ Modules_OBJECTS = \
 "CMakeFiles/Modules.dir/ExpFunc.cpp.o" \
 "CMakeFiles/Modules.dir/AbstractExpectation.cpp.o" \
 "CMakeFiles/Modules.dir/StatisticalMoment.cpp.o" \
-"CMakeFiles/Modules.dir/FunctReader.cpp.o" \
 "CMakeFiles/Modules.dir/CentralLimitThm.cpp.o"
 
 # External object files for target Modules
@@ -284,6 +284,7 @@ Modules/libModules.a: Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o
+Modules/libModules.a: Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o
@@ -291,7 +292,6 @@ Modules/libModules.a: Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o
-Modules/libModules.a: Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/build.make
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/link.txt

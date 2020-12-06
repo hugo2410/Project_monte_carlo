@@ -35,4 +35,4 @@ void UniformReader::read_file(const char *file,AbstractVariable* &pRandomUniform
         std::cout << pRandomUniform->get_vector()[i] << ' ';
 }
 
-void UniformReader::read_file(const char* file, AbstractFunc* &pFunction){}
+void UniformReader::read_file(const char* file, AbstractFunc* &pFunction,int &order){}

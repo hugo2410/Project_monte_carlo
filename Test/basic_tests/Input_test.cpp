@@ -75,7 +75,7 @@ TEST_F(InputTestFixture, normal_size_error) {
     ASSERT_THROW(pNormal ->read_file(TEST_PATH_SIZE, pRandomsample), VectSizeError);
 }
 TEST_F(InputTestFixture, func_order_error) {
-    ASSERT_THROW(pFunc ->read_file(TEST_PATH_ORDER,pFunction), OrderError);
+    ASSERT_THROW(pFunc ->read_file(TEST_PATH_ORDER,pFunction,order), OrderError);// J4AI CHANGE JUSTE POUR TESTER
 }
 TEST_F(InputTestFixture, input_uniform_size_check) {
     ASSERT_THROW(pUniform ->read_file(TEST_PATH_SIZE, pRandomsample), VectSizeError);

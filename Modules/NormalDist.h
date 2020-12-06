@@ -19,14 +19,12 @@ public:
     virtual double get_mean() const{ return mean;}
     virtual double get_var() const { return var;}
     virtual int get_size() const { return normalSamples.size(); }
-    int get_initial_size() const { return initial_sample_size; }
-    //void getMoreSamples(const int multiples);
+
 
 private:
     std::vector<double> normalSamples ;
     double mean ;
     double var ;
-    int initial_sample_size;
 };
 
 

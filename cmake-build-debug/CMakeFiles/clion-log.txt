@@ -1,4 +1,4 @@
-/snap/clion/137/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/hugo/MA3/Project_monte_carlo
+/app/extra/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
 CMake Warning at Test/lib/googletest/CMakeLists.txt:54 (project):
   VERSION keyword not followed by a value or was followed by a value that
   expanded to nothing.
@@ -6,4 +6,4 @@ CMake Warning at Test/lib/googletest/CMakeLists.txt:54 (project):
 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
+-- Build files have been written to: /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug

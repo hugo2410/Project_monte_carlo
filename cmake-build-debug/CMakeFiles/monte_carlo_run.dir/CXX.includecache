@@ -6,19 +6,27 @@
 
 #IncludeRegexTransform: 
 
+../Modules/AbstractError.hpp
+string
+-
+exception
+-
+iostream
+-
+
 ../Modules/AbstractExpectation.h
 AbstractVariable.h
 ../Modules/AbstractVariable.h
 
 ../Modules/AbstractFunc.h
-Error.hpp
-../Modules/Error.hpp
+AbstractError.hpp
+../Modules/AbstractError.hpp
 AbstractVariable.h
 ../Modules/AbstractVariable.h
 
 ../Modules/AbstractReader.h
-Error.hpp
-../Modules/Error.hpp
+AbstractError.hpp
+../Modules/AbstractError.hpp
 AbstractVariable.h
 ../Modules/AbstractVariable.h
 AbstractFunc.h
@@ -34,11 +42,9 @@ AbstractVariable.h
 AbstractExpectation.h
 ../Modules/AbstractExpectation.h
 
-../Modules/Error.hpp
-string
--
-exception
--
+../Modules/ExpFunc.h
+AbstractFunc.h
+../Modules/AbstractFunc.h
 
 ../Modules/FunctReader.h
 AbstractReader.h
@@ -71,6 +77,10 @@ typeinfo
 -
 iostream
 -
+
+../Modules/PolynomlFunc.h
+AbstractFunc.h
+../Modules/AbstractFunc.h
 
 ../Modules/StatisticalMoment.h
 AbstractVariable.h
@@ -113,12 +123,16 @@ AbstractReader.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/AbstractReader.h
 AbstractFunc.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/AbstractFunc.h
+PolynomlFunc.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/PolynomlFunc.h
 NormalReader.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/NormalReader.h
 UniformReader.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/UniformReader.h
+ExpFunc.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/ExpFunc.h
 AbstractVariable.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/AbstractVariable.h
-Error.hpp
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Error.hpp
+AbstractError.hpp
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/AbstractError.hpp
 

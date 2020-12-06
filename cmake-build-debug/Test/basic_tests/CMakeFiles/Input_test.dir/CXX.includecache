@@ -6,21 +6,37 @@
 
 #IncludeRegexTransform: 
 
-../Modules/AbstractReader.h
-Error.hpp
-../Modules/Error.hpp
+../Modules/AbstractError.hpp
+string
+-
+exception
+-
+iostream
+-
+
+../Modules/AbstractFunc.h
+AbstractError.hpp
+../Modules/AbstractError.hpp
 AbstractVariable.h
 ../Modules/AbstractVariable.h
+
+../Modules/AbstractReader.h
+AbstractError.hpp
+../Modules/AbstractError.hpp
+AbstractVariable.h
+../Modules/AbstractVariable.h
+AbstractFunc.h
+../Modules/AbstractFunc.h
 
 ../Modules/AbstractVariable.h
 vector
 -
 
-../Modules/Error.hpp
-string
--
-exception
--
+../Modules/FunctReader.h
+AbstractReader.h
+../Modules/AbstractReader.h
+AbstractFunc.h
+../Modules/AbstractFunc.h
 
 ../Modules/NormalReader.h
 AbstractReader.h
@@ -347,8 +363,8 @@ acxx_demangle.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/Input_test.cpp
 gtest/gtest.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/gtest/gtest.h
-Error.hpp
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/Error.hpp
+AbstractError.hpp
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/AbstractError.hpp
 AbstractVariable.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/AbstractVariable.h
 AbstractReader.h
@@ -357,4 +373,6 @@ NormalReader.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/NormalReader.h
 UniformReader.h
 /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/UniformReader.h
+FunctReader.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/FunctReader.h
 

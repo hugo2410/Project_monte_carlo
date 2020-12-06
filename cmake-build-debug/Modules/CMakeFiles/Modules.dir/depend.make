@@ -5,42 +5,42 @@ Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o: ../Modules/AbstractExp
 Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o: ../Modules/AbstractExpectation.h
 Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o: ../Modules/AbstractVariable.h
 
+Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o: ../Modules/AbstractError.hpp
 Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o: ../Modules/AbstractFunc.cpp
 Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o: ../Modules/AbstractFunc.h
 Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o: ../Modules/AbstractVariable.h
-Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o: ../Modules/Error.hpp
 
+Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o: ../Modules/AbstractError.hpp
 Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o: ../Modules/AbstractFunc.h
 Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o: ../Modules/AbstractReader.cpp
 Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o: ../Modules/AbstractReader.h
 Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o: ../Modules/AbstractVariable.h
-Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o: ../Modules/Error.hpp
 
 Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o: ../Modules/AbstractExpectation.h
 Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o: ../Modules/AbstractVariable.h
 Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o: ../Modules/CentralLimitThm.cpp
 Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o: ../Modules/CentralLimitThm.h
 
+Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: ../Modules/AbstractError.hpp
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: ../Modules/AbstractFunc.h
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: ../Modules/AbstractVariable.h
-Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: ../Modules/Error.hpp
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: ../Modules/ExpFunc.cpp
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: ../Modules/ExpFunc.h
 
+Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/AbstractError.hpp
 Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/AbstractFunc.h
 Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/AbstractReader.h
 Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/AbstractVariable.h
-Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/Error.hpp
 Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/ExpFunc.h
 Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/FunctReader.cpp
 Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/FunctReader.h
 Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/PolynomlFunc.h
 Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o: ../Modules/TrigoFunc.h
 
+Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o: ../Modules/AbstractError.hpp
 Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o: ../Modules/AbstractExpectation.h
 Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o: ../Modules/AbstractFunc.h
 Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o: ../Modules/AbstractVariable.h
-Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o: ../Modules/Error.hpp
 Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o: ../Modules/MonteCarloExpectation.cpp
 Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o: ../Modules/MonteCarloExpectation.h
 
@@ -49,18 +49,18 @@ Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o: ../Modules/NormalDist.cpp
 Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o: ../Modules/NormalDist.h
 Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o: ../Modules/UniformDist.h
 
+Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o: ../Modules/AbstractError.hpp
 Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o: ../Modules/AbstractFunc.h
 Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o: ../Modules/AbstractReader.h
 Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o: ../Modules/AbstractVariable.h
-Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o: ../Modules/Error.hpp
 Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o: ../Modules/NormalDist.h
 Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o: ../Modules/NormalReader.cpp
 Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o: ../Modules/NormalReader.h
 Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o: ../Modules/UniformDist.h
 
+Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: ../Modules/AbstractError.hpp
 Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: ../Modules/AbstractFunc.h
 Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: ../Modules/AbstractVariable.h
-Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: ../Modules/Error.hpp
 Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: ../Modules/PolynomlFunc.cpp
 Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: ../Modules/PolynomlFunc.h
 
@@ -68,9 +68,9 @@ Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o: ../Modules/AbstractVaria
 Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o: ../Modules/StatisticalMoment.cpp
 Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o: ../Modules/StatisticalMoment.h
 
+Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o: ../Modules/AbstractError.hpp
 Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o: ../Modules/AbstractFunc.h
 Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o: ../Modules/AbstractVariable.h
-Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o: ../Modules/Error.hpp
 Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o: ../Modules/TrigoFunc.cpp
 Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o: ../Modules/TrigoFunc.h
 
@@ -78,10 +78,10 @@ Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o: ../Modules/AbstractVariable.h
 Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o: ../Modules/UniformDist.cpp
 Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o: ../Modules/UniformDist.h
 
+Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o: ../Modules/AbstractError.hpp
 Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o: ../Modules/AbstractFunc.h
 Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o: ../Modules/AbstractReader.h
 Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o: ../Modules/AbstractVariable.h
-Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o: ../Modules/Error.hpp
 Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o: ../Modules/UniformDist.h
 Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o: ../Modules/UniformReader.cpp
 Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o: ../Modules/UniformReader.h

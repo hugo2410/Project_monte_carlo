@@ -64,6 +64,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp">
+			<Option target="Modules"/>
+		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractExpectation.cpp">
 			<Option target="Modules"/>
 		</Unit>
@@ -89,9 +92,6 @@
 			<Option target="Modules"/>
 		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/CentralLimitThm.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp">
 			<Option target="Modules"/>
 		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.cpp">

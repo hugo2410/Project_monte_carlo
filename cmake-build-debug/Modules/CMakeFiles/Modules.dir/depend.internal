@@ -6,42 +6,42 @@ Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractExpectation.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
 Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o
+ /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
- /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp
 Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o
+ /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
- /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp
 Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractExpectation.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/CentralLimitThm.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/CentralLimitThm.h
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o
+ /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
- /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.h
 Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o
+ /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
- /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/FunctReader.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.h
 Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o
+ /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractExpectation.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
- /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/MonteCarloExpectation.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/MonteCarloExpectation.h
 Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o
@@ -50,18 +50,18 @@ Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.h
 Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o
+ /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
- /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.h
 Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o
+ /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
- /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.h
 Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o
@@ -69,9 +69,9 @@ Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/StatisticalMoment.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/StatisticalMoment.h
 Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o
+ /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
- /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.h
 Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o
@@ -79,10 +79,10 @@ Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.h
 Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o
+ /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
- /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.h
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformReader.cpp
  /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformReader.h
