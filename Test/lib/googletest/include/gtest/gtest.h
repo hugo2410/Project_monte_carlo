@@ -1061,7 +1061,7 @@ class Environment {
 
 #if GTEST_HAS_EXCEPTIONS
 
-// Error which can be thrown from TestEventListener::OnTestPartResult.
+// AbstractError which can be thrown from TestEventListener::OnTestPartResult.
 class GTEST_API_ AssertionException
     : public internal::GoogleTestFailureException {
  public:

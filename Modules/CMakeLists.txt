@@ -5,8 +5,9 @@ set(HEADER_FILES
         AbstractExpectation.h
         NormalReader.h
         UniformReader.h
-        Error.hpp
+        AbstractError.hpp
         MonteCarloExpectation.h
+        FunctReader.h
         ExpFunc.h
         UniformDist.h
         NormalDist.h
@@ -21,6 +22,8 @@ set(SOURCE_FILES
         AbstractReader.cpp
         NormalReader.cpp
         UniformReader.cpp
-        UniformDist.cpp NormalDist.cpp   AbstractFunc.cpp  TrigoFunc.cpp  PolynomlFunc.cpp  ExpFunc.cpp AbstractExpectation.cpp StatisticalMoment.cpp StatisticalMoment.h FunctReader.cpp FunctReader.h CentralLimitThm.cpp CentralLimitThm.h)
+        UniformDist.cpp
+        FunctReader.cpp
+        NormalDist.cpp   AbstractFunc.cpp  TrigoFunc.cpp  PolynomlFunc.cpp  ExpFunc.cpp AbstractExpectation.cpp StatisticalMoment.cpp StatisticalMoment.h)
 
 add_library(Modules STATIC ${SOURCE_FILES} ${HEADER_FILES})

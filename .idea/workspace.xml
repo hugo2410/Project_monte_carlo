@@ -21,31 +21,19 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="Project_Monte_carlo" targetName="monte_carlo_run" />
-      <config projectName="Project_Monte_carlo" targetName="gtest_main" />
+      <config projectName="Project_Monte_carlo" targetName="Input_test" />
       <config projectName="Project_Monte_carlo" targetName="gtest" />
       <config projectName="Project_Monte_carlo" targetName="Modules" />
-      <config projectName="Project_Monte_carlo" targetName="Input_test" />
+      <config projectName="Project_Monte_carlo" targetName="gtest_main" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="Function reader  + order set by user">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/AbstractExpectation.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractExpectation.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/AbstractVariable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractVariable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/CentralLimitThm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/CentralLimitThm.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/MonteCarloExpectation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/MonteCarloExpectation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/MonteCarloExpectation.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/MonteCarloExpectation.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/NormalDist.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalDist.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/NormalDist.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalDist.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/UniformDist.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformDist.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/UniformDist.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformDist.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="Gtest works for inputs, modified readfile for function and AbstractFunc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,9 +52,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="OCResolveContextSettings">
-    <option name="configuration" value="0-Debug-Modules" />
   </component>
   <component name="ProjectId" id="1kk6lZRK0tzrcU0oPy5QrmrHntU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -97,36 +82,41 @@
       <recent name="$PROJECT_DIR$/cmake-build-debug" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.monte_carlo_run">
-    <configuration name="Input_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Input_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="Input_test" TEST_MODE="SUITE_TEST">
+  <component name="RunManager" selected="CMake Application.test">
+    <configuration name="Input_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Input_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="Input_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Modules" CONFIG_NAME="Debug">
+    <configuration name="Modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Modules" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="gtest" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="monte_carlo_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="monte_carlo_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="monte_carlo_run">
+    <configuration name="monte_carlo_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="monte_carlo_run" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="monte_carlo_run">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/Test/basic_tests/Input_test" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$/cmake-build-debug/Test/basic_tests" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/Test/basic_tests/Input_test" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -156,8 +146,6 @@
       <workItem from="1606928897220" duration="3212000" />
       <workItem from="1606993964012" duration="11123000" />
       <workItem from="1607021362227" duration="896000" />
-      <workItem from="1607068909964" duration="5106000" />
-      <workItem from="1607174857880" duration="4795000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606232472143</created>
@@ -236,7 +224,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606931417118</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="All readers' constructors are inherited from the mother's">
+      <created>1607181079077</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607181079077</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Gtest works for inputs, modified readfile for function and AbstractFunc">
+      <created>1607249700875</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607249700875</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,86 +270,8 @@
     <MESSAGE value="Casser tout / Expectation noramelment ok" />
     <MESSAGE value="Moment done" />
     <MESSAGE value="Function reader  + order set by user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Function reader  + order set by user" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="458" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606588203438">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="458" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1606588203438" />
-    <state x="652" y="354" width="672" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606325198379">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="652" y="354" width="672" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1606325198379" />
-    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606325194378">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1606325194378" />
-    <state x="536" y="98" width="916" height="898" key="CommitChangelistDialog2" timestamp="1606238144394">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="536" y="98" width="916" height="898" key="CommitChangelistDialog2/72.27.1848.1053@72.27.1848.1053" timestamp="1606238144394" />
-    <state x="813" y="311" width="424" height="496" key="FileChooserDialogImpl" timestamp="1606588201424">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="813" y="311" width="424" height="496" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1606588201424" />
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1607073243640">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1607073243640" />
-    <state width="1802" height="256" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439592" />
-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1607073243639">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1607073243639" />
-    <state width="1802" height="256" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1607073243638">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1607073243638" />
-    <state width="1802" height="256" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1607073243639">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1607073243639" />
-    <state width="1802" height="256" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1606326339704">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1606326339704" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1606326339704">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1606326339704" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1606326339704">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1606326339704" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1606326339704">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1606326339704" />
-    <state x="519" y="218" width="1016" height="742" key="SettingsEditor" timestamp="1606593961419">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="519" y="218" width="1016" height="742" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1606593961419" />
-    <state x="590" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1606931427115">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="590" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1606931427115" />
-    <state x="594" y="247" width="800" height="540" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1606587620558" />
-    <state x="777" y="441" width="438" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606600115302">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="777" y="441" width="438" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1606600115302" />
-    <state x="780" y="431" width="431" height="182" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1606587451497" />
-    <state x="772" y="338" width="432" height="429" key="refactoring.ChangeSignatureDialog" timestamp="1606597368165">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="772" y="338" width="432" height="429" key="refactoring.ChangeSignatureDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1606597368165" />
-    <state x="660" y="249" key="run.anything.popup" timestamp="1606326937389">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="660" y="249" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1606326937389" />
+    <MESSAGE value="All readers' constructors are inherited from the mother's" />
+    <MESSAGE value="Gtest works for inputs, modified readfile for function and AbstractFunc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gtest works for inputs, modified readfile for function and AbstractFunc" />
   </component>
 </project>

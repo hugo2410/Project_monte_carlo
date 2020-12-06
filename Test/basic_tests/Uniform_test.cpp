@@ -4,7 +4,7 @@
 
 #include "gtest/gtest.h"
 #include "Uniform.h"
-#include "Error.hpp"
+#include "AbstractError.hpp"
 #include <cmath>
 
 

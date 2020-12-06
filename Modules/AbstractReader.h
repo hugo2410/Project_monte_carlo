@@ -4,7 +4,7 @@
 
 #ifndef PROJECT_MONTE_CARLO_ABSTRACTREADER_H
 #define PROJECT_MONTE_CARLO_ABSTRACTREADER_H
-#include "Error.hpp"
+#include "AbstractError.hpp"
 #include "AbstractVariable.h"
 #include "AbstractFunc.h"
 
@@ -15,7 +15,7 @@ public:
 
     virtual ~AbstractReader();
     virtual void read_file(const char *file_name,AbstractVariable* &pRandomVariable) = 0;
-    virtual void read_file(const char* file, AbstractFunc* &pFunction,int &order) = 0;
+    virtual void read_file(const char* file, AbstractFunc* &pFunction) = 0;
 };
 
 

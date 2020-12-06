@@ -22,8 +22,9 @@
 #include "PolynomlFunc.h"
 #include "NormalReader.h"
 #include "UniformReader.h"
+#include "ExpFunc.h"
 #include "AbstractVariable.h"
-#include "Error.hpp"
+#include "AbstractError.hpp"
 
 using namespace std;
 
@@ -42,7 +43,15 @@ int main(int argc, char *argv[]) {
     CentralLimitThm *pCThm;
     int order;
 
-    if(argc == 4){
+    pReader = new NormalReader;
+    function_file_name = argv[2];
+    dist_type = argv[3];
+
+    pReader = new FunctReader;
+    pReader ->read_file(function_file_name,pFunction);
+    file_name = argv[1];
+    pReader->read_file(file_name,pRandom);
+    /*if(argc == 4){
 
         file_name = argv[1];
         function_file_name = argv[2];
@@ -72,13 +81,12 @@ int main(int argc, char *argv[]) {
             }
         }
     }
-    cout<< "file = "<< file_name<< endl;
     try{
         pReader->read_file(file_name,pRandom);
-    }catch(Error& e){
-        cerr << "Exception thrown: " << e.getErrorTag() << e.what() << endl;
+    }catch(AbstractError& e){
+        cerr << "Exception thrown: " << e.what() << endl;
         return -1;
-    }
+    }*/
     delete pReader;
 
 //////////////////////////////////////FUNCTION//////////////////////////////////////////////////

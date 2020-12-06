@@ -11,7 +11,7 @@ class TrigoFunc:public AbstractFunc {
 public:
     TrigoFunc();
     ~TrigoFunc() override;
-    void build();
+    TrigoFunc(int a, int b, int o):AbstractFunc(a,b,o){}
     double evaluate(double x) override ;
 
 };

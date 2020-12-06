@@ -5,7 +5,7 @@
 #include "gtest/gtest.h"
 #include "Uniform.h"
 #include "Normal.h"
-#include "Error.hpp"
+#include "AbstractError.hpp"
 #include "MonteCarloExpectation.hpp"
 #include "StandardCentralLimitThm.hpp"
 #include <cmath>
