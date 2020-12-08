@@ -131,61 +131,76 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Test/tests/CMakeFiles/Input_test.dir/rule:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/tests/CMakeFiles/Input_test.dir/rule
-.PHONY : Test/tests/CMakeFiles/Input_test.dir/rule
+Test/tests/CMakeFiles/Reader_test.dir/rule:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/tests/CMakeFiles/Reader_test.dir/rule
+.PHONY : Test/tests/CMakeFiles/Reader_test.dir/rule
 
 # Convenience name for target.
-Input_test: Test/tests/CMakeFiles/Input_test.dir/rule
+Reader_test: Test/tests/CMakeFiles/Reader_test.dir/rule
 
-.PHONY : Input_test
+.PHONY : Reader_test
 
 # fast build rule for target.
-Input_test/fast:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Input_test.dir/build.make Test/tests/CMakeFiles/Input_test.dir/build
-.PHONY : Input_test/fast
+Reader_test/fast:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Reader_test.dir/build.make Test/tests/CMakeFiles/Reader_test.dir/build
+.PHONY : Reader_test/fast
 
 # Convenience name for target.
-Test/tests/CMakeFiles/Normal_test.dir/rule:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/tests/CMakeFiles/Normal_test.dir/rule
-.PHONY : Test/tests/CMakeFiles/Normal_test.dir/rule
+Test/tests/CMakeFiles/NormalDist_test.dir/rule:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/tests/CMakeFiles/NormalDist_test.dir/rule
+.PHONY : Test/tests/CMakeFiles/NormalDist_test.dir/rule
 
 # Convenience name for target.
-Normal_test: Test/tests/CMakeFiles/Normal_test.dir/rule
+NormalDist_test: Test/tests/CMakeFiles/NormalDist_test.dir/rule
 
-.PHONY : Normal_test
+.PHONY : NormalDist_test
 
 # fast build rule for target.
-Normal_test/fast:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Normal_test.dir/build.make Test/tests/CMakeFiles/Normal_test.dir/build
-.PHONY : Normal_test/fast
+NormalDist_test/fast:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/NormalDist_test.dir/build.make Test/tests/CMakeFiles/NormalDist_test.dir/build
+.PHONY : NormalDist_test/fast
 
-Normal_test.o: Normal_test.cpp.o
+# Convenience name for target.
+Test/tests/CMakeFiles/UniformDist_test.dir/rule:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/tests/CMakeFiles/UniformDist_test.dir/rule
+.PHONY : Test/tests/CMakeFiles/UniformDist_test.dir/rule
 
-.PHONY : Normal_test.o
+# Convenience name for target.
+UniformDist_test: Test/tests/CMakeFiles/UniformDist_test.dir/rule
+
+.PHONY : UniformDist_test
+
+# fast build rule for target.
+UniformDist_test/fast:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/UniformDist_test.dir/build.make Test/tests/CMakeFiles/UniformDist_test.dir/build
+.PHONY : UniformDist_test/fast
+
+NormalDist_test.o: NormalDist_test.cpp.o
+
+.PHONY : NormalDist_test.o
 
 # target to build an object file
-Normal_test.cpp.o:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Normal_test.dir/build.make Test/tests/CMakeFiles/Normal_test.dir/Normal_test.cpp.o
-.PHONY : Normal_test.cpp.o
+NormalDist_test.cpp.o:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/NormalDist_test.dir/build.make Test/tests/CMakeFiles/NormalDist_test.dir/NormalDist_test.cpp.o
+.PHONY : NormalDist_test.cpp.o
 
-Normal_test.i: Normal_test.cpp.i
+NormalDist_test.i: NormalDist_test.cpp.i
 
-.PHONY : Normal_test.i
+.PHONY : NormalDist_test.i
 
 # target to preprocess a source file
-Normal_test.cpp.i:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Normal_test.dir/build.make Test/tests/CMakeFiles/Normal_test.dir/Normal_test.cpp.i
-.PHONY : Normal_test.cpp.i
+NormalDist_test.cpp.i:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/NormalDist_test.dir/build.make Test/tests/CMakeFiles/NormalDist_test.dir/NormalDist_test.cpp.i
+.PHONY : NormalDist_test.cpp.i
 
-Normal_test.s: Normal_test.cpp.s
+NormalDist_test.s: NormalDist_test.cpp.s
 
-.PHONY : Normal_test.s
+.PHONY : NormalDist_test.s
 
 # target to generate assembly for a file
-Normal_test.cpp.s:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Normal_test.dir/build.make Test/tests/CMakeFiles/Normal_test.dir/Normal_test.cpp.s
-.PHONY : Normal_test.cpp.s
+NormalDist_test.cpp.s:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/NormalDist_test.dir/build.make Test/tests/CMakeFiles/NormalDist_test.dir/NormalDist_test.cpp.s
+.PHONY : NormalDist_test.cpp.s
 
 Reader_test.o: Reader_test.cpp.o
 
@@ -193,7 +208,7 @@ Reader_test.o: Reader_test.cpp.o
 
 # target to build an object file
 Reader_test.cpp.o:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Input_test.dir/build.make Test/tests/CMakeFiles/Input_test.dir/Reader_test.cpp.o
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Reader_test.dir/build.make Test/tests/CMakeFiles/Reader_test.dir/Reader_test.cpp.o
 .PHONY : Reader_test.cpp.o
 
 Reader_test.i: Reader_test.cpp.i
@@ -202,7 +217,7 @@ Reader_test.i: Reader_test.cpp.i
 
 # target to preprocess a source file
 Reader_test.cpp.i:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Input_test.dir/build.make Test/tests/CMakeFiles/Input_test.dir/Reader_test.cpp.i
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Reader_test.dir/build.make Test/tests/CMakeFiles/Reader_test.dir/Reader_test.cpp.i
 .PHONY : Reader_test.cpp.i
 
 Reader_test.s: Reader_test.cpp.s
@@ -211,8 +226,35 @@ Reader_test.s: Reader_test.cpp.s
 
 # target to generate assembly for a file
 Reader_test.cpp.s:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Input_test.dir/build.make Test/tests/CMakeFiles/Input_test.dir/Reader_test.cpp.s
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Reader_test.dir/build.make Test/tests/CMakeFiles/Reader_test.dir/Reader_test.cpp.s
 .PHONY : Reader_test.cpp.s
+
+UniformDist_test.o: UniformDist_test.cpp.o
+
+.PHONY : UniformDist_test.o
+
+# target to build an object file
+UniformDist_test.cpp.o:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/UniformDist_test.dir/build.make Test/tests/CMakeFiles/UniformDist_test.dir/UniformDist_test.cpp.o
+.PHONY : UniformDist_test.cpp.o
+
+UniformDist_test.i: UniformDist_test.cpp.i
+
+.PHONY : UniformDist_test.i
+
+# target to preprocess a source file
+UniformDist_test.cpp.i:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/UniformDist_test.dir/build.make Test/tests/CMakeFiles/UniformDist_test.dir/UniformDist_test.cpp.i
+.PHONY : UniformDist_test.cpp.i
+
+UniformDist_test.s: UniformDist_test.cpp.s
+
+.PHONY : UniformDist_test.s
+
+# target to generate assembly for a file
+UniformDist_test.cpp.s:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/UniformDist_test.dir/build.make Test/tests/CMakeFiles/UniformDist_test.dir/UniformDist_test.cpp.s
+.PHONY : UniformDist_test.cpp.s
 
 # Help Target
 help:
@@ -222,14 +264,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Input_test"
-	@echo "... Normal_test"
-	@echo "... Normal_test.o"
-	@echo "... Normal_test.i"
-	@echo "... Normal_test.s"
+	@echo "... NormalDist_test"
+	@echo "... Reader_test"
+	@echo "... UniformDist_test"
+	@echo "... NormalDist_test.o"
+	@echo "... NormalDist_test.i"
+	@echo "... NormalDist_test.s"
 	@echo "... Reader_test.o"
 	@echo "... Reader_test.i"
 	@echo "... Reader_test.s"
+	@echo "... UniformDist_test.o"
+	@echo "... UniformDist_test.i"
+	@echo "... UniformDist_test.s"
 .PHONY : help
 
 

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules -isystem /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include -isystem /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest 
+CXX_INCLUDES = -I/home/hugo/MA3/Project_monte_carlo/Modules -isystem /home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include -isystem /home/hugo/MA3/Project_monte_carlo/Test/lib/googletest 
 

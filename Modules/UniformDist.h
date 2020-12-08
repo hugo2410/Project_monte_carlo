@@ -11,7 +11,7 @@ class UniformDist : public AbstractVariable{
 public:
     UniformDist();
     UniformDist(const int N);
-    UniformDist(const int N,const int a, const int b);
+    UniformDist(const int N, const int a, const int b);
     virtual std::vector<double> get_vector()  const{ return uniformSamples;}
     virtual double get_mean() const{ return mean;};
     virtual double get_var() const{ return var;};

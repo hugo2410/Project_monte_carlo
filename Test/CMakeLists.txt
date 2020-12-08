@@ -1,5 +1,6 @@
 project(Test)
 
-add_subdirectory(basic_tests)
+add_subdirectory(tests)
+
 add_subdirectory(lib/googletest)
 

@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/137/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/137/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
+CMAKE_SOURCE_DIR = /home/hugo/MA3/Project_monte_carlo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
+CMAKE_BINARY_DIR = /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/app/extra/clion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/137/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/137/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -144,17 +144,43 @@ monte_carlo_run/fast:
 .PHONY : monte_carlo_run/fast
 
 #=============================================================================
-# Target rules for targets named Input_test
+# Target rules for targets named Reader_test
 
 # Build rule for target.
-Input_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Input_test
-.PHONY : Input_test
+Reader_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Reader_test
+.PHONY : Reader_test
 
 # fast build rule for target.
-Input_test/fast:
-	$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Input_test.dir/build.make Test/basic_tests/CMakeFiles/Input_test.dir/build
-.PHONY : Input_test/fast
+Reader_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/Reader_test.dir/build.make Test/tests/CMakeFiles/Reader_test.dir/build
+.PHONY : Reader_test/fast
+
+#=============================================================================
+# Target rules for targets named NormalDist_test
+
+# Build rule for target.
+NormalDist_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NormalDist_test
+.PHONY : NormalDist_test
+
+# fast build rule for target.
+NormalDist_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/NormalDist_test.dir/build.make Test/tests/CMakeFiles/NormalDist_test.dir/build
+.PHONY : NormalDist_test/fast
+
+#=============================================================================
+# Target rules for targets named UniformDist_test
+
+# Build rule for target.
+UniformDist_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UniformDist_test
+.PHONY : UniformDist_test
+
+# fast build rule for target.
+UniformDist_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/tests/CMakeFiles/UniformDist_test.dir/build.make Test/tests/CMakeFiles/UniformDist_test.dir/build
+.PHONY : UniformDist_test/fast
 
 #=============================================================================
 # Target rules for targets named gtest_main
@@ -195,6 +221,87 @@ Modules/fast:
 	$(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/build
 .PHONY : Modules/fast
 
+Test/tests/NormalDist_test.o: Test/tests/NormalDist_test.cpp.o
+
+.PHONY : Test/tests/NormalDist_test.o
+
+# target to build an object file
+Test/tests/NormalDist_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o
+.PHONY : Test/tests/NormalDist_test.cpp.o
+
+Test/tests/NormalDist_test.i: Test/tests/NormalDist_test.cpp.i
+
+.PHONY : Test/tests/NormalDist_test.i
+
+# target to preprocess a source file
+Test/tests/NormalDist_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.i
+.PHONY : Test/tests/NormalDist_test.cpp.i
+
+Test/tests/NormalDist_test.s: Test/tests/NormalDist_test.cpp.s
+
+.PHONY : Test/tests/NormalDist_test.s
+
+# target to generate assembly for a file
+Test/tests/NormalDist_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.s
+.PHONY : Test/tests/NormalDist_test.cpp.s
+
+Test/tests/Reader_test.o: Test/tests/Reader_test.cpp.o
+
+.PHONY : Test/tests/Reader_test.o
+
+# target to build an object file
+Test/tests/Reader_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o
+.PHONY : Test/tests/Reader_test.cpp.o
+
+Test/tests/Reader_test.i: Test/tests/Reader_test.cpp.i
+
+.PHONY : Test/tests/Reader_test.i
+
+# target to preprocess a source file
+Test/tests/Reader_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.i
+.PHONY : Test/tests/Reader_test.cpp.i
+
+Test/tests/Reader_test.s: Test/tests/Reader_test.cpp.s
+
+.PHONY : Test/tests/Reader_test.s
+
+# target to generate assembly for a file
+Test/tests/Reader_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.s
+.PHONY : Test/tests/Reader_test.cpp.s
+
+Test/tests/UniformDist_test.o: Test/tests/UniformDist_test.cpp.o
+
+.PHONY : Test/tests/UniformDist_test.o
+
+# target to build an object file
+Test/tests/UniformDist_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o
+.PHONY : Test/tests/UniformDist_test.cpp.o
+
+Test/tests/UniformDist_test.i: Test/tests/UniformDist_test.cpp.i
+
+.PHONY : Test/tests/UniformDist_test.i
+
+# target to preprocess a source file
+Test/tests/UniformDist_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.i
+.PHONY : Test/tests/UniformDist_test.cpp.i
+
+Test/tests/UniformDist_test.s: Test/tests/UniformDist_test.cpp.s
+
+.PHONY : Test/tests/UniformDist_test.s
+
+# target to generate assembly for a file
+Test/tests/UniformDist_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.s
+.PHONY : Test/tests/UniformDist_test.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -230,11 +337,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Input_test"
 	@echo "... Modules"
+	@echo "... NormalDist_test"
+	@echo "... Reader_test"
+	@echo "... UniformDist_test"
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... monte_carlo_run"
+	@echo "... Test/tests/NormalDist_test.o"
+	@echo "... Test/tests/NormalDist_test.i"
+	@echo "... Test/tests/NormalDist_test.s"
+	@echo "... Test/tests/Reader_test.o"
+	@echo "... Test/tests/Reader_test.i"
+	@echo "... Test/tests/Reader_test.s"
+	@echo "... Test/tests/UniformDist_test.o"
+	@echo "... Test/tests/UniformDist_test.i"
+	@echo "... Test/tests/UniformDist_test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

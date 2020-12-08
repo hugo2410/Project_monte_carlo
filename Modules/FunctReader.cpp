@@ -27,10 +27,11 @@ void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &orde
     read_input >> b;
     read_input >> user_order;
     std::cout<< "order = "<<user_order<<std::endl;
+    order = user_order;
     if (order<0){
         throw OrderError();
     }
-    order = user_order;
+
     switch(functionType)
     {
         case 'P' :

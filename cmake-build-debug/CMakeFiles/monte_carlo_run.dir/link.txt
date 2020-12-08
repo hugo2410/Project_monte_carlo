@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/monte_carlo_run.dir/main.cpp.o  -o monte_carlo_run  Modules/libModules.a 
+/usr/bin/c++  -g   CMakeFiles/monte_carlo_run.dir/main.cpp.o CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o  -o monte_carlo_run  Modules/libModules.a 
