@@ -11,10 +11,27 @@
 
 class FunctReader : public AbstractReader {
 public:
+    /**
+     * \brief Default Constructor
+     */
     FunctReader();
+    /**
+     * \brief Default Destructor
+     */
     ~FunctReader();
+    /**
+     * \brief Abstrat function to Read file for distribution type and paramaters
+     * @param file
+     * @param pRandomVariable
+     */
     void read_file(const char *file,AbstractVariable* &pRandomVariable) override;
-    void read_file(const char* file, AbstractFunc* &pFunction) override;
+    /**
+     * \brief Read file for user function type and coefficients
+     * @param file : file name
+     * @param pFunction : Pointer to a user function
+     * @param order : Order defined by the user
+     */
+    void read_file(const char* file, AbstractFunc* &pFunction,int &order) override;
 };
 
 

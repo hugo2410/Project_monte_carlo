@@ -100,7 +100,7 @@ typeinfo
 iostream
 -
 
-/home/hugo/MA3/Project_monte_carlo/main.cpp
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/main.cpp
 iostream
 -
 cstring
@@ -120,19 +120,19 @@ FunctReader.h
 CentralLimitThm.h
 -
 AbstractReader.h
-/home/hugo/MA3/Project_monte_carlo/AbstractReader.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/AbstractReader.h
 AbstractFunc.h
-/home/hugo/MA3/Project_monte_carlo/AbstractFunc.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/AbstractFunc.h
 PolynomlFunc.h
-/home/hugo/MA3/Project_monte_carlo/PolynomlFunc.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/PolynomlFunc.h
 NormalReader.h
-/home/hugo/MA3/Project_monte_carlo/NormalReader.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/NormalReader.h
 UniformReader.h
-/home/hugo/MA3/Project_monte_carlo/UniformReader.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/UniformReader.h
 ExpFunc.h
-/home/hugo/MA3/Project_monte_carlo/ExpFunc.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/ExpFunc.h
 AbstractVariable.h
-/home/hugo/MA3/Project_monte_carlo/AbstractVariable.h
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/AbstractVariable.h
 AbstractError.hpp
-/home/hugo/MA3/Project_monte_carlo/AbstractError.hpp
+/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/AbstractError.hpp
 

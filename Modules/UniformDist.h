@@ -16,10 +16,13 @@ public:
     virtual double get_mean() const{ return mean;};
     virtual double get_var() const{ return var;};
     virtual int get_size() const{return uniformSamples.size(); }
+    virtual int get_initial_size() const { return initial_sample_size; }
+    //virtual void getMoreSamples(const int multiples) = 0;
 
 private:
     double mean;
     double var;
+    double initial_sample_size;
 protected:
     std::vector<double> uniformSamples;
 };

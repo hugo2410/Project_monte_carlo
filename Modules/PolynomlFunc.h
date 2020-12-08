@@ -12,7 +12,7 @@ class PolynomFunc: public AbstractFunc {
 public:
     PolynomFunc();
     ~PolynomFunc() override;
-    PolynomFunc(int a, int b, int o):AbstractFunc(a,b,o){}
+    PolynomFunc(int a, int b):AbstractFunc(a,b){}
     double evaluate(double x);
 };
 
