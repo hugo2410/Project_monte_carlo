@@ -20,6 +20,10 @@ AbstractError.hpp
 AbstractVariable.h
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
 
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.cpp
+AbstractReader.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.h
+
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.h
 AbstractError.hpp
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractError.hpp
@@ -32,13 +36,29 @@ AbstractFunc.h
 vector
 -
 
-/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.cpp
+/home/hugo/MA3/Project_monte_carlo/Modules/ExpFunc.h
+AbstractFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/FunctReader.cpp
 iostream
 -
-NormalDist.h
-/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.h
-random
-/home/hugo/MA3/Project_monte_carlo/Modules/random
+fstream
+-
+FunctReader.h
+/home/hugo/MA3/Project_monte_carlo/Modules/FunctReader.h
+PolynomlFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.h
+ExpFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/ExpFunc.h
+TrigoFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/FunctReader.h
+AbstractReader.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.h
+AbstractFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
 
 /home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.h
 vector
@@ -64,11 +84,13 @@ typeinfo
 iostream
 -
 
-/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.cpp
-random
--
-UniformDist.h
-/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.h
+/home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.h
+AbstractFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.h
+AbstractFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
 
 /home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.h
 AbstractVariable.h

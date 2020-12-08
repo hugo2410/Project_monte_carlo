@@ -24,6 +24,7 @@ public:
      * @param file
      * @param pRandomVariable
      */
+
     void read_file(const char *file,AbstractVariable* &pRandomVariable) override;
     /**
      * \brief Read file for user function type and coefficients
@@ -31,7 +32,8 @@ public:
      * @param pFunction : Pointer to a user function
      * @param order : Order defined by the user
      */
-    void read_file(const char* file, AbstractFunc* &pFunction,int &order) override;
+
+    void read_file(const char* file, AbstractFunc* &pFunction,int &order) ;
 };
 
 

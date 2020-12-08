@@ -9,8 +9,8 @@
 
 
 #define TEST_SIZE 100
-#define TEST_UPPER_BOUND 6.
-#define TEST_LOWER_BOUND 1.5
+#define TEST_UPPER_BOUND 6
+#define TEST_LOWER_BOUND 2
 
 
 class UniformDistFixture : public ::testing::Test

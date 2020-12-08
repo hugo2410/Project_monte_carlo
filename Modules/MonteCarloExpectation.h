@@ -14,34 +14,35 @@ class MonteCarloExpectation: public AbstractExpectation {
 public:
 
     /**
-     * \brief
+     * \brief Default constructor.
      */
     MonteCarloExpectation();
     /**
-     * \brief
+     * \brief Default Destructor.
      */
     ~MonteCarloExpectation();
     /**
-     * \brief
-     * @param pFunction
-     * @param pRandom
+     * \brief Constructor
+     *                  Defines the user's function and the expectation.
+     * @param pFunction Pointer to the user defined function.
+     * @param pRandom   Pointer to the previously defined distibution.
      */
     MonteCarloExpectation( AbstractFunc *pFunction,const AbstractVariable *pRandom);
     /**
-     * \brief
-     * @return
+     * \brief Returns the value of the previously computed expectation.
+     * @return The value of the expectation.
      */
     double getExpectation() const{ return monteCarloExpectation;};
     /**
-     * \brief
-     * @param pRandom
-     * @return
+     * \brief Computes the value of the expctetation for a given function depending on the distribution of pRandom.
+     * @param pRandom Pointer to the previously defined distibution.
+     * @return The value of the expectation.
      */
     double evaluateExpectation(const AbstractVariable *pRandom);
     /**
-     * \brief
-     * @param pRandom
-     * @return
+     * \brief Computes the mean of a given distribution.
+     * @param pRandom Pointer to the previously defined distibution.
+     * @return The value of the mean.
      */
     double computeMean( const AbstractVariable *pRandom);
 private:

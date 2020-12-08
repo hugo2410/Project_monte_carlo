@@ -27,7 +27,7 @@ double MonteCarloExpectation::evaluateExpectation( const AbstractVariable *pRand
 }
 double MonteCarloExpectation::computeMean( const AbstractVariable *pRandom){
         double sum = 0.;
-        double var =0.;
+
         for(int i=0;i<pRandom->get_size();++i){
             sum += pRandom->get_vector()[i];
         }

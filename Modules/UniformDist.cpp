@@ -3,6 +3,7 @@
 //
 
 #include <random>
+#include <iostream>
 #include "UniformDist.h"
 
 UniformDist::UniformDist(){}
@@ -12,6 +13,7 @@ UniformDist::UniformDist(const int N, const int a, const int b) : mean((a + b) /
 {
 
     std::default_random_engine generator(std::random_device{}());
+    std::cout<< mean<<std::endl;
     std::uniform_real_distribution<double> distribution(a,b);
     for (int i =0;i < N; ++i )
     {

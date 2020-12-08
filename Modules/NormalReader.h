@@ -15,9 +15,26 @@
 
 class NormalReader:public AbstractReader{
 public:
+    /**
+     * \brief: Default Constructor
+     */
     NormalReader();
+    /**
+     * \brief: Default Destructor
+     */
     ~NormalReader() override;
+    /**
+     *
+     * @param file
+     * @param pRandomNormal
+     */
     void read_file(const char *file,AbstractVariable* &pRandomNormal) override ;
+    /**
+     *
+     * @param file
+     * @param pFunction
+     * @param order
+     */
     void read_file(const char* file, AbstractFunc* &pFunction,int &order) override;
 };
 

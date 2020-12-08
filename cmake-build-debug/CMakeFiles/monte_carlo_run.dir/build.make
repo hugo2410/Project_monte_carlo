@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/137/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/137/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
+CMAKE_SOURCE_DIR = /home/hugo/MA3/Project_monte_carlo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
+CMAKE_BINARY_DIR = /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/monte_carlo_run.dir/depend.make
@@ -79,62 +79,76 @@ include CMakeFiles/monte_carlo_run.dir/flags.make
 
 CMakeFiles/monte_carlo_run.dir/main.cpp.o: CMakeFiles/monte_carlo_run.dir/flags.make
 CMakeFiles/monte_carlo_run.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/monte_carlo_run.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monte_carlo_run.dir/main.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/monte_carlo_run.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monte_carlo_run.dir/main.cpp.o -c /home/hugo/MA3/Project_monte_carlo/main.cpp
 
 CMakeFiles/monte_carlo_run.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monte_carlo_run.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/main.cpp > CMakeFiles/monte_carlo_run.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/MA3/Project_monte_carlo/main.cpp > CMakeFiles/monte_carlo_run.dir/main.cpp.i
 
 CMakeFiles/monte_carlo_run.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monte_carlo_run.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/main.cpp -o CMakeFiles/monte_carlo_run.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/MA3/Project_monte_carlo/main.cpp -o CMakeFiles/monte_carlo_run.dir/main.cpp.s
 
 CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o: CMakeFiles/monte_carlo_run.dir/flags.make
 CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o: ../Test/tests/NormalDist_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/tests/NormalDist_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o -c /home/hugo/MA3/Project_monte_carlo/Test/tests/NormalDist_test.cpp
 
 CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/tests/NormalDist_test.cpp > CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/MA3/Project_monte_carlo/Test/tests/NormalDist_test.cpp > CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.i
 
 CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/tests/NormalDist_test.cpp -o CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/MA3/Project_monte_carlo/Test/tests/NormalDist_test.cpp -o CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.s
 
 CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o: CMakeFiles/monte_carlo_run.dir/flags.make
 CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o: ../Test/tests/Reader_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/tests/Reader_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o -c /home/hugo/MA3/Project_monte_carlo/Test/tests/Reader_test.cpp
 
 CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/tests/Reader_test.cpp > CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/MA3/Project_monte_carlo/Test/tests/Reader_test.cpp > CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.i
 
 CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/tests/Reader_test.cpp -o CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/MA3/Project_monte_carlo/Test/tests/Reader_test.cpp -o CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.s
 
 CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o: CMakeFiles/monte_carlo_run.dir/flags.make
 CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o: ../Test/tests/UniformDist_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/tests/UniformDist_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o -c /home/hugo/MA3/Project_monte_carlo/Test/tests/UniformDist_test.cpp
 
 CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/tests/UniformDist_test.cpp > CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/MA3/Project_monte_carlo/Test/tests/UniformDist_test.cpp > CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.i
 
 CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/tests/UniformDist_test.cpp -o CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/MA3/Project_monte_carlo/Test/tests/UniformDist_test.cpp -o CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.s
+
+CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.o: CMakeFiles/monte_carlo_run.dir/flags.make
+CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.o: ../Test/tests/MonteCarloExpectation_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.o -c /home/hugo/MA3/Project_monte_carlo/Test/tests/MonteCarloExpectation_test.cpp
+
+CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/MA3/Project_monte_carlo/Test/tests/MonteCarloExpectation_test.cpp > CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.i
+
+CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/MA3/Project_monte_carlo/Test/tests/MonteCarloExpectation_test.cpp -o CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.s
 
 # Object files for target monte_carlo_run
 monte_carlo_run_OBJECTS = \
 "CMakeFiles/monte_carlo_run.dir/main.cpp.o" \
 "CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o" \
 "CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o" \
-"CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o"
+"CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o" \
+"CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.o"
 
 # External object files for target monte_carlo_run
 monte_carlo_run_EXTERNAL_OBJECTS =
@@ -143,10 +157,11 @@ monte_carlo_run: CMakeFiles/monte_carlo_run.dir/main.cpp.o
 monte_carlo_run: CMakeFiles/monte_carlo_run.dir/Test/tests/NormalDist_test.cpp.o
 monte_carlo_run: CMakeFiles/monte_carlo_run.dir/Test/tests/Reader_test.cpp.o
 monte_carlo_run: CMakeFiles/monte_carlo_run.dir/Test/tests/UniformDist_test.cpp.o
+monte_carlo_run: CMakeFiles/monte_carlo_run.dir/Test/tests/MonteCarloExpectation_test.cpp.o
 monte_carlo_run: CMakeFiles/monte_carlo_run.dir/build.make
 monte_carlo_run: Modules/libModules.a
 monte_carlo_run: CMakeFiles/monte_carlo_run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable monte_carlo_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable monte_carlo_run"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/monte_carlo_run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,6 +174,6 @@ CMakeFiles/monte_carlo_run.dir/clean:
 .PHONY : CMakeFiles/monte_carlo_run.dir/clean
 
 CMakeFiles/monte_carlo_run.dir/depend:
-	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/monte_carlo_run.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hugo/MA3/Project_monte_carlo /home/hugo/MA3/Project_monte_carlo /home/hugo/MA3/Project_monte_carlo/cmake-build-debug /home/hugo/MA3/Project_monte_carlo/cmake-build-debug /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/monte_carlo_run.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/monte_carlo_run.dir/depend
 

@@ -10,7 +10,15 @@
 
 class StatisticalMoment {
 public:
+    /**
+     * \brief: Default Constructor
+     */
     StatisticalMoment();
+    /**
+     * \brief Constructor
+     *        Define the function "aCos(bx)"
+     * @param pRandom
+     */
 
     StatisticalMoment(AbstractVariable *pRandom);
 
