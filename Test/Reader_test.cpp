@@ -13,10 +13,10 @@
 
 
 #define TEST_PATH_NO_FILE "a.txt"
-#define TEST_PATH_SIZE "../../TestVectSize.txt"
-#define TEST_PATH_VAR "../../TestNormalVar.txt"
-#define TEST_PATH_ORDER "../../TestOrder.txt"
-#define TEST_PATH_BOUND "../../TestBound.txt"
+#define TEST_PATH_SIZE "../TestVectSize.txt"
+#define TEST_PATH_VAR "../TestNormalVar.txt"
+#define TEST_PATH_ORDER "../TestOrder.txt"
+#define TEST_PATH_BOUND "../TestBound.txt"
 
 
 

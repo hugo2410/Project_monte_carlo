@@ -131,19 +131,145 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Test/CMakeFiles/Google_Tests_run.dir/rule:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/CMakeFiles/Google_Tests_run.dir/rule
-.PHONY : Test/CMakeFiles/Google_Tests_run.dir/rule
+Test/CMakeFiles/Reader_test.dir/rule:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/CMakeFiles/Reader_test.dir/rule
+.PHONY : Test/CMakeFiles/Reader_test.dir/rule
 
 # Convenience name for target.
-Google_Tests_run: Test/CMakeFiles/Google_Tests_run.dir/rule
+Reader_test: Test/CMakeFiles/Reader_test.dir/rule
 
-.PHONY : Google_Tests_run
+.PHONY : Reader_test
 
 # fast build rule for target.
-Google_Tests_run/fast:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Google_Tests_run.dir/build.make Test/CMakeFiles/Google_Tests_run.dir/build
-.PHONY : Google_Tests_run/fast
+Reader_test/fast:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Reader_test.dir/build.make Test/CMakeFiles/Reader_test.dir/build
+.PHONY : Reader_test/fast
+
+# Convenience name for target.
+Test/CMakeFiles/NormalDist_test.dir/rule:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/CMakeFiles/NormalDist_test.dir/rule
+.PHONY : Test/CMakeFiles/NormalDist_test.dir/rule
+
+# Convenience name for target.
+NormalDist_test: Test/CMakeFiles/NormalDist_test.dir/rule
+
+.PHONY : NormalDist_test
+
+# fast build rule for target.
+NormalDist_test/fast:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/NormalDist_test.dir/build.make Test/CMakeFiles/NormalDist_test.dir/build
+.PHONY : NormalDist_test/fast
+
+# Convenience name for target.
+Test/CMakeFiles/UniformDist_test.dir/rule:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/CMakeFiles/UniformDist_test.dir/rule
+.PHONY : Test/CMakeFiles/UniformDist_test.dir/rule
+
+# Convenience name for target.
+UniformDist_test: Test/CMakeFiles/UniformDist_test.dir/rule
+
+.PHONY : UniformDist_test
+
+# fast build rule for target.
+UniformDist_test/fast:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/UniformDist_test.dir/build.make Test/CMakeFiles/UniformDist_test.dir/build
+.PHONY : UniformDist_test/fast
+
+# Convenience name for target.
+Test/CMakeFiles/MonteCarloExpectation_test.dir/rule:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/CMakeFiles/MonteCarloExpectation_test.dir/rule
+.PHONY : Test/CMakeFiles/MonteCarloExpectation_test.dir/rule
+
+# Convenience name for target.
+MonteCarloExpectation_test: Test/CMakeFiles/MonteCarloExpectation_test.dir/rule
+
+.PHONY : MonteCarloExpectation_test
+
+# fast build rule for target.
+MonteCarloExpectation_test/fast:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/MonteCarloExpectation_test.dir/build.make Test/CMakeFiles/MonteCarloExpectation_test.dir/build
+.PHONY : MonteCarloExpectation_test/fast
+
+MonteCarloExpectation_test.o: MonteCarloExpectation_test.cpp.o
+
+.PHONY : MonteCarloExpectation_test.o
+
+# target to build an object file
+MonteCarloExpectation_test.cpp.o:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/MonteCarloExpectation_test.dir/build.make Test/CMakeFiles/MonteCarloExpectation_test.dir/MonteCarloExpectation_test.cpp.o
+.PHONY : MonteCarloExpectation_test.cpp.o
+
+MonteCarloExpectation_test.i: MonteCarloExpectation_test.cpp.i
+
+.PHONY : MonteCarloExpectation_test.i
+
+# target to preprocess a source file
+MonteCarloExpectation_test.cpp.i:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/MonteCarloExpectation_test.dir/build.make Test/CMakeFiles/MonteCarloExpectation_test.dir/MonteCarloExpectation_test.cpp.i
+.PHONY : MonteCarloExpectation_test.cpp.i
+
+MonteCarloExpectation_test.s: MonteCarloExpectation_test.cpp.s
+
+.PHONY : MonteCarloExpectation_test.s
+
+# target to generate assembly for a file
+MonteCarloExpectation_test.cpp.s:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/MonteCarloExpectation_test.dir/build.make Test/CMakeFiles/MonteCarloExpectation_test.dir/MonteCarloExpectation_test.cpp.s
+.PHONY : MonteCarloExpectation_test.cpp.s
+
+NormalDist_test.o: NormalDist_test.cpp.o
+
+.PHONY : NormalDist_test.o
+
+# target to build an object file
+NormalDist_test.cpp.o:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/NormalDist_test.dir/build.make Test/CMakeFiles/NormalDist_test.dir/NormalDist_test.cpp.o
+.PHONY : NormalDist_test.cpp.o
+
+NormalDist_test.i: NormalDist_test.cpp.i
+
+.PHONY : NormalDist_test.i
+
+# target to preprocess a source file
+NormalDist_test.cpp.i:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/NormalDist_test.dir/build.make Test/CMakeFiles/NormalDist_test.dir/NormalDist_test.cpp.i
+.PHONY : NormalDist_test.cpp.i
+
+NormalDist_test.s: NormalDist_test.cpp.s
+
+.PHONY : NormalDist_test.s
+
+# target to generate assembly for a file
+NormalDist_test.cpp.s:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/NormalDist_test.dir/build.make Test/CMakeFiles/NormalDist_test.dir/NormalDist_test.cpp.s
+.PHONY : NormalDist_test.cpp.s
+
+Reader_test.o: Reader_test.cpp.o
+
+.PHONY : Reader_test.o
+
+# target to build an object file
+Reader_test.cpp.o:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Reader_test.dir/build.make Test/CMakeFiles/Reader_test.dir/Reader_test.cpp.o
+.PHONY : Reader_test.cpp.o
+
+Reader_test.i: Reader_test.cpp.i
+
+.PHONY : Reader_test.i
+
+# target to preprocess a source file
+Reader_test.cpp.i:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Reader_test.dir/build.make Test/CMakeFiles/Reader_test.dir/Reader_test.cpp.i
+.PHONY : Reader_test.cpp.i
+
+Reader_test.s: Reader_test.cpp.s
+
+.PHONY : Reader_test.s
+
+# target to generate assembly for a file
+Reader_test.cpp.s:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Reader_test.dir/build.make Test/CMakeFiles/Reader_test.dir/Reader_test.cpp.s
+.PHONY : Reader_test.cpp.s
 
 UniformDist_test.o: UniformDist_test.cpp.o
 
@@ -151,7 +277,7 @@ UniformDist_test.o: UniformDist_test.cpp.o
 
 # target to build an object file
 UniformDist_test.cpp.o:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Google_Tests_run.dir/build.make Test/CMakeFiles/Google_Tests_run.dir/UniformDist_test.cpp.o
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/UniformDist_test.dir/build.make Test/CMakeFiles/UniformDist_test.dir/UniformDist_test.cpp.o
 .PHONY : UniformDist_test.cpp.o
 
 UniformDist_test.i: UniformDist_test.cpp.i
@@ -160,7 +286,7 @@ UniformDist_test.i: UniformDist_test.cpp.i
 
 # target to preprocess a source file
 UniformDist_test.cpp.i:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Google_Tests_run.dir/build.make Test/CMakeFiles/Google_Tests_run.dir/UniformDist_test.cpp.i
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/UniformDist_test.dir/build.make Test/CMakeFiles/UniformDist_test.dir/UniformDist_test.cpp.i
 .PHONY : UniformDist_test.cpp.i
 
 UniformDist_test.s: UniformDist_test.cpp.s
@@ -169,7 +295,7 @@ UniformDist_test.s: UniformDist_test.cpp.s
 
 # target to generate assembly for a file
 UniformDist_test.cpp.s:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Google_Tests_run.dir/build.make Test/CMakeFiles/Google_Tests_run.dir/UniformDist_test.cpp.s
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/UniformDist_test.dir/build.make Test/CMakeFiles/UniformDist_test.dir/UniformDist_test.cpp.s
 .PHONY : UniformDist_test.cpp.s
 
 # Help Target
@@ -180,7 +306,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Google_Tests_run"
+	@echo "... MonteCarloExpectation_test"
+	@echo "... NormalDist_test"
+	@echo "... Reader_test"
+	@echo "... UniformDist_test"
+	@echo "... MonteCarloExpectation_test.o"
+	@echo "... MonteCarloExpectation_test.i"
+	@echo "... MonteCarloExpectation_test.s"
+	@echo "... NormalDist_test.o"
+	@echo "... NormalDist_test.i"
+	@echo "... NormalDist_test.s"
+	@echo "... Reader_test.o"
+	@echo "... Reader_test.i"
+	@echo "... Reader_test.s"
 	@echo "... UniformDist_test.o"
 	@echo "... UniformDist_test.i"
 	@echo "... UniformDist_test.s"

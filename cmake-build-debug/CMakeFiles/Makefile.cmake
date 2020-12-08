@@ -63,7 +63,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/monte_carlo_run.dir/DependInfo.cmake"
-  "Test/CMakeFiles/Google_Tests_run.dir/DependInfo.cmake"
+  "Test/CMakeFiles/Reader_test.dir/DependInfo.cmake"
+  "Test/CMakeFiles/NormalDist_test.dir/DependInfo.cmake"
+  "Test/CMakeFiles/UniformDist_test.dir/DependInfo.cmake"
+  "Test/CMakeFiles/MonteCarloExpectation_test.dir/DependInfo.cmake"
   "Test/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "Test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "Modules/CMakeFiles/Modules.dir/DependInfo.cmake"
