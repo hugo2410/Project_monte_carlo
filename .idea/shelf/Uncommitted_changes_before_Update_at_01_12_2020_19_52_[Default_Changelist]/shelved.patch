@@ -1,0 +1,1198 @@
+Index: Modules/ExpFunc.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\n// Created by hugo on 28/11/2020.\n//\n\n#include \"ExpFunc.h\"\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Modules/ExpFunc.cpp	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ Modules/ExpFunc.cpp	(date 1606600158938)
+@@ -2,4 +2,19 @@
+ // Created by hugo on 28/11/2020.
+ //
+ 
++#include <iostream>
++#include <math.h>
+ #include "ExpFunc.h"
++
++
++ExpFunc::ExpFunc()  {}
++ExpFunc::~ExpFunc() {}
++
++ExpFunc::ExpFunc(int a, int b):coef_a(a),coef_b(b){
++    std::cout<< "You have built the following exponential function: "<< coef_b<<"* e^( + "<<coef_a<<"* x) "<<std::endl;
++
++}
++
++double ExpFunc:: evaluate(double x){
++    return coef_b*exp(coef_a*x);
++};
+\ No newline at end of file
+Index: Modules/ExpFunc.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\n// Created by hugo on 28/11/2020.\n//\n\n#ifndef PROJECT_MONTE_CARLO_EXPFUNC_H\n#define PROJECT_MONTE_CARLO_EXPFUNC_H\n\n#include \"AbstractFunc.h\"\n\nclass ExpFunc : public AbstractFunc{\npublic:\n    ExpFunc();\n    ~ExpFunc();\n    void build();\n    double evaluate(double x);\n};\n\n\n#endif //PROJECT_MONTE_CARLO_EXPFUNC_H\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Modules/ExpFunc.h	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ Modules/ExpFunc.h	(date 1606600158950)
+@@ -11,8 +11,14 @@
+ public:
+     ExpFunc();
+     ~ExpFunc();
+-    void build();
++    ExpFunc(int a, int b);
+     double evaluate(double x);
++
++
++private:
++    int coef_a;
++    int coef_b;
++
+ };
+ 
+ 
+Index: main.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*!\n *\n * main.cpp\n *\n *  Created on: Nov 24, 2020\n * \t   Authors: Akeddar Mehdi <mehdi.akeddar@epfl.ch> &\n * \t            Birch Hugo <hugo.birchd@epfl.ch>\n */\n\n#include <iostream>\n#include <cstring>\n#include <string>\n#include <MonteCarloExpectation.h>\n#include <AbstractExpectation.h>\n#include <NormalDist.h>\n\n#include \"AbstractReader.h\"\n#include \"AbstractFunc.h\"\n#include \"PolynomlFunc.h\"\n#include \"NormalReader.h\"\n#include \"UniformReader.h\"\n#include \"AbstractVariable.h\"\n#include \"Error.hpp\"\n\nusing namespace std;\n\nint main(int argc, char *argv[]) {\n/*\n    const char *file_name;\n    const char *dist_type;\n    AbstractVariable *pRandom = 0;\n    string file;\n    string input;\n    AbstractReader *pReader;\n    //AbstractFunc *pFunction;\n\n    if(argc == 3){\n\n        file_name = argv[1];\n        dist_type = argv[2];\n        if( strcmp(dist_type , \"N\") == 0 ) {\n            pReader = new NormalReader;\n        }\n        else if(strcmp(dist_type , \"U\") == 0)\n                pReader = new UniformReader;\n        else{\n            string input;\n            cerr << \"Wrong distribution type. Please refer to README\" << endl;\n            cout << \"Please enter the of the two distribution types: [U/N] \" << endl;\n            cin >> input;\n\n            if (input == \"U\")\n                pReader = new UniformReader;\n            else if (input == \"N\")\n                pReader = new NormalReader;\n            else{\n                cerr << \"Input invalid !\" << endl;\n                return -1;\n            }\n\n        }\n    }\n    if (argc < 3 ) {\n        if (argc == 1){\n\n            cerr << \"Missing File name to read from. Please refer to README\" << endl;\n            cout << \"Please enter the file name: \" << endl;\n            cin >> file;\n            if(file == \"\"){\n                cerr << \"You pressed enter without typing anything\" << endl;\n                return -1;\n            }\n            file_name = file.c_str();\n            argc = 2;\n\n        }if (argc == 2) {\n\n            cerr << \"Missing distribution type. Please refer to README\" << endl;\n            cout << \"Please enter the distribution type: [U/N] \" << endl;\n            cin >> input;\n            if (input == \"U\")\n                pReader = new UniformReader;\n            else if (input == \"N\")\n                pReader = new NormalReader;\n            else {\n                cerr << \"Input invalid !\" << endl;\n                return -1;\n            }\n        }\n    }\n    cout<< \"file = \"<< file_name<< endl;\n    try{\n        pReader->read_file(file_name,pRandom);\n    }catch(Error& e){\n        cerr << \"Exception thrown: \" << e.getErrorTag() << e.what() << endl;\n        return -1;\n    }\n    delete pReader;*/\n    AbstractVariable *pRandom = 0;\n\n    AbstractFunc *pFunction = 0;\n    AbstractExpectation *pExpectation = 0;\n    pRandom = new NormalDist(3,0,3);\n    for(int i =0; i<3;++i)\n        cout << pRandom->get_vector()[i] << endl;\n    pFunction = new PolynomlFunc(1,2,3);\n    pExpectation = new MonteCarloExpectation(pFunction,pRandom);\n    //Calculer l'expectation selon le pRandom\n    //pFunction = new PolynomlFunc(1,2,3);\n    cout << pExpectation->getExpectation() << endl;\n\n    return 0;\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- main.cpp	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ main.cpp	(date 1606600220058)
+@@ -19,6 +19,7 @@
+ #include "PolynomlFunc.h"
+ #include "NormalReader.h"
+ #include "UniformReader.h"
++#include "ExpFunc.h"
+ #include "AbstractVariable.h"
+ #include "Error.hpp"
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"CMakeRunConfigurationManager\" shouldGenerate=\"true\" shouldDeleteObsolete=\"true\">\n    <generated>\n      <config projectName=\"Project_Monte_carlo\" targetName=\"Modules\" />\n      <config projectName=\"Project_Monte_carlo\" targetName=\"gtest\" />\n      <config projectName=\"Project_Monte_carlo\" targetName=\"Input_test\" />\n      <config projectName=\"Project_Monte_carlo\" targetName=\"gtest_main\" />\n      <config projectName=\"Project_Monte_carlo\" targetName=\"monte_carlo_run\" />\n    </generated>\n  </component>\n  <component name=\"CMakeSettings\">\n    <configurations>\n      <configuration PROFILE_NAME=\"Debug\" CONFIG_NAME=\"Debug\" />\n    </configurations>\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"29280ede-bff2-4e7a-8182-6ac519fa5ecf\" name=\"Default Changelist\" comment=\"added test\">\n      <change afterPath=\"$PROJECT_DIR$/Modules/AbstractExpectation.cpp\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Modules/AbstractExpectation.h\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Modules/MonteCarloExpectation.cpp\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Modules/MonteCarloExpectation.h\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/CMakeLists.txt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/CMakeLists.txt\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Modules/AbstractVariable.h\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Modules/AbstractVariable.h\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Modules/CMakeLists.txt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Modules/CMakeLists.txt\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Modules/NormalDist.cpp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Modules/NormalDist.cpp\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Modules/NormalDist.h\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Modules/NormalDist.h\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Modules/NormalReader.cpp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Modules/NormalReader.cpp\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Modules/UniformDist.h\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Modules/UniformDist.h\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/Makefile\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/Makefile\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/main.cpp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main.cpp\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ClangdSettings\">\n    <option name=\"formatViaClangd\" value=\"false\" />\n  </component>\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"CMakeBuildProfile:Debug\" />\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CMakeLists.txt\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"OCResolveContextSettings\">\n    <option name=\"configuration\" value=\"0-Debug-Modules\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1kk6lZRK0tzrcU0oPy5QrmrHntU\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"cf.first.check.clang-format\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/cmake-build-debug/Test/basic_tests/Input_test\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"terminal\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/cmake-build-debug\" />\n    </key>\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"CMake Application.monte_carlo_run\">\n    <configuration name=\"Input_test\" type=\"CMakeGoogleTestRunConfigurationType\" factoryName=\"Google Test\" REDIRECT_INPUT=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"Project_Monte_carlo\" TARGET_NAME=\"Input_test\" CONFIG_NAME=\"Debug\" RUN_TARGET_PROJECT_NAME=\"Project_Monte_carlo\" RUN_TARGET_NAME=\"Input_test\" TEST_MODE=\"SUITE_TEST\">\n      <method v=\"2\">\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\n        <option name=\"BeforeTestRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Modules\" type=\"CMakeRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"Project_Monte_carlo\" TARGET_NAME=\"Modules\" CONFIG_NAME=\"Debug\">\n      <method v=\"2\">\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"CMakeRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" PASS_PARENT_ENVS_2=\"true\">\n      <method v=\"2\">\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"gtest\" type=\"CMakeRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"Project_Monte_carlo\" TARGET_NAME=\"gtest\" CONFIG_NAME=\"Debug\">\n      <method v=\"2\">\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"gtest_main\" type=\"CMakeRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"Project_Monte_carlo\" TARGET_NAME=\"gtest_main\" CONFIG_NAME=\"Debug\">\n      <method v=\"2\">\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"monte_carlo_run\" type=\"CMakeRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"Project_Monte_carlo\" TARGET_NAME=\"monte_carlo_run\" CONFIG_NAME=\"Debug\" RUN_TARGET_PROJECT_NAME=\"Project_Monte_carlo\" RUN_TARGET_NAME=\"monte_carlo_run\">\n      <method v=\"2\">\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"test\" type=\"CMakeRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" WORKING_DIR=\"file://$PROJECT_DIR$\" PASS_PARENT_ENVS_2=\"true\" CONFIG_NAME=\"Debug\" RUN_PATH=\"$PROJECT_DIR$/cmake-build-debug/Test/basic_tests/Input_test\" EXPLICIT_BUILD_TARGET_NAME=\"all\">\n      <method v=\"2\">\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"GradleAppRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" PASS_PARENT_ENVS_2=\"true\">\n      <method v=\"2\">\n        <option name=\"com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <list>\n      <item itemvalue=\"CMake Application.monte_carlo_run\" />\n      <item itemvalue=\"CMake Application.Modules\" />\n      <item itemvalue=\"CMake Application.gtest\" />\n      <item itemvalue=\"CMake Application.gtest_main\" />\n      <item itemvalue=\"CMake Application.test\" />\n      <item itemvalue=\"Google Test.Input_test\" />\n    </list>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"29280ede-bff2-4e7a-8182-6ac519fa5ecf\" name=\"Default Changelist\" comment=\"\" />\n      <created>1606232396522</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1606232396522</updated>\n      <workItem from=\"1606232400806\" duration=\"3663000\" />\n      <workItem from=\"1606238314808\" duration=\"63000\" />\n      <workItem from=\"1606323398421\" duration=\"3009000\" />\n      <workItem from=\"1606326886474\" duration=\"621000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Initial commit\">\n      <created>1606232472143</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1606232472143</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Added folders and comments for doxygen\">\n      <created>1606238077384</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1606238077384</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Added folders and comments for doxygen\">\n      <created>1606255202718</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1606255202719</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Removed Hello world\">\n      <created>1606255269232</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1606255269232</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"probleme prints\">\n      <created>1606326096253</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1606326096254</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Cmake for boost\">\n      <created>1606586632631</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1606586632631</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Cmake for boost update\">\n      <created>1606587463193</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1606587463193</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"added test\">\n      <created>1606587614954</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1606587614954</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"9\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <ignored-roots>\n      <path value=\"$PROJECT_DIR$/..\" />\n    </ignored-roots>\n    <MESSAGE value=\"Initial commit\" />\n    <MESSAGE value=\"Added folders and comments for doxygen\" />\n    <MESSAGE value=\"Removed Hello world\" />\n    <MESSAGE value=\"probleme prints\" />\n    <MESSAGE value=\"Cmake for boost\" />\n    <MESSAGE value=\"Cmake for boost update\" />\n    <MESSAGE value=\"added test\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"added test\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"458\" y=\"162\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1606588203438\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"458\" y=\"162\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606588203438\" />\n    <state x=\"652\" y=\"354\" width=\"672\" height=\"396\" key=\"#com.intellij.fileTypes.FileTypeChooser\" timestamp=\"1606325198379\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state x=\"652\" y=\"354\" width=\"672\" height=\"396\" key=\"#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606325198379\" />\n    <state x=\"726\" y=\"301\" width=\"524\" height=\"502\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog\" timestamp=\"1606325194378\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state x=\"726\" y=\"301\" width=\"524\" height=\"502\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606325194378\" />\n    <state x=\"536\" y=\"98\" width=\"916\" height=\"898\" key=\"CommitChangelistDialog2\" timestamp=\"1606238144394\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"536\" y=\"98\" width=\"916\" height=\"898\" key=\"CommitChangelistDialog2/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606238144394\" />\n    <state x=\"813\" y=\"311\" width=\"424\" height=\"496\" key=\"FileChooserDialogImpl\" timestamp=\"1606588201424\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"813\" y=\"311\" width=\"424\" height=\"496\" key=\"FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606588201424\" />\n    <state width=\"1807\" height=\"278\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1606600079071\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state width=\"1807\" height=\"278\" key=\"GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606600079071\" />\n    <state width=\"1802\" height=\"256\" key=\"GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606596439592\" />\n    <state width=\"1807\" height=\"278\" key=\"GridCell.Tab.0.center\" timestamp=\"1606600079070\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state width=\"1807\" height=\"278\" key=\"GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606600079070\" />\n    <state width=\"1802\" height=\"256\" key=\"GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606596439591\" />\n    <state width=\"1807\" height=\"278\" key=\"GridCell.Tab.0.left\" timestamp=\"1606600079069\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state width=\"1807\" height=\"278\" key=\"GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606600079069\" />\n    <state width=\"1802\" height=\"256\" key=\"GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606596439591\" />\n    <state width=\"1807\" height=\"278\" key=\"GridCell.Tab.0.right\" timestamp=\"1606600079071\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state width=\"1807\" height=\"278\" key=\"GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606600079071\" />\n    <state width=\"1802\" height=\"256\" key=\"GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606596439591\" />\n    <state width=\"1807\" height=\"344\" key=\"GridCell.Tab.1.bottom\" timestamp=\"1606326339704\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state width=\"1807\" height=\"344\" key=\"GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606326339704\" />\n    <state width=\"1807\" height=\"344\" key=\"GridCell.Tab.1.center\" timestamp=\"1606326339704\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state width=\"1807\" height=\"344\" key=\"GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606326339704\" />\n    <state width=\"1807\" height=\"344\" key=\"GridCell.Tab.1.left\" timestamp=\"1606326339704\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state width=\"1807\" height=\"344\" key=\"GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606326339704\" />\n    <state width=\"1807\" height=\"344\" key=\"GridCell.Tab.1.right\" timestamp=\"1606326339704\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state width=\"1807\" height=\"344\" key=\"GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606326339704\" />\n    <state x=\"519\" y=\"218\" width=\"1016\" height=\"742\" key=\"SettingsEditor\" timestamp=\"1606593961419\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"519\" y=\"218\" width=\"1016\" height=\"742\" key=\"SettingsEditor/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606593961419\" />\n    <state x=\"594\" y=\"247\" width=\"800\" height=\"540\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1606587620558\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"590\" y=\"262\" key=\"Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606326099880\" />\n    <state x=\"594\" y=\"247\" width=\"800\" height=\"540\" key=\"Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606587620558\" />\n    <state x=\"780\" y=\"431\" width=\"438\" height=\"182\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1606587451497\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"777\" y=\"441\" width=\"438\" height=\"182\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606393382141\" />\n    <state x=\"780\" y=\"431\" width=\"431\" height=\"182\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606587451497\" />\n    <state x=\"772\" y=\"338\" width=\"432\" height=\"429\" key=\"refactoring.ChangeSignatureDialog\" timestamp=\"1606597368165\">\n      <screen x=\"67\" y=\"27\" width=\"1853\" height=\"1053\" />\n    </state>\n    <state x=\"772\" y=\"338\" width=\"432\" height=\"429\" key=\"refactoring.ChangeSignatureDialog/67.27.1853.1053@67.27.1853.1053\" timestamp=\"1606597368165\" />\n    <state x=\"660\" y=\"249\" key=\"run.anything.popup\" timestamp=\"1606326937389\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"660\" y=\"249\" key=\"run.anything.popup/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1606326937389\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ .idea/workspace.xml	(date 1606848745733)
+@@ -34,25 +34,16 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="added test">
+-      <change afterPath="$PROJECT_DIR$/Modules/AbstractExpectation.cpp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Modules/AbstractExpectation.h" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Modules/MonteCarloExpectation.cpp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Modules/MonteCarloExpectation.h" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Modules/AbstractVariable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractVariable.h" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Modules/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/CMakeLists.txt" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Modules/NormalDist.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalDist.cpp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Modules/NormalDist.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalDist.h" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Modules/NormalReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalReader.cpp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Modules/UniformDist.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformDist.h" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Modules/ExpFunc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/ExpFunc.cpp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Modules/ExpFunc.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/ExpFunc.h" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Modules/TrigoFunc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/TrigoFunc.cpp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Modules/TrigoFunc.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/TrigoFunc.h" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+@@ -109,18 +100,18 @@
+     </key>
+   </component>
+   <component name="RunManager" selected="CMake Application.monte_carlo_run">
+-    <configuration name="Input_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Input_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="Input_test" TEST_MODE="SUITE_TEST">
++    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+       <method v="2">
+-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+-        <option name="BeforeTestRunTask" enabled="true" />
++        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Modules" CONFIG_NAME="Debug">
++    <configuration name="Input_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Input_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="Input_test" TEST_MODE="SUITE_TEST">
+       <method v="2">
+         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
++        <option name="BeforeTestRunTask" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
++    <configuration name="Modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Modules" CONFIG_NAME="Debug">
+       <method v="2">
+         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+       </method>
+@@ -171,6 +162,7 @@
+       <workItem from="1606238314808" duration="63000" />
+       <workItem from="1606323398421" duration="3009000" />
+       <workItem from="1606326886474" duration="621000" />
++      <workItem from="1606723692424" duration="1697000" />
+     </task>
+     <task id="LOCAL-00001" summary="Initial commit">
+       <created>1606232472143</created>
+@@ -280,26 +272,26 @@
+       <screen x="72" y="27" width="1848" height="1053" />
+     </state>
+     <state x="813" y="311" width="424" height="496" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1606588201424" />
+-    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1606600079071">
+-      <screen x="67" y="27" width="1853" height="1053" />
++    <state width="1802" height="256" key="GridCell.Tab.0.bottom" timestamp="1606600222161">
++      <screen x="72" y="27" width="1848" height="1053" />
+     </state>
+     <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1606600079071" />
+-    <state width="1802" height="256" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439592" />
+-    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1606600079070">
+-      <screen x="67" y="27" width="1853" height="1053" />
++    <state width="1802" height="256" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1606600222161" />
++    <state width="1802" height="256" key="GridCell.Tab.0.center" timestamp="1606600222161">
++      <screen x="72" y="27" width="1848" height="1053" />
+     </state>
+     <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1606600079070" />
+-    <state width="1802" height="256" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
+-    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1606600079069">
+-      <screen x="67" y="27" width="1853" height="1053" />
++    <state width="1802" height="256" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1606600222161" />
++    <state width="1802" height="256" key="GridCell.Tab.0.left" timestamp="1606600222160">
++      <screen x="72" y="27" width="1848" height="1053" />
+     </state>
+     <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1606600079069" />
+-    <state width="1802" height="256" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
+-    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1606600079071">
+-      <screen x="67" y="27" width="1853" height="1053" />
++    <state width="1802" height="256" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1606600222160" />
++    <state width="1802" height="256" key="GridCell.Tab.0.right" timestamp="1606600222161">
++      <screen x="72" y="27" width="1848" height="1053" />
+     </state>
+     <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1606600079071" />
+-    <state width="1802" height="256" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1606596439591" />
++    <state width="1802" height="256" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1606600222161" />
+     <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1606326339704">
+       <screen x="67" y="27" width="1853" height="1053" />
+     </state>
+Index: cmake-build-debug/CMakeFiles/clion-log.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/app/extra/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G \"CodeBlocks - Unix Makefiles\" /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo\nCMake Warning at Test/lib/googletest/CMakeLists.txt:54 (project):\n  VERSION keyword not followed by a value or was followed by a value that\n  expanded to nothing.\n\n\n-- Configuring done\n-- Generating done\n-- Build files have been written to: /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- cmake-build-debug/CMakeFiles/clion-log.txt	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ cmake-build-debug/CMakeFiles/clion-log.txt	(date 1606723697556)
+@@ -1,4 +1,4 @@
+-/app/extra/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
++/snap/clion/135/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/hugo/MA3/Project_monte_carlo
+ CMake Warning at Test/lib/googletest/CMakeLists.txt:54 (project):
+   VERSION keyword not followed by a value or was followed by a value that
+   expanded to nothing.
+@@ -6,4 +6,4 @@
+ 
+ -- Configuring done
+ -- Generating done
+--- Build files have been written to: /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
++-- Build files have been written to: /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
+Index: cmake-build-debug/CMakeFiles/TargetDirectories.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/rebuild_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/edit_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/monte_carlo_run.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/CMakeFiles/rebuild_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/CMakeFiles/edit_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/CMakeFiles/rebuild_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/CMakeFiles/edit_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/CMakeFiles/Input_test.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/rebuild_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/edit_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/rebuild_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/edit_cache.dir\n/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- cmake-build-debug/CMakeFiles/TargetDirectories.txt	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ cmake-build-debug/CMakeFiles/TargetDirectories.txt	(date 1606723695704)
+@@ -1,15 +1,15 @@
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/edit_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/monte_carlo_run.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/CMakeFiles/rebuild_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/CMakeFiles/edit_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/CMakeFiles/rebuild_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/CMakeFiles/edit_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/CMakeFiles/Input_test.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/rebuild_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/edit_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/rebuild_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/edit_cache.dir
+-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/edit_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/monte_carlo_run.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/CMakeFiles/rebuild_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/CMakeFiles/edit_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/CMakeFiles/rebuild_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/CMakeFiles/edit_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/CMakeFiles/Input_test.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/rebuild_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/edit_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/rebuild_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/edit_cache.dir
++/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir
+Index: Modules/TrigoFunc.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\n// Created by hugo on 28/11/2020.\n//\n\n#include \"TrigoFunc.h\"\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Modules/TrigoFunc.cpp	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ Modules/TrigoFunc.cpp	(date 1606600158914)
+@@ -2,4 +2,19 @@
+ // Created by hugo on 28/11/2020.
+ //
+ 
++#include <iostream>
++#include <math.h>
++
+ #include "TrigoFunc.h"
++
++TrigoFunc::TrigoFunc() {}
++TrigoFunc::~TrigoFunc() {}
++
++TrigoFunc::TrigoFunc(int a, int b):coef_a(a),coef_b(b){
++    std::cout<< "You have built the following polynomial: "<< coef_a<<"* cos( + "<<coef_b<<"* x ) "<<std::endl;
++
++}
++
++double TrigoFunc:: evaluate(double x){
++    return coef_a*cos(coef_b*x) ;
++};
+\ No newline at end of file
+Index: Modules/TrigoFunc.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\n// Created by hugo on 28/11/2020.\n//\n\n#ifndef PROJECT_MONTE_CARLO_TRIGOFUNC_H\n#define PROJECT_MONTE_CARLO_TRIGOFUNC_H\n\n#include \"AbstractFunc.h\"\n\nclass TrigoFunc:public AbstractFunc {\npublic:\n    TrigoFunc();\n    ~TrigoFunc() override;\n    void build();\n    double evaluate(double x) override ;\n\n};\n\n\n#endif //PROJECT_MONTE_CARLO_TRIGOFUNC_H\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Modules/TrigoFunc.h	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ Modules/TrigoFunc.h	(date 1606600158930)
+@@ -11,9 +11,12 @@
+ public:
+     TrigoFunc();
+     ~TrigoFunc() override;
+-    void build();
++    TrigoFunc(int a, int b);
+     double evaluate(double x) override ;
+ 
++private:
++    int coef_a;
++    int coef_b;
+ };
+ 
+ 
+Index: cmake-build-debug/CMakeFiles/Makefile2
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 3.17\n\n# Default target executed when no arguments are given to make.\ndefault_target: all\n\n.PHONY : default_target\n\n#=============================================================================\n# Special targets provided by cmake.\n\n# Disable implicit rules so canonical targets will work.\n.SUFFIXES:\n\n\n# Disable VCS-based implicit rules.\n% : %,v\n\n\n# Disable VCS-based implicit rules.\n% : RCS/%\n\n\n# Disable VCS-based implicit rules.\n% : RCS/%,v\n\n\n# Disable VCS-based implicit rules.\n% : SCCS/s.%\n\n\n# Disable VCS-based implicit rules.\n% : s.%\n\n\n.SUFFIXES: .hpux_make_needs_suffix_list\n\n\n# Command-line flag to silence nested $(MAKE).\n$(VERBOSE)MAKESILENT = -s\n\n# Suppress display of executed commands.\n$(VERBOSE).SILENT:\n\n\n# A target that is always out of date.\ncmake_force:\n\n.PHONY : cmake_force\n\n#=============================================================================\n# Set environment variables for the build.\n\n# The shell in which to execute make rules.\nSHELL = /bin/sh\n\n# The CMake executable.\nCMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake\n\n# The command to remove a file.\nRM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f\n\n# Escaping for special characters.\nEQUALS = =\n\n# The top-level source directory on which CMake was run.\nCMAKE_SOURCE_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo\n\n# The top-level build directory on which CMake was run.\nCMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug\n\n#=============================================================================\n# Directory level rules for the build root directory\n\n# The main recursive \"all\" target.\nall: CMakeFiles/monte_carlo_run.dir/all\nall: Test/all\nall: Modules/all\n\n.PHONY : all\n\n# The main recursive \"preinstall\" target.\npreinstall: Test/preinstall\npreinstall: Modules/preinstall\n\n.PHONY : preinstall\n\n# The main recursive \"clean\" target.\nclean: CMakeFiles/monte_carlo_run.dir/clean\nclean: Test/clean\nclean: Modules/clean\n\n.PHONY : clean\n\n#=============================================================================\n# Directory level rules for directory Modules\n\n# Recursive \"all\" directory target.\nModules/all: Modules/CMakeFiles/Modules.dir/all\n\n.PHONY : Modules/all\n\n# Recursive \"preinstall\" directory target.\nModules/preinstall:\n\n.PHONY : Modules/preinstall\n\n# Recursive \"clean\" directory target.\nModules/clean: Modules/CMakeFiles/Modules.dir/clean\n\n.PHONY : Modules/clean\n\n#=============================================================================\n# Directory level rules for directory Test\n\n# Recursive \"all\" directory target.\nTest/all: Test/basic_tests/all\nTest/all: Test/lib/googletest/all\n\n.PHONY : Test/all\n\n# Recursive \"preinstall\" directory target.\nTest/preinstall: Test/basic_tests/preinstall\nTest/preinstall: Test/lib/googletest/preinstall\n\n.PHONY : Test/preinstall\n\n# Recursive \"clean\" directory target.\nTest/clean: Test/basic_tests/clean\nTest/clean: Test/lib/googletest/clean\n\n.PHONY : Test/clean\n\n#=============================================================================\n# Directory level rules for directory Test/basic_tests\n\n# Recursive \"all\" directory target.\nTest/basic_tests/all: Test/basic_tests/CMakeFiles/Input_test.dir/all\n\n.PHONY : Test/basic_tests/all\n\n# Recursive \"preinstall\" directory target.\nTest/basic_tests/preinstall:\n\n.PHONY : Test/basic_tests/preinstall\n\n# Recursive \"clean\" directory target.\nTest/basic_tests/clean: Test/basic_tests/CMakeFiles/Input_test.dir/clean\n\n.PHONY : Test/basic_tests/clean\n\n#=============================================================================\n# Directory level rules for directory Test/lib/googletest\n\n# Recursive \"all\" directory target.\nTest/lib/googletest/all: Test/lib/googletest/CMakeFiles/gtest_main.dir/all\nTest/lib/googletest/all: Test/lib/googletest/CMakeFiles/gtest.dir/all\n\n.PHONY : Test/lib/googletest/all\n\n# Recursive \"preinstall\" directory target.\nTest/lib/googletest/preinstall:\n\n.PHONY : Test/lib/googletest/preinstall\n\n# Recursive \"clean\" directory target.\nTest/lib/googletest/clean: Test/lib/googletest/CMakeFiles/gtest_main.dir/clean\nTest/lib/googletest/clean: Test/lib/googletest/CMakeFiles/gtest.dir/clean\n\n.PHONY : Test/lib/googletest/clean\n\n#=============================================================================\n# Target rules for target CMakeFiles/monte_carlo_run.dir\n\n# All Build rule for target.\nCMakeFiles/monte_carlo_run.dir/all: Modules/CMakeFiles/Modules.dir/all\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/depend\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/build\n\t@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=19,20 \"Built target monte_carlo_run\"\n.PHONY : CMakeFiles/monte_carlo_run.dir/all\n\n# Build rule for subdir invocation for target.\nCMakeFiles/monte_carlo_run.dir/rule: cmake_check_build_system\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 14\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/monte_carlo_run.dir/all\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0\n.PHONY : CMakeFiles/monte_carlo_run.dir/rule\n\n# Convenience name for target.\nmonte_carlo_run: CMakeFiles/monte_carlo_run.dir/rule\n\n.PHONY : monte_carlo_run\n\n# clean rule for target.\nCMakeFiles/monte_carlo_run.dir/clean:\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/clean\n.PHONY : CMakeFiles/monte_carlo_run.dir/clean\n\n#=============================================================================\n# Target rules for target Test/basic_tests/CMakeFiles/Input_test.dir\n\n# All Build rule for target.\nTest/basic_tests/CMakeFiles/Input_test.dir/all: Test/lib/googletest/CMakeFiles/gtest_main.dir/all\nTest/basic_tests/CMakeFiles/Input_test.dir/all: Test/lib/googletest/CMakeFiles/gtest.dir/all\nTest/basic_tests/CMakeFiles/Input_test.dir/all: Modules/CMakeFiles/Modules.dir/all\n\t$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Input_test.dir/build.make Test/basic_tests/CMakeFiles/Input_test.dir/depend\n\t$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Input_test.dir/build.make Test/basic_tests/CMakeFiles/Input_test.dir/build\n\t@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=1,2 \"Built target Input_test\"\n.PHONY : Test/basic_tests/CMakeFiles/Input_test.dir/all\n\n# Build rule for subdir invocation for target.\nTest/basic_tests/CMakeFiles/Input_test.dir/rule: cmake_check_build_system\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 18\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/basic_tests/CMakeFiles/Input_test.dir/all\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0\n.PHONY : Test/basic_tests/CMakeFiles/Input_test.dir/rule\n\n# Convenience name for target.\nInput_test: Test/basic_tests/CMakeFiles/Input_test.dir/rule\n\n.PHONY : Input_test\n\n# clean rule for target.\nTest/basic_tests/CMakeFiles/Input_test.dir/clean:\n\t$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Input_test.dir/build.make Test/basic_tests/CMakeFiles/Input_test.dir/clean\n.PHONY : Test/basic_tests/CMakeFiles/Input_test.dir/clean\n\n#=============================================================================\n# Target rules for target Test/lib/googletest/CMakeFiles/gtest_main.dir\n\n# All Build rule for target.\nTest/lib/googletest/CMakeFiles/gtest_main.dir/all: Test/lib/googletest/CMakeFiles/gtest.dir/all\n\t$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make Test/lib/googletest/CMakeFiles/gtest_main.dir/depend\n\t$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make Test/lib/googletest/CMakeFiles/gtest_main.dir/build\n\t@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=17,18 \"Built target gtest_main\"\n.PHONY : Test/lib/googletest/CMakeFiles/gtest_main.dir/all\n\n# Build rule for subdir invocation for target.\nTest/lib/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 4\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/lib/googletest/CMakeFiles/gtest_main.dir/all\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0\n.PHONY : Test/lib/googletest/CMakeFiles/gtest_main.dir/rule\n\n# Convenience name for target.\ngtest_main: Test/lib/googletest/CMakeFiles/gtest_main.dir/rule\n\n.PHONY : gtest_main\n\n# clean rule for target.\nTest/lib/googletest/CMakeFiles/gtest_main.dir/clean:\n\t$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make Test/lib/googletest/CMakeFiles/gtest_main.dir/clean\n.PHONY : Test/lib/googletest/CMakeFiles/gtest_main.dir/clean\n\n#=============================================================================\n# Target rules for target Test/lib/googletest/CMakeFiles/gtest.dir\n\n# All Build rule for target.\nTest/lib/googletest/CMakeFiles/gtest.dir/all:\n\t$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/depend\n\t$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/build\n\t@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=15,16 \"Built target gtest\"\n.PHONY : Test/lib/googletest/CMakeFiles/gtest.dir/all\n\n# Build rule for subdir invocation for target.\nTest/lib/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 2\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/lib/googletest/CMakeFiles/gtest.dir/all\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0\n.PHONY : Test/lib/googletest/CMakeFiles/gtest.dir/rule\n\n# Convenience name for target.\ngtest: Test/lib/googletest/CMakeFiles/gtest.dir/rule\n\n.PHONY : gtest\n\n# clean rule for target.\nTest/lib/googletest/CMakeFiles/gtest.dir/clean:\n\t$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/clean\n.PHONY : Test/lib/googletest/CMakeFiles/gtest.dir/clean\n\n#=============================================================================\n# Target rules for target Modules/CMakeFiles/Modules.dir\n\n# All Build rule for target.\nModules/CMakeFiles/Modules.dir/all:\n\t$(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/depend\n\t$(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/build\n\t@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14 \"Built target Modules\"\n.PHONY : Modules/CMakeFiles/Modules.dir/all\n\n# Build rule for subdir invocation for target.\nModules/CMakeFiles/Modules.dir/rule: cmake_check_build_system\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 12\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Modules/CMakeFiles/Modules.dir/all\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0\n.PHONY : Modules/CMakeFiles/Modules.dir/rule\n\n# Convenience name for target.\nModules: Modules/CMakeFiles/Modules.dir/rule\n\n.PHONY : Modules\n\n# clean rule for target.\nModules/CMakeFiles/Modules.dir/clean:\n\t$(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/clean\n.PHONY : Modules/CMakeFiles/Modules.dir/clean\n\n#=============================================================================\n# Special targets to cleanup operation of make.\n\n# Special rule to run CMake to check the build system integrity.\n# No rule that depends on this can have commands that come from listfiles\n# because they might be regenerated.\ncmake_check_build_system:\n\t$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0\n.PHONY : cmake_check_build_system\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- cmake-build-debug/CMakeFiles/Makefile2	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ cmake-build-debug/CMakeFiles/Makefile2	(date 1606723695712)
+@@ -55,19 +55,19 @@
+ SHELL = /bin/sh
+ 
+ # The CMake executable.
+-CMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake
++CMAKE_COMMAND = /snap/clion/135/bin/cmake/linux/bin/cmake
+ 
+ # The command to remove a file.
+-RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
++RM = /snap/clion/135/bin/cmake/linux/bin/cmake -E rm -f
+ 
+ # Escaping for special characters.
+ EQUALS = =
+ 
+ # The top-level source directory on which CMake was run.
+-CMAKE_SOURCE_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
++CMAKE_SOURCE_DIR = /home/hugo/MA3/Project_monte_carlo
+ 
+ # The top-level build directory on which CMake was run.
+-CMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
++CMAKE_BINARY_DIR = /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
+ 
+ #=============================================================================
+ # Directory level rules for the build root directory
+@@ -176,14 +176,14 @@
+ CMakeFiles/monte_carlo_run.dir/all: Modules/CMakeFiles/Modules.dir/all
+ 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/depend
+ 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/build
+-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target monte_carlo_run"
++	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target monte_carlo_run"
+ .PHONY : CMakeFiles/monte_carlo_run.dir/all
+ 
+ # Build rule for subdir invocation for target.
+ CMakeFiles/monte_carlo_run.dir/rule: cmake_check_build_system
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 14
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 14
+ 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/monte_carlo_run.dir/all
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
+ .PHONY : CMakeFiles/monte_carlo_run.dir/rule
+ 
+ # Convenience name for target.
+@@ -205,14 +205,14 @@
+ Test/basic_tests/CMakeFiles/Input_test.dir/all: Modules/CMakeFiles/Modules.dir/all
+ 	$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Input_test.dir/build.make Test/basic_tests/CMakeFiles/Input_test.dir/depend
+ 	$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Input_test.dir/build.make Test/basic_tests/CMakeFiles/Input_test.dir/build
+-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Input_test"
++	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Input_test"
+ .PHONY : Test/basic_tests/CMakeFiles/Input_test.dir/all
+ 
+ # Build rule for subdir invocation for target.
+ Test/basic_tests/CMakeFiles/Input_test.dir/rule: cmake_check_build_system
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 18
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 18
+ 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/basic_tests/CMakeFiles/Input_test.dir/all
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
+ .PHONY : Test/basic_tests/CMakeFiles/Input_test.dir/rule
+ 
+ # Convenience name for target.
+@@ -232,14 +232,14 @@
+ Test/lib/googletest/CMakeFiles/gtest_main.dir/all: Test/lib/googletest/CMakeFiles/gtest.dir/all
+ 	$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make Test/lib/googletest/CMakeFiles/gtest_main.dir/depend
+ 	$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make Test/lib/googletest/CMakeFiles/gtest_main.dir/build
+-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target gtest_main"
++	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target gtest_main"
+ .PHONY : Test/lib/googletest/CMakeFiles/gtest_main.dir/all
+ 
+ # Build rule for subdir invocation for target.
+ Test/lib/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 4
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 4
+ 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/lib/googletest/CMakeFiles/gtest_main.dir/all
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
+ .PHONY : Test/lib/googletest/CMakeFiles/gtest_main.dir/rule
+ 
+ # Convenience name for target.
+@@ -259,14 +259,14 @@
+ Test/lib/googletest/CMakeFiles/gtest.dir/all:
+ 	$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/depend
+ 	$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/build
+-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target gtest"
++	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target gtest"
+ .PHONY : Test/lib/googletest/CMakeFiles/gtest.dir/all
+ 
+ # Build rule for subdir invocation for target.
+ Test/lib/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 2
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 2
+ 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/lib/googletest/CMakeFiles/gtest.dir/all
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
+ .PHONY : Test/lib/googletest/CMakeFiles/gtest.dir/rule
+ 
+ # Convenience name for target.
+@@ -286,14 +286,14 @@
+ Modules/CMakeFiles/Modules.dir/all:
+ 	$(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/depend
+ 	$(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/build
+-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14 "Built target Modules"
++	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14 "Built target Modules"
+ .PHONY : Modules/CMakeFiles/Modules.dir/all
+ 
+ # Build rule for subdir invocation for target.
+ Modules/CMakeFiles/Modules.dir/rule: cmake_check_build_system
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 12
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 12
+ 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Modules/CMakeFiles/Modules.dir/all
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
+ .PHONY : Modules/CMakeFiles/Modules.dir/rule
+ 
+ # Convenience name for target.
+Index: cmake-build-debug/Makefile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 3.17\n\n# Default target executed when no arguments are given to make.\ndefault_target: all\n\n.PHONY : default_target\n\n# Allow only one \"make -f Makefile2\" at a time, but pass parallelism.\n.NOTPARALLEL:\n\n\n#=============================================================================\n# Special targets provided by cmake.\n\n# Disable implicit rules so canonical targets will work.\n.SUFFIXES:\n\n\n# Disable VCS-based implicit rules.\n% : %,v\n\n\n# Disable VCS-based implicit rules.\n% : RCS/%\n\n\n# Disable VCS-based implicit rules.\n% : RCS/%,v\n\n\n# Disable VCS-based implicit rules.\n% : SCCS/s.%\n\n\n# Disable VCS-based implicit rules.\n% : s.%\n\n\n.SUFFIXES: .hpux_make_needs_suffix_list\n\n\n# Command-line flag to silence nested $(MAKE).\n$(VERBOSE)MAKESILENT = -s\n\n# Suppress display of executed commands.\n$(VERBOSE).SILENT:\n\n\n# A target that is always out of date.\ncmake_force:\n\n.PHONY : cmake_force\n\n#=============================================================================\n# Set environment variables for the build.\n\n# The shell in which to execute make rules.\nSHELL = /bin/sh\n\n# The CMake executable.\nCMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake\n\n# The command to remove a file.\nRM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f\n\n# Escaping for special characters.\nEQUALS = =\n\n# The top-level source directory on which CMake was run.\nCMAKE_SOURCE_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo\n\n# The top-level build directory on which CMake was run.\nCMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug\n\n#=============================================================================\n# Targets provided globally by CMake.\n\n# Special rule for the target rebuild_cache\nrebuild_cache:\n\t@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan \"Running CMake to regenerate build system...\"\n\t/app/extra/clion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)\n.PHONY : rebuild_cache\n\n# Special rule for the target rebuild_cache\nrebuild_cache/fast: rebuild_cache\n\n.PHONY : rebuild_cache/fast\n\n# Special rule for the target edit_cache\nedit_cache:\n\t@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan \"No interactive CMake dialog available...\"\n\t/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\\ interactive\\ CMake\\ dialog\\ available.\n.PHONY : edit_cache\n\n# Special rule for the target edit_cache\nedit_cache/fast: edit_cache\n\n.PHONY : edit_cache/fast\n\n# The main all target\nall: cmake_check_build_system\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all\n\t$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0\n.PHONY : all\n\n# The main clean target\nclean:\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean\n.PHONY : clean\n\n# The main clean target\nclean/fast: clean\n\n.PHONY : clean/fast\n\n# Prepare targets for installation.\npreinstall: all\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall\n.PHONY : preinstall\n\n# Prepare targets for installation.\npreinstall/fast:\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall\n.PHONY : preinstall/fast\n\n# clear depends\ndepend:\n\t$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1\n.PHONY : depend\n\n#=============================================================================\n# Target rules for targets named monte_carlo_run\n\n# Build rule for target.\nmonte_carlo_run: cmake_check_build_system\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 monte_carlo_run\n.PHONY : monte_carlo_run\n\n# fast build rule for target.\nmonte_carlo_run/fast:\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/build\n.PHONY : monte_carlo_run/fast\n\n#=============================================================================\n# Target rules for targets named Input_test\n\n# Build rule for target.\nInput_test: cmake_check_build_system\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Input_test\n.PHONY : Input_test\n\n# fast build rule for target.\nInput_test/fast:\n\t$(MAKE) $(MAKESILENT) -f Test/basic_tests/CMakeFiles/Input_test.dir/build.make Test/basic_tests/CMakeFiles/Input_test.dir/build\n.PHONY : Input_test/fast\n\n#=============================================================================\n# Target rules for targets named gtest_main\n\n# Build rule for target.\ngtest_main: cmake_check_build_system\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main\n.PHONY : gtest_main\n\n# fast build rule for target.\ngtest_main/fast:\n\t$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make Test/lib/googletest/CMakeFiles/gtest_main.dir/build\n.PHONY : gtest_main/fast\n\n#=============================================================================\n# Target rules for targets named gtest\n\n# Build rule for target.\ngtest: cmake_check_build_system\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest\n.PHONY : gtest\n\n# fast build rule for target.\ngtest/fast:\n\t$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/build\n.PHONY : gtest/fast\n\n#=============================================================================\n# Target rules for targets named Modules\n\n# Build rule for target.\nModules: cmake_check_build_system\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Modules\n.PHONY : Modules\n\n# fast build rule for target.\nModules/fast:\n\t$(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/build\n.PHONY : Modules/fast\n\nmain.o: main.cpp.o\n\n.PHONY : main.o\n\n# target to build an object file\nmain.cpp.o:\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/main.cpp.o\n.PHONY : main.cpp.o\n\nmain.i: main.cpp.i\n\n.PHONY : main.i\n\n# target to preprocess a source file\nmain.cpp.i:\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/main.cpp.i\n.PHONY : main.cpp.i\n\nmain.s: main.cpp.s\n\n.PHONY : main.s\n\n# target to generate assembly for a file\nmain.cpp.s:\n\t$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/main.cpp.s\n.PHONY : main.cpp.s\n\n# Help Target\nhelp:\n\t@echo \"The following are some of the valid targets for this Makefile:\"\n\t@echo \"... all (the default if no target is provided)\"\n\t@echo \"... clean\"\n\t@echo \"... depend\"\n\t@echo \"... edit_cache\"\n\t@echo \"... rebuild_cache\"\n\t@echo \"... Input_test\"\n\t@echo \"... Modules\"\n\t@echo \"... gtest\"\n\t@echo \"... gtest_main\"\n\t@echo \"... monte_carlo_run\"\n\t@echo \"... main.o\"\n\t@echo \"... main.i\"\n\t@echo \"... main.s\"\n.PHONY : help\n\n\n\n#=============================================================================\n# Special targets to cleanup operation of make.\n\n# Special rule to run CMake to check the build system integrity.\n# No rule that depends on this can have commands that come from listfiles\n# because they might be regenerated.\ncmake_check_build_system:\n\t$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0\n.PHONY : cmake_check_build_system\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- cmake-build-debug/Makefile	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ cmake-build-debug/Makefile	(date 1606723695640)
+@@ -59,19 +59,19 @@
+ SHELL = /bin/sh
+ 
+ # The CMake executable.
+-CMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake
++CMAKE_COMMAND = /snap/clion/135/bin/cmake/linux/bin/cmake
+ 
+ # The command to remove a file.
+-RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
++RM = /snap/clion/135/bin/cmake/linux/bin/cmake -E rm -f
+ 
+ # Escaping for special characters.
+ EQUALS = =
+ 
+ # The top-level source directory on which CMake was run.
+-CMAKE_SOURCE_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
++CMAKE_SOURCE_DIR = /home/hugo/MA3/Project_monte_carlo
+ 
+ # The top-level build directory on which CMake was run.
+-CMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
++CMAKE_BINARY_DIR = /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
+ 
+ #=============================================================================
+ # Targets provided globally by CMake.
+@@ -79,7 +79,7 @@
+ # Special rule for the target rebuild_cache
+ rebuild_cache:
+ 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+-	/app/extra/clion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
++	/snap/clion/135/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+ .PHONY : rebuild_cache
+ 
+ # Special rule for the target rebuild_cache
+@@ -90,7 +90,7 @@
+ # Special rule for the target edit_cache
+ edit_cache:
+ 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+-	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
++	/snap/clion/135/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+ .PHONY : edit_cache
+ 
+ # Special rule for the target edit_cache
+@@ -100,9 +100,9 @@
+ 
+ # The main all target
+ all: cmake_check_build_system
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
+ 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
++	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
+ .PHONY : all
+ 
+ # The main clean target
+Index: cmake-build-debug/CMakeFiles/Makefile.cmake
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 3.17\n\n# The generator used is:\nset(CMAKE_DEPENDS_GENERATOR \"Unix Makefiles\")\n\n# The top level Makefile was generated from the following files:\nset(CMAKE_MAKEFILE_DEPENDS\n  \"CMakeCache.txt\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindCodeBlocks.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeGenericSystem.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CheckLibraryExists.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-C.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/FindPythonInterp.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/FindThreads.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-CXX.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake\"\n  \"/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake\"\n  \"../CMakeLists.txt\"\n  \"../Modules/CMakeLists.txt\"\n  \"../Test/CMakeLists.txt\"\n  \"../Test/basic_tests/CMakeLists.txt\"\n  \"../Test/lib/googletest/CMakeLists.txt\"\n  \"../Test/lib/googletest/cmake/internal_utils.cmake\"\n  \"CMakeFiles/3.17.3/CMakeCCompiler.cmake\"\n  \"CMakeFiles/3.17.3/CMakeCXXCompiler.cmake\"\n  \"CMakeFiles/3.17.3/CMakeSystem.cmake\"\n  )\n\n# The corresponding makefile is:\nset(CMAKE_MAKEFILE_OUTPUTS\n  \"Makefile\"\n  \"CMakeFiles/cmake.check_cache\"\n  )\n\n# Byproducts of CMake generate step:\nset(CMAKE_MAKEFILE_PRODUCTS\n  \"CMakeFiles/CMakeDirectoryInformation.cmake\"\n  \"Test/CMakeFiles/CMakeDirectoryInformation.cmake\"\n  \"Test/basic_tests/CMakeFiles/CMakeDirectoryInformation.cmake\"\n  \"Test/lib/googletest/CMakeFiles/CMakeDirectoryInformation.cmake\"\n  \"Modules/CMakeFiles/CMakeDirectoryInformation.cmake\"\n  )\n\n# Dependency information for all targets:\nset(CMAKE_DEPEND_INFO_FILES\n  \"CMakeFiles/monte_carlo_run.dir/DependInfo.cmake\"\n  \"Test/basic_tests/CMakeFiles/Input_test.dir/DependInfo.cmake\"\n  \"Test/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake\"\n  \"Test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake\"\n  \"Modules/CMakeFiles/Modules.dir/DependInfo.cmake\"\n  )\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- cmake-build-debug/CMakeFiles/Makefile.cmake	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ cmake-build-debug/CMakeFiles/Makefile.cmake	(date 1606723695712)
+@@ -7,35 +7,6 @@
+ # The top level Makefile was generated from the following files:
+ set(CMAKE_MAKEFILE_DEPENDS
+   "CMakeCache.txt"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindCodeBlocks.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeGenericSystem.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/CheckLibraryExists.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-C.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/FindPythonInterp.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/FindThreads.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-CXX.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
+-  "/app/extra/clion/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
+   "../CMakeLists.txt"
+   "../Modules/CMakeLists.txt"
+   "../Test/CMakeLists.txt"
+@@ -45,6 +16,35 @@
+   "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
+   "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
+   "CMakeFiles/3.17.3/CMakeSystem.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeFindCodeBlocks.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeGenericSystem.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/CheckLibraryExists.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-C.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindPythonInterp.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/FindThreads.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-CXX.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
++  "/snap/clion/135/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
+   )
+ 
+ # The corresponding makefile is:
+Index: cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 3.17\n\n# Relative path conversion top directories.\nset(CMAKE_RELATIVE_PATH_TOP_SOURCE \"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo\")\nset(CMAKE_RELATIVE_PATH_TOP_BINARY \"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug\")\n\n# Force unix paths in dependencies.\nset(CMAKE_FORCE_UNIX_PATHS 1)\n\n\n# The C and CXX include file regular expressions for this directory.\nset(CMAKE_C_INCLUDE_REGEX_SCAN \"^.*$\")\nset(CMAKE_C_INCLUDE_REGEX_COMPLAIN \"^$\")\nset(CMAKE_CXX_INCLUDE_REGEX_SCAN ${CMAKE_C_INCLUDE_REGEX_SCAN})\nset(CMAKE_CXX_INCLUDE_REGEX_COMPLAIN ${CMAKE_C_INCLUDE_REGEX_COMPLAIN})\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake	(date 1606600192678)
+@@ -2,8 +2,8 @@
+ # Generated by "Unix Makefiles" Generator, CMake Version 3.17
+ 
+ # Relative path conversion top directories.
+-set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo")
+-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug")
++set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/hugo/MA3/Project_monte_carlo")
++set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug")
+ 
+ # Force unix paths in dependencies.
+ set(CMAKE_FORCE_UNIX_PATHS 1)
+Index: cmake-build-debug/cmake_install.cmake
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Install script for directory: /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo\n\n# Set the install prefix\nif(NOT DEFINED CMAKE_INSTALL_PREFIX)\n  set(CMAKE_INSTALL_PREFIX \"/usr/local\")\nendif()\nstring(REGEX REPLACE \"/$\" \"\" CMAKE_INSTALL_PREFIX \"${CMAKE_INSTALL_PREFIX}\")\n\n# Set the install configuration name.\nif(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)\n  if(BUILD_TYPE)\n    string(REGEX REPLACE \"^[^A-Za-z0-9_]+\" \"\"\n           CMAKE_INSTALL_CONFIG_NAME \"${BUILD_TYPE}\")\n  else()\n    set(CMAKE_INSTALL_CONFIG_NAME \"Debug\")\n  endif()\n  message(STATUS \"Install configuration: \\\"${CMAKE_INSTALL_CONFIG_NAME}\\\"\")\nendif()\n\n# Set the component getting installed.\nif(NOT CMAKE_INSTALL_COMPONENT)\n  if(COMPONENT)\n    message(STATUS \"Install component: \\\"${COMPONENT}\\\"\")\n    set(CMAKE_INSTALL_COMPONENT \"${COMPONENT}\")\n  else()\n    set(CMAKE_INSTALL_COMPONENT)\n  endif()\nendif()\n\n# Install shared libraries without execute permission?\nif(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)\n  set(CMAKE_INSTALL_SO_NO_EXE \"0\")\nendif()\n\n# Is this installation the result of a crosscompile?\nif(NOT DEFINED CMAKE_CROSSCOMPILING)\n  set(CMAKE_CROSSCOMPILING \"FALSE\")\nendif()\n\nif(NOT CMAKE_INSTALL_LOCAL_ONLY)\n  # Include the install script for the subdirectory.\n  include(\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/cmake_install.cmake\")\nendif()\n\nif(NOT CMAKE_INSTALL_LOCAL_ONLY)\n  # Include the install script for the subdirectory.\n  include(\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/cmake_install.cmake\")\nendif()\n\nif(CMAKE_INSTALL_COMPONENT)\n  set(CMAKE_INSTALL_MANIFEST \"install_manifest_${CMAKE_INSTALL_COMPONENT}.txt\")\nelse()\n  set(CMAKE_INSTALL_MANIFEST \"install_manifest.txt\")\nendif()\n\nstring(REPLACE \";\" \"\\n\" CMAKE_INSTALL_MANIFEST_CONTENT\n       \"${CMAKE_INSTALL_MANIFEST_FILES}\")\nfile(WRITE \"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}\"\n     \"${CMAKE_INSTALL_MANIFEST_CONTENT}\")\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- cmake-build-debug/cmake_install.cmake	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ cmake-build-debug/cmake_install.cmake	(date 1606600192678)
+@@ -1,4 +1,4 @@
+-# Install script for directory: /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
++# Install script for directory: /home/hugo/MA3/Project_monte_carlo
+ 
+ # Set the install prefix
+ if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+@@ -29,7 +29,7 @@
+ 
+ # Install shared libraries without execute permission?
+ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+-  set(CMAKE_INSTALL_SO_NO_EXE "0")
++  set(CMAKE_INSTALL_SO_NO_EXE "1")
+ endif()
+ 
+ # Is this installation the result of a crosscompile?
+@@ -39,12 +39,12 @@
+ 
+ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+   # Include the install script for the subdirectory.
+-  include("/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/cmake_install.cmake")
++  include("/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/cmake_install.cmake")
+ endif()
+ 
+ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+   # Include the install script for the subdirectory.
+-  include("/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/cmake_install.cmake")
++  include("/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/cmake_install.cmake")
+ endif()
+ 
+ if(CMAKE_INSTALL_COMPONENT)
+@@ -55,5 +55,5 @@
+ 
+ string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+        "${CMAKE_INSTALL_MANIFEST_FILES}")
+-file(WRITE "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
++file(WRITE "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+Index: cmake-build-debug/Project_Monte_carlo.cbp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<CodeBlocks_project_file>\n\t<FileVersion major=\"1\" minor=\"6\"/>\n\t<Project>\n\t\t<Option title=\"Project_Monte_carlo\"/>\n\t\t<Option makefile_is_custom=\"1\"/>\n\t\t<Option compiler=\"gcc\"/>\n\t\t<Option virtualFolders=\"CMake Files\\;CMake Files\\Modules\\;CMake Files\\Test\\;CMake Files\\Test\\basic_tests\\;CMake Files\\Test\\lib\\;CMake Files\\Test\\lib\\googletest\\;CMake Files\\Test\\lib\\googletest\\cmake\\;\"/>\n\t\t<Build>\n\t\t\t<Target title=\"all\">\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug\"/>\n\t\t\t\t<Option type=\"4\"/>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 all\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"rebuild_cache\">\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug\"/>\n\t\t\t\t<Option type=\"4\"/>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"edit_cache\">\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug\"/>\n\t\t\t\t<Option type=\"4\"/>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"monte_carlo_run\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/monte_carlo_run\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"1\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 monte_carlo_run\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"monte_carlo_run/fast\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/monte_carlo_run\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"1\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 monte_carlo_run/fast\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"Input_test\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Input_test\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"1\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 Input_test\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"Input_test/fast\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Input_test\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"1\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 Input_test/fast\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"gtest_main\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/lib/libgtest_maind.a\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"2\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"gtest_main/fast\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/lib/libgtest_maind.a\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"2\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"gtest\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/lib/libgtestd.a\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"2\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"gtest/fast\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/lib/libgtestd.a\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"2\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include\"/>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"Modules\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/libModules.a\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"2\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 Modules\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t\t<Target title=\"Modules/fast\">\n\t\t\t\t<Option output=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/libModules.a\" prefix_auto=\"0\" extension_auto=\"0\"/>\n\t\t\t\t<Option working_dir=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules\"/>\n\t\t\t\t<Option object_output=\"./\"/>\n\t\t\t\t<Option type=\"2\"/>\n\t\t\t\t<Option compiler=\"gcc\"/>\n\t\t\t\t<Compiler>\n\t\t\t\t\t<Add directory=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include\"/>\n\t\t\t\t\t<Add directory=\"/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed\"/>\n\t\t\t\t\t<Add directory=\"/usr/include/x86_64-linux-gnu\"/>\n\t\t\t\t\t<Add directory=\"/usr/include\"/>\n\t\t\t\t</Compiler>\n\t\t\t\t<MakeCommands>\n\t\t\t\t\t<Build command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 Modules/fast\"/>\n\t\t\t\t\t<CompileFile command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;\"/>\n\t\t\t\t\t<Clean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t\t<DistClean command=\"/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean\"/>\n\t\t\t\t</MakeCommands>\n\t\t\t</Target>\n\t\t</Build>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractExpectation.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractExpectation.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/MonteCarloExpectation.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/MonteCarloExpectation.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformReader.cpp\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformReader.h\">\n\t\t\t<Option target=\"Modules\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/Input_test.cpp\">\n\t\t\t<Option target=\"Input_test\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/src/gtest-all.cc\">\n\t\t\t<Option target=\"gtest\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/src/gtest_main.cc\">\n\t\t\t<Option target=\"gtest_main\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/main.cpp\">\n\t\t\t<Option target=\"monte_carlo_run\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/CMakeLists.txt\">\n\t\t\t<Option virtualFolder=\"CMake Files\\\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/CMakeLists.txt\">\n\t\t\t<Option virtualFolder=\"CMake Files\\Modules\\\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/CMakeLists.txt\">\n\t\t\t<Option virtualFolder=\"CMake Files\\Test\\\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/CMakeLists.txt\">\n\t\t\t<Option virtualFolder=\"CMake Files\\Test\\basic_tests\\\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/CMakeLists.txt\">\n\t\t\t<Option virtualFolder=\"CMake Files\\Test\\lib\\googletest\\\"/>\n\t\t</Unit>\n\t\t<Unit filename=\"/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/cmake/internal_utils.cmake\">\n\t\t\t<Option virtualFolder=\"CMake Files\\Test\\lib\\googletest\\cmake\\\"/>\n\t\t</Unit>\n\t</Project>\n</CodeBlocks_project_file>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- cmake-build-debug/Project_Monte_carlo.cbp	(revision 0746acd6fc7f7f3ebae201684226a0ba3b3af3f0)
++++ cmake-build-debug/Project_Monte_carlo.cbp	(date 1606723695708)
+@@ -8,378 +8,378 @@
+ 		<Option virtualFolders="CMake Files\;CMake Files\Modules\;CMake Files\Test\;CMake Files\Test\basic_tests\;CMake Files\Test\lib\;CMake Files\Test\lib\googletest\;CMake Files\Test\lib\googletest\cmake\;"/>
+ 		<Build>
+ 			<Target title="all">
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug"/>
+ 				<Option type="4"/>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="rebuild_cache">
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug"/>
+ 				<Option type="4"/>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="edit_cache">
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug"/>
+ 				<Option type="4"/>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="monte_carlo_run">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/monte_carlo_run" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/monte_carlo_run" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug"/>
+ 				<Option object_output="./"/>
+ 				<Option type="1"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 monte_carlo_run"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 monte_carlo_run"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="monte_carlo_run/fast">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/monte_carlo_run" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/monte_carlo_run" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug"/>
+ 				<Option object_output="./"/>
+ 				<Option type="1"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 monte_carlo_run/fast"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 monte_carlo_run/fast"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="Input_test">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Input_test" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Input_test" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests"/>
+ 				<Option object_output="./"/>
+ 				<Option type="1"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 Input_test"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 Input_test"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="Input_test/fast">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Input_test" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Input_test" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests"/>
+ 				<Option object_output="./"/>
+ 				<Option type="1"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 Input_test/fast"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 Input_test/fast"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/basic_tests/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="gtest_main">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
+ 				<Option object_output="./"/>
+ 				<Option type="2"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="gtest_main/fast">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
+ 				<Option object_output="./"/>
+ 				<Option type="2"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="gtest">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
+ 				<Option object_output="./"/>
+ 				<Option type="2"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="gtest/fast">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
+ 				<Option object_output="./"/>
+ 				<Option type="2"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="Modules">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/libModules.a" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/libModules.a" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules"/>
+ 				<Option object_output="./"/>
+ 				<Option type="2"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 Modules"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 Modules"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 			<Target title="Modules/fast">
+-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/libModules.a" prefix_auto="0" extension_auto="0"/>
+-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules"/>
++				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/libModules.a" prefix_auto="0" extension_auto="0"/>
++				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules"/>
+ 				<Option object_output="./"/>
+ 				<Option type="2"/>
+ 				<Option compiler="gcc"/>
+ 				<Compiler>
+-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
++					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
++					<Add directory="/usr/include/c++/9"/>
++					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
++					<Add directory="/usr/include/c++/9/backward"/>
++					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
++					<Add directory="/usr/local/include"/>
+ 					<Add directory="/usr/include/x86_64-linux-gnu"/>
+ 					<Add directory="/usr/include"/>
+ 				</Compiler>
+ 				<MakeCommands>
+-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 Modules/fast"/>
+-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
+-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
++					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 Modules/fast"/>
++					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
++					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
++					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
+ 				</MakeCommands>
+ 			</Target>
+ 		</Build>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractExpectation.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractExpectation.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractExpectation.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractExpectation.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractFunc.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/Error.hpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/Error.hpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/ExpFunc.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/ExpFunc.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/ExpFunc.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/MonteCarloExpectation.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/MonteCarloExpectation.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/MonteCarloExpectation.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/MonteCarloExpectation.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalReader.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalReader.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformReader.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/UniformReader.cpp">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformReader.h">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/UniformReader.h">
+ 			<Option target="Modules"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/Input_test.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/basic_tests/Input_test.cpp">
+ 			<Option target="Input_test"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/src/gtest-all.cc">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/src/gtest-all.cc">
+ 			<Option target="gtest"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/src/gtest_main.cc">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/src/gtest_main.cc">
+ 			<Option target="gtest_main"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/main.cpp">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/main.cpp">
+ 			<Option target="monte_carlo_run"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/CMakeLists.txt">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/CMakeLists.txt">
+ 			<Option virtualFolder="CMake Files\"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/CMakeLists.txt">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/CMakeLists.txt">
+ 			<Option virtualFolder="CMake Files\Modules\"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/CMakeLists.txt">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/CMakeLists.txt">
+ 			<Option virtualFolder="CMake Files\Test\"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/basic_tests/CMakeLists.txt">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/basic_tests/CMakeLists.txt">
+ 			<Option virtualFolder="CMake Files\Test\basic_tests\"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/CMakeLists.txt">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/CMakeLists.txt">
+ 			<Option virtualFolder="CMake Files\Test\lib\googletest\"/>
+ 		</Unit>
+-		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/cmake/internal_utils.cmake">
++		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/cmake/internal_utils.cmake">
+ 			<Option virtualFolder="CMake Files\Test\lib\googletest\cmake\"/>
+ 		</Unit>
+ 	</Project>

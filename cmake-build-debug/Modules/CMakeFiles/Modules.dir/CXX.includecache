@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
+vector
+-
+
+/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.cpp
+iostream
+-
+NormalDist.h
+/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.h
+random
+/home/hugo/MA3/Project_monte_carlo/Modules/random
+
+/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.h
+vector
+-
+UniformDist.h
+/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.h
+AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
+

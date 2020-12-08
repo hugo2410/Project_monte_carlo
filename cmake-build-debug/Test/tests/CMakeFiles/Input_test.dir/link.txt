@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Input_test.dir/Reader_test.cpp.o  -o Input_test  ../../lib/libgtestd.a ../../lib/libgtest_maind.a ../../Modules/libModules.a ../../lib/libgtestd.a -lpthread 
