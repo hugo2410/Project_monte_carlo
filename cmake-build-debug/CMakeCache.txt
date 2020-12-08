@@ -236,6 +236,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+Google_tests_BINARY_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test
+
+//Value Computed by CMake
+Google_tests_SOURCE_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/Test
+
+//Value Computed by CMake
 Modules_BINARY_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules
 
 //Value Computed by CMake
@@ -408,7 +414,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

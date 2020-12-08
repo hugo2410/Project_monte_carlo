@@ -130,6 +130,48 @@ depend:
 	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+Test/CMakeFiles/Google_Tests_run.dir/rule:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test/CMakeFiles/Google_Tests_run.dir/rule
+.PHONY : Test/CMakeFiles/Google_Tests_run.dir/rule
+
+# Convenience name for target.
+Google_Tests_run: Test/CMakeFiles/Google_Tests_run.dir/rule
+
+.PHONY : Google_Tests_run
+
+# fast build rule for target.
+Google_Tests_run/fast:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Google_Tests_run.dir/build.make Test/CMakeFiles/Google_Tests_run.dir/build
+.PHONY : Google_Tests_run/fast
+
+UniformDist_test.o: UniformDist_test.cpp.o
+
+.PHONY : UniformDist_test.o
+
+# target to build an object file
+UniformDist_test.cpp.o:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Google_Tests_run.dir/build.make Test/CMakeFiles/Google_Tests_run.dir/UniformDist_test.cpp.o
+.PHONY : UniformDist_test.cpp.o
+
+UniformDist_test.i: UniformDist_test.cpp.i
+
+.PHONY : UniformDist_test.i
+
+# target to preprocess a source file
+UniformDist_test.cpp.i:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Google_Tests_run.dir/build.make Test/CMakeFiles/Google_Tests_run.dir/UniformDist_test.cpp.i
+.PHONY : UniformDist_test.cpp.i
+
+UniformDist_test.s: UniformDist_test.cpp.s
+
+.PHONY : UniformDist_test.s
+
+# target to generate assembly for a file
+UniformDist_test.cpp.s:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Google_Tests_run.dir/build.make Test/CMakeFiles/Google_Tests_run.dir/UniformDist_test.cpp.s
+.PHONY : UniformDist_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -138,6 +180,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Google_Tests_run"
+	@echo "... UniformDist_test.o"
+	@echo "... UniformDist_test.i"
+	@echo "... UniformDist_test.s"
 .PHONY : help
 
 

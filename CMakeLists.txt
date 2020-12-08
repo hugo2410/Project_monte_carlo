@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(Modules)
 add_subdirectory(Test)
 add_subdirectory(Modules)
-set(SOURCE_FILES main.cpp Test/tests/NormalDist_test.cpp Test/tests/Reader_test.cpp Test/tests/UniformDist_test.cpp Test/tests/MonteCarloExpectation_test.cpp)
+set(SOURCE_FILES main.cpp)
 add_executable(monte_carlo_run ${SOURCE_FILES})
 
 target_link_libraries(monte_carlo_run Modules)
