@@ -20,7 +20,8 @@ public:
      */
     ~CentralLimitThm();
     /**
-     * \brief Constructor to define a new csv file to save the means of generated samples of same size
+     * \brief Constructor
+     *         Define a new csv file to save the means of generated samples of same size
      * @param pRandom : Pointer of initially generated random samples
      * @param multiples : define the size of the new samples (N,2N,3N ...)
      */

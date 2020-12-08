@@ -13,9 +13,26 @@
 
 class UniformReader: public AbstractReader{
 public:
+    /**
+     * \brief Default Construcot
+     */
     UniformReader();
+    /**
+     * \brief Default Destructor
+     */
     ~UniformReader() override;
+    /**
+     *
+     * @param file
+     * @param pRandomVariable
+     */
     void read_file(const char *file,AbstractVariable* &pRandomVariable) override;
+    /**
+     *
+     * @param file
+     * @param pFunction
+     * @param order
+     */
     void read_file(const char* file, AbstractFunc* &pFunction,int &order) override;
 };
 

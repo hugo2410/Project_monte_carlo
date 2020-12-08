@@ -30,7 +30,7 @@ NormalDist::NormalDist(const int N, const double mean, const double var):Uniform
     }
 
 }
-NormalDist::NormalDist(const int N): mean(0.0),var(1.0)
+NormalDist::NormalDist(const int N):UniformDist(N), mean(0.0),var(1.0)
 {
     for (int i =0;i < N; ++i )
     {

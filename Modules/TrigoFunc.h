@@ -9,9 +9,26 @@
 
 class TrigoFunc:public AbstractFunc {
 public:
+    /**
+     * \brief: Default Constructor
+     */
     TrigoFunc();
+    /**
+     * \brief: Default Destructor
+     */
     ~TrigoFunc() override;
+    /**
+     * \brief Constructor
+     *        Define the function "aCos(bx)"
+     * @param a First Coefficient
+     * @param b Second Coefficient
+     */
     TrigoFunc(int a, int b):AbstractFunc(a,b){}
+    /**
+     * \brief Return the evaluation of the user exponential function on a random number
+     * @param x : a Random number
+     * @return a*Cos(bx)
+     */
     double evaluate(double x) override ;
 
 };

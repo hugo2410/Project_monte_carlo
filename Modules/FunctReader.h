@@ -20,7 +20,7 @@ public:
      */
     ~FunctReader();
     /**
-     * \brief Abstrat function to Read file for distribution type and paramaters
+     * \brief Abstract function to Read file for distribution type and parameters
      * @param file
      * @param pRandomVariable
      */
