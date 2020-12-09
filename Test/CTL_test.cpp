@@ -1,14 +1,16 @@
 //
-// Created by hugo on 08/12/2020.
+// Created by hugo on 09/12/2020.
 //
 
 #include "gtest/gtest.h"
 #include "UniformDist.h"
 #include "NormalDist.h"
 #include "FunctReader.h"
-
+#include "CentralLimitThm.h"
 #include "MonteCarloExpectation.h"
+#include "CentralLimitThm.h"
 #include <cmath>
+
 
 #define TEST_PATH_FUNC "../Test_files/Functest.txt"
 #define TEST_SIZE 1000
@@ -17,7 +19,7 @@
 #define TEST_MEAN 0
 #define TEST_VARIANCE 1
 
-class MonteCarloExpectationFixture : public ::testing::Test
+class StandardCentrallLimitThmFixture : public ::testing::Test
 {
 protected:
     virtual void TearDown() {
@@ -26,11 +28,11 @@ protected:
 
     virtual void SetUp() {
 
-        mean_uniform = (TEST_UPPER_BOUND + TEST_LOWER_BOUND)/2. ;
-
     }
 public:
-    MonteCarloExpectationFixture() : Test() {
+    StandardCentrallLimitThmFixture() : Test() {
+
+
         pUniformsample =  new UniformDist(TEST_SIZE, TEST_LOWER_BOUND, TEST_UPPER_BOUND);
         pNormalsample = new NormalDist(TEST_SIZE ,TEST_MEAN , TEST_VARIANCE ) ;
         order =0;
@@ -39,15 +41,19 @@ public:
         pMontecarlo_uniform = new MonteCarloExpectation(pFunction,pUniformsample);
         pMontecarlo_normal = new MonteCarloExpectation( pFunction,pNormalsample ) ;
         pMontecarlo = new MonteCarloExpectation();
+        pCentrallimit = new CentralLimitThm() ;
     }
 
-    virtual ~MonteCarloExpectationFixture() {
+    virtual ~StandardCentrallLimitThmFixture() {
         delete pMontecarlo_normal;
         delete pMontecarlo_uniform ;
         delete pMontecarlo;
         delete pUniformsample;
         delete pNormalsample ;
+        delete pCentrallimit ;
     }
+
+
     AbstractVariable* pNormalsample;
     AbstractVariable* pUniformsample;
     MonteCarloExpectation* pMontecarlo_uniform ;
@@ -57,21 +63,14 @@ public:
     MonteCarloExpectation* pMontecarlo;
     double mean_uniform ;
     int order;
+    CentralLimitThm* pCentrallimit ;
 };
 
-
-TEST_F(MonteCarloExpectationFixture, mean_uniform_calculation_check) {
-    ASSERT_NEAR(pMontecarlo->computeMean(pUniformsample),mean_uniform,1e-1);
+TEST_F(StandardCentrallLimitThmFixture, uniform_central_limite_check) {
+    pCentrallimit->CentralLimitThm(AbstractVariable *pRandom, int multiples)(pUniformsample,pMontecarlo_uniform,0.05);
+    EXPECT_TRUE(pCentrallimit->verify_thm());
 }
-
-TEST_F(MonteCarloExpectationFixture, mean_normal_calculation_check) {
-    ASSERT_NEAR(pMontecarlo->computeMean(pNormalsample),TEST_MEAN,1e-1);
-}
-
-TEST_F(MonteCarloExpectationFixture, mean_uniform_get_check) {
-    ASSERT_NEAR(pMontecarlo_uniform->getExpectation(), mean_uniform,5e-1);
-}
-
-TEST_F(MonteCarloExpectationFixture, mean_normal_get_check) {
-    ASSERT_NEAR(pMontecarlo_normal->getExpectation(),TEST_MEAN,5e-1);
+TEST_F(StandardCentrallLimitThmFixture, normal_central_limite_check) {
+    pCentrallimit->calculate_CentralLimitThm(pNormalsample,pMontecarlo_normal,0.05);
+    EXPECT_TRUE(pCentrallimit->verify_thm());
 }
