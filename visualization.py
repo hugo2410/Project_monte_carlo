@@ -5,7 +5,7 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 import os
 
-directory = "tr"
+directory = "output"
 fig = plt.subplots(nrows = 1, ncols = 1, sharex = False, sharey = False, figsize = (13, 10))
 var1=[]
 var2=[]
@@ -21,10 +21,16 @@ for root,dirs,files in os.walk(directory):
             l.append((float)(file.split("_")[-1].split(".")[0]))
             var1.append(df.iloc[0,0]/(float)(file.split("_")[-1].split(".")[0]))
             var2.append(df.iloc[1:,0].var())
-            print(l)
-print(var2)
+
+
 plt.legend()
 plt.show()
 plt.scatter(l,var1)
 plt.scatter(l,var2)
 plt.ylim(0,0.003)
+
+df=pd.read_csv("output/moments.csv",header=None)
+df_separated=df.iloc[1:,0].str.split(pat=";",expand=True).astype(float)
+df_separated.columns= df.iloc[0,0].split(";")
+
+sns.barplot(x=df_separated['Order'], y =df_separated['Statistical Moment'])

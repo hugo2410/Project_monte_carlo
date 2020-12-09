@@ -33,68 +33,32 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="Runall gtest + cleaned program">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/AbstractReader.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/CentralLimitThm.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/UniformReader.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/CMakeFiles/Modules.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/Modules.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/Modules.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Modules/libModules.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Modules/libModules.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/Test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/Test.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/gtest.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/gtest.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/moments.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/sample_means_1000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/sample_means_2000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/sample_means_3000.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/AbstractVariable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/AbstractVariable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test_files/Functest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test_files/Functest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test_files/TestBound.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test_files/TestBound.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test_files/TestNormalMean.tx" beforeDir="false" afterPath="$PROJECT_DIR$/Test_files/TestNormalMean.tx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test_files/TestNormalMean.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test_files/TestNormalMean.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test_files/TestNormalVar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test_files/TestNormalVar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test_files/TestOrder.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test_files/TestOrder.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test_files/TestVectSize.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test_files/TestVectSize.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test_files/test_function.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test_files/test_function.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test_files/test_normal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test_files/test_normal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/output/moments.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/output/sample_means_1000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/output/sample_means_2000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/output/sample_means_3000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pscs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pscs.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualization.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,49 +111,44 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.project9_exe">
-    <configuration name="MonteCarloExpectation_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="MonteCarloExpectation_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="MonteCarloExpectation_test" TEST_MODE="SUITE_TEST">
+    <configuration name="MonteCarloExpectation_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="MonteCarloExpectation_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="MonteCarloExpectation_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NormalDist_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="NormalDist_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="NormalDist_test" TEST_MODE="SUITE_TEST">
+    <configuration name="NormalDist_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="NormalDist_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="NormalDist_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Reader_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Reader_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="Reader_test" TEST_MODE="SUITE_TEST">
+    <configuration name="Reader_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="Reader_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="Reader_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunAllTests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="RunAllTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="RunAllTests" TEST_MODE="SUITE_TEST">
+    <configuration name="RunAllTests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="RunAllTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="RunAllTests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UniformDist_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="UniformDist_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="UniformDist_test" TEST_MODE="SUITE_TEST">
+    <configuration name="UniformDist_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="UniformDist_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="UniformDist_test" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="project9_exe" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="Test_files/test_normal.txt Test_files/test_function.txt N " REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="project9_exe" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="project9_exe">
+    <configuration name="project9_exe" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="Test_files/test_normal.txt Test_files/test_function.txt N " REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project_Monte_carlo" TARGET_NAME="project9_exe" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project_Monte_carlo" RUN_TARGET_NAME="project9_exe">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>

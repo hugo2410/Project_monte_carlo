@@ -6,7 +6,9 @@
 #define PROJECT_MONTE_CARLO_ABSTRACTVARIABLE_H
 
 #include <vector>
-
+/**
+ * \brief
+ */
 class AbstractVariable{
 public:
     /**
