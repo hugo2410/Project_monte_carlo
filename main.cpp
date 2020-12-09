@@ -9,7 +9,6 @@
 
 #include <iostream>
 #include <cstring>
-#include <string>
 #include <MonteCarloExpectation.h>
 #include <AbstractExpectation.h>
 #include <NormalDist.h>
@@ -19,10 +18,8 @@
 
 #include "AbstractReader.h"
 #include "AbstractFunc.h"
-#include "PolynomFunc.h"
 #include "NormalReader.h"
 #include "UniformReader.h"
-#include "ExpFunc.h"
 #include "AbstractVariable.h"
 #include "AbstractError.h"
 
@@ -34,6 +31,8 @@ int main(int argc, char *argv[]) {
     const char *function_file_name;
     const char *dist_type;
     int order;
+    int multiples = 3; // positive integer for generating maximum sample size multiples*N
+    int CTLsampleSize = 5; // The number of sample to generate of size multiples*N
     AbstractVariable *pRandom = 0;
     AbstractVariable *pRandomCTL = 0;
     AbstractReader *pReader;
@@ -66,7 +65,7 @@ int main(int argc, char *argv[]) {
         }
     }
     else{
-            cerr << "Missing distribution type. Please refer to README" << endl;
+            cerr << "Missing arguments. Please refer to README" << endl;
             return -1;
     }
 
@@ -78,23 +77,27 @@ int main(int argc, char *argv[]) {
     }
     delete pReader;
 
-//////////////////////////////////////FUNCTION//////////////////////////////////////////////////
+    ///////////////////////////////////FUNCTION//////////////////////////////////////////////////
 
     cout << "Calulating Expectation" << endl;
     pExpectation = new MonteCarloExpectation(pFunction,pRandom);
     cout << "Expectation Calculated" << endl;
     cout << pExpectation->getExpectation() << endl;
-    //////////////////////////////////////MOMENT//////////////////////////////////////////////////
+    //////////////////////////////////////MOMENT/////////////////////////////////////////////////
     StatisticalMoment *pMoment = new StatisticalMoment(pRandom);
     pMoment->write_csv("output/moments.csv",order);
     cout << "Moment written !" << endl;
     delete pMoment;
     delete pFunction;
-    //////////////////////////////////////CTL//////////////////////////////////////////////////
+    //////////////////////////////////////CTL///////////////////////////////////////////////////
+
     cout << "Verifying Central Limit Theorem !" << endl;
-    for(int j = 1;j<=3;++j) {
+
+    for(int j = 1;j<=multiples;++j) {
+
         pCThm = new CentralLimitThm(pRandom,j);
-        for (int i = 1; i <= 5; ++i) {
+
+        for (int i = 1; i <= CTLsampleSize; ++i) {
             pRandomCTL = new NormalDist(j * pRandom->get_size(), pRandom->get_mean(), pRandom->get_var());
             pCThm ->verify_thm(pRandomCTL,pExpectation);
         }
