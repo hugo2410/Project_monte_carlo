@@ -24,16 +24,16 @@ public:
      */
     ~NormalReader() override;
     /**
-     *
-     * @param file
-     * @param pRandomNormal
+     **\brief Reads file for distribution type and parameters
+     * @param file : File name
+     * @param pRandomVariable : Pointer to previously to distribution
      */
     void read_file(const char *file,AbstractVariable* &pRandomNormal) override ;
     /**
-     *
-     * @param file
-     * @param pFunction
-     * @param order
+     *\brief Abstract function to Read file for user function type and coefficients
+     * @param file: File name
+     * @param pFunction : Pointer to a user function
+     * @param order : Order defined by the user
      */
     void read_file(const char* file, AbstractFunc* &pFunction,int &order) override;
 };

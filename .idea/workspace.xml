@@ -36,30 +36,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="Modifier gtest suite au pb de tout à l'heure">
-      <change afterPath="$PROJECT_DIR$/Test/CTL_test.cpp" afterDir="false" />
+    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="All gtest work except for ctl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/MonteCarloExpectation_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MonteCarloExpectation_test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/monte_carlo_run.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/monte_carlo_run.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project_Monte_carlo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/Test.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/Test.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test/lib/googletest/CMakeFiles/gtest_main.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TestBound.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TestNormalMean.tx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TestNormalMean.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TestNormalVar.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TestOrder.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TestVectSize.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/func.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/func.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test_function.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test_normal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/FunctReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/FunctReader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/NormalReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/NormalReader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/UniformReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/UniformReader.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607463747177</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="All gtest work except for ctl">
+      <created>1607496906039</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607496906039</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +356,7 @@
     <MESSAGE value="Order + CTL ttheorem" />
     <MESSAGE value="Push pour que tu changes" />
     <MESSAGE value="Modifier gtest suite au pb de tout à l'heure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifier gtest suite au pb de tout à l'heure" />
+    <MESSAGE value="All gtest work except for ctl" />
+    <option name="LAST_COMMIT_MESSAGE" value="All gtest work except for ctl" />
   </component>
 </project>

@@ -21,8 +21,8 @@ public:
     ~FunctReader();
     /**
      * \brief Abstract function to Read file for distribution type and parameters
-     * @param file
-     * @param pRandomVariable
+     * @param file : File name
+     * @param pRandomVariable : Pointer to previously to distribution
      */
 
     void read_file(const char *file,AbstractVariable* &pRandomVariable) override;
