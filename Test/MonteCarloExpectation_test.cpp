@@ -60,18 +60,18 @@ public:
 };
 
 
-TEST_F(MonteCarloExpectationFixture, mean_uniform_calculation_check) {
+TEST_F(MonteCarloExpectationFixture, mean_uniform_calculation_test) {
     ASSERT_NEAR(pMontecarlo->computeMean(pUniformsample),mean_uniform,1e-1);
 }
 
-TEST_F(MonteCarloExpectationFixture, mean_normal_calculation_check) {
+TEST_F(MonteCarloExpectationFixture, mean_normal_calculation_test) {
     ASSERT_NEAR(pMontecarlo->computeMean(pNormalsample),TEST_MEAN,1e-1);
 }
 
-TEST_F(MonteCarloExpectationFixture, mean_uniform_get_check) {
+TEST_F(MonteCarloExpectationFixture, expectation_uniform_test) {
     ASSERT_NEAR(pMontecarlo_uniform->getExpectation(), mean_uniform,5e-1);
 }
 
-TEST_F(MonteCarloExpectationFixture, mean_normal_get_check) {
+TEST_F(MonteCarloExpectationFixture, expectation_normal_test) {
     ASSERT_NEAR(pMontecarlo_normal->getExpectation(),TEST_MEAN,5e-1);
 }

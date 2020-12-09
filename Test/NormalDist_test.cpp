@@ -46,9 +46,7 @@ TEST_F(NormalDistFixture, variance_check) {
 TEST_F(NormalDistFixture, size_check) {
     EXPECT_EQ(pRandomNormal->get_vector().size(),TEST_SIZE);
 }
-/*TEST_F(NormalDistFixture, throw_sub_sample_check) {
-    ASSERT_THROW(pRandomNormal->sub_sample(101),Error);
-}*/
+
 
 
 
