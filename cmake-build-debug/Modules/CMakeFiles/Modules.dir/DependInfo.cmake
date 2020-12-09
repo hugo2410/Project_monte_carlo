@@ -13,7 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/MonteCarloExpectation.cpp" "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o"
   "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.cpp" "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o"
   "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.cpp" "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o"
-  "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.cpp" "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o"
+  "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomFunc.cpp" "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.o"
   "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/StatisticalMoment.cpp" "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o"
   "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.cpp" "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o"
   "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.cpp" "/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o"

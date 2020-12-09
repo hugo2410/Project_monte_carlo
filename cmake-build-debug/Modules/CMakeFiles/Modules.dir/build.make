@@ -194,18 +194,18 @@ Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Modules.dir/TrigoFunc.cpp.s"
 	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/TrigoFunc.cpp -o CMakeFiles/Modules.dir/TrigoFunc.cpp.s
 
-Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
-Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o: ../Modules/PolynomlFunc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o"
-	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/PolynomlFunc.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.cpp
+Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
+Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.o: ../Modules/PolynomFunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.o"
+	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Modules.dir/PolynomFunc.cpp.o -c /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomFunc.cpp
 
-Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Modules.dir/PolynomlFunc.cpp.i"
-	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.cpp > CMakeFiles/Modules.dir/PolynomlFunc.cpp.i
+Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Modules.dir/PolynomFunc.cpp.i"
+	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomFunc.cpp > CMakeFiles/Modules.dir/PolynomFunc.cpp.i
 
-Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Modules.dir/PolynomlFunc.cpp.s"
-	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomlFunc.cpp -o CMakeFiles/Modules.dir/PolynomlFunc.cpp.s
+Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Modules.dir/PolynomFunc.cpp.s"
+	cd /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Modules && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/PolynomFunc.cpp -o CMakeFiles/Modules.dir/PolynomFunc.cpp.s
 
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: Modules/CMakeFiles/Modules.dir/flags.make
 Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o: ../Modules/ExpFunc.cpp
@@ -270,7 +270,7 @@ Modules_OBJECTS = \
 "CMakeFiles/Modules.dir/NormalDist.cpp.o" \
 "CMakeFiles/Modules.dir/AbstractFunc.cpp.o" \
 "CMakeFiles/Modules.dir/TrigoFunc.cpp.o" \
-"CMakeFiles/Modules.dir/PolynomlFunc.cpp.o" \
+"CMakeFiles/Modules.dir/PolynomFunc.cpp.o" \
 "CMakeFiles/Modules.dir/ExpFunc.cpp.o" \
 "CMakeFiles/Modules.dir/AbstractExpectation.cpp.o" \
 "CMakeFiles/Modules.dir/StatisticalMoment.cpp.o" \
@@ -288,7 +288,7 @@ Modules/libModules.a: Modules/CMakeFiles/Modules.dir/FunctReader.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/AbstractFunc.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o
-Modules/libModules.a: Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o
+Modules/libModules.a: Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/ExpFunc.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/AbstractExpectation.cpp.o
 Modules/libModules.a: Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o

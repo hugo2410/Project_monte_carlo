@@ -2,6 +2,7 @@
 
 ### Authors : 
 Akeddar Mehdi 261344
+
 Birch Hugo 
 
 ### Description
@@ -13,12 +14,14 @@ The objective of the project is the creation of a Monte Carlo algorithm in a mod
 * The visualization of the statistical moments
 *  The graphical verification of Central Limit Theorem (CTL)
 ### General Context
-The code is designed for 
+T
 ### How It Works
 
 To run the executable, the following information must be written to the terminal : 
 './project9_exe  name_of_distribution_file name_of_function_file distribution type'
+
 The program returns an output directory containing a 'moments.csv' file with moment results and several 'sample_means.csv' to verify the CTL theorem. 
+
 To plot the results, the 'visualization.py' script should be run. It ouputs 3 graphs : A visualization of the moments, 2 visualizations of the CTL theorem : The normal distribution of the sample means and the value of the sample's standard distribution compared to the theoretical standard distribution.
 
 
@@ -35,6 +38,8 @@ To plot the results, the 'visualization.py' script should be run. It ouputs 3 gr
 	* The maximum order for the statistical moments.
 This code is designed for **uniform** and **normal** distributions.   
 However, given the modularity of the code, it is easy to extend this constraint by adding new classes.
+
+### Output files
 
 ### Prerequisites
 #### C++

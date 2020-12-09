@@ -17,162 +17,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Reader_test">
-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Reader_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 Reader_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Reader_test/fast">
-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Reader_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 Reader_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="NormalDist_test">
-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/NormalDist_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 NormalDist_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="NormalDist_test/fast">
-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/NormalDist_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 NormalDist_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="UniformDist_test">
-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/UniformDist_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 UniformDist_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="UniformDist_test/fast">
-				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/UniformDist_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
-					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 UniformDist_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="MonteCarloExpectation_test">
 				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/MonteCarloExpectation_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
@@ -181,7 +25,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
@@ -207,7 +50,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
@@ -225,6 +67,206 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="RunAllTests">
+				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/RunAllTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 RunAllTests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RunAllTests/fast">
+				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/RunAllTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 RunAllTests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NormalDist_test">
+				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/NormalDist_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 NormalDist_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NormalDist_test/fast">
+				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/NormalDist_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 NormalDist_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Reader_test">
+				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Reader_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 Reader_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Reader_test/fast">
+				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Reader_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 Reader_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UniformDist_test">
+				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/UniformDist_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 UniformDist_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UniformDist_test/fast">
+				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/UniformDist_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
+					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 UniformDist_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="gtest_main">
 				<Option output="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
@@ -233,7 +275,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
@@ -259,7 +300,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
@@ -285,7 +325,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
@@ -311,7 +350,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules"/>
-					<Add directory="/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
@@ -332,14 +370,18 @@
 		</Build>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/MonteCarloExpectation_test.cpp">
 			<Option target="MonteCarloExpectation_test"/>
+			<Option target="RunAllTests"/>
 		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/NormalDist_test.cpp">
+			<Option target="RunAllTests"/>
 			<Option target="NormalDist_test"/>
 		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/Reader_test.cpp">
+			<Option target="RunAllTests"/>
 			<Option target="Reader_test"/>
 		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/UniformDist_test.cpp">
+			<Option target="RunAllTests"/>
 			<Option target="UniformDist_test"/>
 		</Unit>
 		<Unit filename="/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Test/lib/googletest/src/gtest-all.cc">
