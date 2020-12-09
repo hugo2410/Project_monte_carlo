@@ -5,7 +5,7 @@ set(HEADER_FILES
         AbstractExpectation.h
         NormalReader.h
         UniformReader.h
-        AbstractError.hpp
+        AbstractError.h
         MonteCarloExpectation.h
         FunctReader.h
         ExpFunc.h

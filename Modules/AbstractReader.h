@@ -4,7 +4,7 @@
 
 #ifndef PROJECT_MONTE_CARLO_ABSTRACTREADER_H
 #define PROJECT_MONTE_CARLO_ABSTRACTREADER_H
-#include "AbstractError.hpp"
+#include "AbstractError.h"
 #include "AbstractVariable.h"
 #include "AbstractFunc.h"
 

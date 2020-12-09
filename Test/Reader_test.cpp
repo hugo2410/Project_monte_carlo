@@ -4,7 +4,7 @@
 
 
 #include "gtest/gtest.h"
-#include "AbstractError.hpp"
+#include "AbstractError.h"
 #include "AbstractVariable.h"
 #include "AbstractReader.h"
 #include "NormalReader.h"
