@@ -2,7 +2,6 @@
 // Created by hugo on 28/11/2020.
 //
 
-#include <iostream>
 #include "PolynomlFunc.h"
 
 PolynomFunc::PolynomFunc() {}

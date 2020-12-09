@@ -9,9 +9,6 @@
 #include "AbstractReader.h"
 #include "AbstractVariable.h"
 
-#include <fstream>
-#include <typeinfo>
-#include <iostream>
 
 class NormalReader:public AbstractReader {
 public:

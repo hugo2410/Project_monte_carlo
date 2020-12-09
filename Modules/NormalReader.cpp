@@ -3,6 +3,7 @@
 //
 
 
+#include <fstream>
 #include "NormalReader.h"
 #include "NormalDist.h"
 

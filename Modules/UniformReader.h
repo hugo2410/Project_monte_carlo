@@ -7,9 +7,6 @@
 
 #include "AbstractReader.h"
 
-#include <fstream>
-#include <typeinfo>
-#include <iostream>
 
 class UniformReader: public AbstractReader{
 public:

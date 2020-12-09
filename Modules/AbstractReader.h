@@ -6,7 +6,6 @@
 #define PROJECT_MONTE_CARLO_ABSTRACTREADER_H
 #include "AbstractError.hpp"
 #include "AbstractVariable.h"
-#include "AbstractFunc.h"
 
 class AbstractReader {
 public:

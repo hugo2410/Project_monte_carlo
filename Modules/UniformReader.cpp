@@ -3,6 +3,7 @@
 //
 
 
+#include <fstream>
 #include "UniformReader.h"
 #include "UniformDist.h"
 
