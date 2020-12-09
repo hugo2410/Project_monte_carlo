@@ -28,10 +28,7 @@ void UniformReader::read_file(const char *file,AbstractVariable* &pRandomUniform
     if (b <= a){
         throw BoundError();
     }
-    std::cout << "J'ai fini de lire une uniforme" << std::endl;
-    // Creer une classe uniform avec ses informations
+    std::cout << "Reading Uniform parameters from file" << std::endl;
     pRandomUniform = new UniformDist(vectorSize,a,b);
-    std::cout << "J'ai fini de calculer une uniforme" << std::endl;
-    for(int i =0; i<vectorSize;++i)
-        std::cout << pRandomUniform->get_vector()[i] << ' ';
+    std::cout << "Uniform parameters correctly read" << std::endl;
 }

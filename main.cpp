@@ -79,10 +79,9 @@ int main(int argc, char *argv[]) {
 
     ///////////////////////////////////FUNCTION//////////////////////////////////////////////////
 
-    cout << "Calulating Expectation" << endl;
+    cout << "Calculating Expectation" << endl;
     pExpectation = new MonteCarloExpectation(pFunction,pRandom);
-    cout << "Expectation Calculated" << endl;
-    cout << pExpectation->getExpectation() << endl;
+    cout << "Expectation Calculated for user function : " << pExpectation->getExpectation()  << endl;
     //////////////////////////////////////MOMENT/////////////////////////////////////////////////
     StatisticalMoment *pMoment = new StatisticalMoment(pRandom);
     pMoment->write_csv("output/moments.csv",order);

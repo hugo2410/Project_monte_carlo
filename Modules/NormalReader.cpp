@@ -28,7 +28,7 @@ void NormalReader::read_file(const char *file,AbstractVariable* &pRandomNormal )
     if ((read_input.fail())|| (var <= 0)){
         throw VarError();
     }
-    std::cout << "Finished reading Normal distribution's parameters." << std::endl;
+    std::cout << "Finished reading normal distribution's parameters." << std::endl;
     pRandomNormal = new NormalDist(vectorSize,mean,var);
     std::cout << "Finished computing normal distribution." << std::endl;
 }

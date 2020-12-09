@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named project9_exe
+# Target rules for targets named project9
 
 # Build rule for target.
-project9_exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project9_exe
-.PHONY : project9_exe
+project9: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project9
+.PHONY : project9
 
 # fast build rule for target.
-project9_exe/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9_exe.dir/build.make CMakeFiles/project9_exe.dir/build
-.PHONY : project9_exe/fast
+project9/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9.dir/build.make CMakeFiles/project9.dir/build
+.PHONY : project9/fast
 
 #=============================================================================
 # Target rules for targets named MonteCarloExpectation_test
@@ -253,7 +253,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9_exe.dir/build.make CMakeFiles/project9_exe.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9.dir/build.make CMakeFiles/project9.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -262,7 +262,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9_exe.dir/build.make CMakeFiles/project9_exe.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9.dir/build.make CMakeFiles/project9.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -271,7 +271,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9_exe.dir/build.make CMakeFiles/project9_exe.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9.dir/build.make CMakeFiles/project9.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -290,7 +290,7 @@ help:
 	@echo "... UniformDist_test"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... project9_exe"
+	@echo "... project9"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

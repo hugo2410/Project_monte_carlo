@@ -18,7 +18,7 @@ The code is designed for
 ### How It Works
 
 To run the executable, the following information must be written to the terminal : 
-'./project9_exe  name_of_distribution_file name_of_function_file distribution type'
+'./project9  name_of_distribution_file name_of_function_file distribution type'
 The program returns an output directory containing a 'moments.csv' file with moment results and several 
 'sample_means.csv' to verify the CTL theorem.
 

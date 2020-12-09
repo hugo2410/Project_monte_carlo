@@ -42,7 +42,7 @@ plt.ylim(0,0.003)
 # In[11]:
 
 
-df=pd.read_csv("output/moments.csv",header=None)
+df=pd.read_csv("cmake-build-debug/output/moments.csv", header=None)
 df_separated=df.iloc[1:,0].str.split(pat=";",expand=True).astype(float)
 df_separated.columns= df.iloc[0,0].split(";")
 #df_separated['Statistical Moment']=df.iloc[:,0].str.split(pat=";",expand=True)[1].astype(float)
