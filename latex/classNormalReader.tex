@@ -1,0 +1,73 @@
+\hypertarget{classNormalReader}{}\section{Normal\+Reader Class Reference}
+\label{classNormalReader}\index{Normal\+Reader@{Normal\+Reader}}
+
+
+Class to read and store a normal distribution parameters Derived from \hyperlink{classAbstractReader}{Abstract\+Reader}.  
+
+
+
+
+{\ttfamily \#include $<$Normal\+Reader.\+h$>$}
+
+
+
+Inheritance diagram for Normal\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classNormalReader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Normal\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classNormalReader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNormalReader_a21910e5b630b535ac9e8a9b55bcb4d06}\label{classNormalReader_a21910e5b630b535ac9e8a9b55bcb4d06}} 
+\hyperlink{classNormalReader_a21910e5b630b535ac9e8a9b55bcb4d06}{Normal\+Reader} ()
+\begin{DoxyCompactList}\small\item\em \+: Default Constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNormalReader_a028e517f19b788a043ba170a3bbe24ab}\label{classNormalReader_a028e517f19b788a043ba170a3bbe24ab}} 
+\hyperlink{classNormalReader_a028e517f19b788a043ba170a3bbe24ab}{$\sim$\+Normal\+Reader} () override
+\begin{DoxyCompactList}\small\item\em \+: Default Destructor \end{DoxyCompactList}\item 
+void \hyperlink{classNormalReader_ae6571e3fdc414f143a5541807eded6e0}{read\+\_\+file} (const char $\ast$file, \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$\&p\+Random\+Normal) override
+\begin{DoxyCompactList}\small\item\em Reads file for distribution type and parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to read and store a normal distribution parameters Derived from \hyperlink{classAbstractReader}{Abstract\+Reader}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNormalReader_ae6571e3fdc414f143a5541807eded6e0}\label{classNormalReader_ae6571e3fdc414f143a5541807eded6e0}} 
+\index{Normal\+Reader@{Normal\+Reader}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!Normal\+Reader@{Normal\+Reader}}
+\subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
+{\footnotesize\ttfamily void Normal\+Reader\+::read\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file,  }\item[{\hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$\&}]{p\+Random\+Normal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads file for distribution type and parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \+: File name \\
+\hline
+{\em p\+Random\+Variable} & \+: Pointer to previously to distribution \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAbstractReader_a01d009f3633d0af6d9ea8e34defda7f5}{Abstract\+Reader}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Normal\+Reader.\+h\item 
+Modules/Normal\+Reader.\+cpp\end{DoxyCompactItemize}

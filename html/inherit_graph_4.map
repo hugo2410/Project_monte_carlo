@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classAbstractVariable.html" title="AbstractVariable" alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node2" href="$classUniformDist.html" title="Class to create an uniform distribution sample using random generator Derived from Abstract Variable ..." alt="" coords="172,5,264,32"/>
+<area shape="rect" id="node3" href="$classNormalDist.html" title="Class to create a normal distribution sample using inverse transform sampling Derived from UniformDis..." alt="" coords="312,5,400,32"/>
+</map>

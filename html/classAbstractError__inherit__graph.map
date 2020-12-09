@@ -1,0 +1,8 @@
+<map id="AbstractError" name="AbstractError">
+<area shape="rect" id="node3" href="$structBoundError.html" title="BoundError" alt="" coords="5,155,92,181"/>
+<area shape="rect" id="node4" href="$structFileError.html" title="FileError" alt="" coords="116,155,187,181"/>
+<area shape="rect" id="node5" href="$structOrderError.html" title="OrderError" alt="" coords="211,155,294,181"/>
+<area shape="rect" id="node6" href="$structVarError.html" title="VarError" alt="" coords="319,155,389,181"/>
+<area shape="rect" id="node7" href="$structVectSizeError.html" title="VectSizeError" alt="" coords="413,155,516,181"/>
+<area shape="rect" id="node8" href="$structWrongFormatError.html" title="WrongFormatError" alt="" coords="540,155,669,181"/>
+</map>

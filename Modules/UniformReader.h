@@ -29,5 +29,4 @@ public:
     void read_file(const char *file,AbstractVariable* &pRandomVariable) override;
 };
 
-
 #endif //PROJECT_MONTE_CARLO_UNIFORMREADER_H

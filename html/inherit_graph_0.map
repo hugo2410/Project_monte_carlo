@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structFileError.html" title="FileError" alt="" coords="5,107,76,133"/>
+<area shape="rect" id="node2" href="$classAbstractError.html" title="Manages all errors encountered by the program. " alt="" coords="124,107,223,133"/>
+<area shape="rect" id="node3" href="$structBoundError.html" title="BoundError" alt="" coords="292,5,379,32"/>
+<area shape="rect" id="node4" href="$structOrderError.html" title="OrderError" alt="" coords="294,56,377,83"/>
+<area shape="rect" id="node5" href="$structVarError.html" title="VarError" alt="" coords="300,107,371,133"/>
+<area shape="rect" id="node6" href="$structVectSizeError.html" title="VectSizeError" alt="" coords="284,157,387,184"/>
+<area shape="rect" id="node7" href="$structWrongFormatError.html" title="WrongFormatError" alt="" coords="271,208,400,235"/>
+</map>

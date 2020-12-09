@@ -1,0 +1,111 @@
+\subsubsection*{Authors \+:}
+
+Akeddar Mehdi 261344
+
+Birch Hugo 261684
+
+\subsubsection*{Description}
+
+This project is an introduction to scientific programming in C ++. It is registered as part of the Programming Concepts in Scientific Computing course(\href{https://edu.epfl.ch/coursebook/fr/programming-concepts-in-scientific-computing-MATH-458}{\tt https\+://edu.\+epfl.\+ch/coursebook/fr/programming-\/concepts-\/in-\/scientific-\/computing-\/\+M\+A\+T\+H-\/458}).
+
+The objective of the project is the creation of a Monte Carlo algorithm in a modular way. To do this, the following objectives have been achieved \+:
+\begin{DoxyItemize}
+\item Implementation of random number generators with a normal \& uniform probability distribution.
+\item The compute of the expectation value of a user-\/defined function
+\item The visualization of the statistical moments
+\item The graphical verification of Central Limit Theorem (C\+TL)
+\end{DoxyItemize}
+
+\subsubsection*{How It Works}
+
+To run the executable, the following information must be written to the terminal \+:
+
+\textquotesingle{}./project9 name\+\_\+of\+\_\+distribution\+\_\+file name\+\_\+of\+\_\+function\+\_\+file distribution type\textquotesingle{} .
+
+The program returns an output directory containing a \textquotesingle{}moments.\+csv\textquotesingle{} file with moment results and several \textquotesingle{}sample\+\_\+means.\+csv\textquotesingle{} to verify the C\+TL theorem.
+
+If run in C\+Lion I\+DE the arguments are saved to run with the default files to allow to be run directly\+:
+\begin{DoxyItemize}
+\item test\+\_\+function.\+txt
+\item test\+\_\+normal.\+txt
+\item \textquotesingle{}N\textquotesingle{} as distribution type.
+\end{DoxyItemize}
+
+To plot the results, the \textquotesingle{}visualization.\+py\textquotesingle{} script should be run. It ouputs 3 graphs \+: A visualization of the moments, 2 visualizations of the C\+TL theorem \+: The normal distribution of the sample means and the value of the sample\textquotesingle{}s standard distribution compared to the theoretical standard distribution.
+
+\subsubsection*{Input files}
+
+2 input files are needed for code usage \+:
+\begin{DoxyItemize}
+\item A Distribution file \+: the file should be structured as follow \+:
+\begin{DoxyItemize}
+\item The size of the vector.
+\item The mean of the normal distribution or the lower bound of the uniform distribution.
+\item The variance of the distribution or the upper bound of the uniform distribution.
+\end{DoxyItemize}
+\item A Function file \+: the file should be structured as follow \+:
+\begin{DoxyItemize}
+\item The type of function \+: \textquotesingle{} P \textquotesingle{} for polynomial, \textquotesingle{}E\textquotesingle{} for exponential and \textquotesingle{}T\textquotesingle{} for trigonometric function
+\item The first coefficient \+: {\bfseries a$\ast$$\ast$x+b / $\ast$$\ast$a} exp(bx) / {\bfseries a$\ast$$\ast$cos(bx)}
+\item {\bfseries The second coefficient \+: ax+$\ast$$\ast$b} / a exp($<$strong$>$b$\ast$$\ast$x) / acos($\ast$$\ast$b$\ast$$\ast$x)
+\item The maximum order for the statistical moments. This code is designed for $\ast$$\ast$uniform and {\bfseries normal} distributions. However, given the modularity of the code, it is easy to extend this constraint by adding new classes.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Example of input files are present in the directory as df\+\_\+function.\+txt and df\+\_\+normal.\+txt.
+
+\subsubsection*{Prerequisites}
+
+\paragraph*{C++}
+
+
+\begin{DoxyItemize}
+\item Input Files \+: Two examples are provided \textquotesingle{}test\+\_\+normal.\+txt\textquotesingle{} and \textquotesingle{}test\+\_\+function.\+txt\textquotesingle{}. If missing input files, the code exit with an error.
+\item This version was designed for C++ 14 or higher.
+\item No external libraries are required. \paragraph*{Python}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item This version was designed for Python 3.\+6 or higher.
+\item A directory called \textquotesingle{}output\textquotesingle{} containing the results for the moments and the C\+TL theorem is needed to run the visualization.
+\end{DoxyItemize}
+
+\subsubsection*{Google Test}
+
+This project possesses 5 unit test programs\+:
+\begin{DoxyItemize}
+\item Reader\+\_\+test which tests that if the inputs are incorrect exceptions are thrown.
+\item Normal\+Dist\+\_\+test which tests if the mean, the size and the variance given are correctly found in the normal distribution.
+\item Uniform\+Dist\+\_\+test tests if the mean, the size and the variance given are correctly found in the Uniform distribution.
+\item Monte\+Carlo\+Expectation\+\_\+test tests if the mean of the random sample for a uniform or normal distribution is close to the given mean. It also tests if the expectation is close to the theoretical value for both distributions.
+\item Run\+All\+Tests this runs all the test described above in one go, to make it easier for the user.
+\end{DoxyItemize}
+
+All necessary Test files for the test can be found in cmake-\/build-\/debug/\+Test\+\_\+files. These unit tests are all run with the Google test library which is included in the lib directory of the Test project \subsubsection*{Doxygen}
+
+The documentation was designed for doxygen 1.\+8.\+16 or higher. To generate the documentation, run the command \+: \textquotesingle{}doxygen Doxyfile\textquotesingle{} in the terminal.
+
+\subsubsection*{Improvements}
+
+
+\begin{DoxyEnumerate}
+\item Numerous exceptions were implemented however not all cases were taken into account, so we could make the program more robust to hazardous inputs.
+\item Add other type of distributions such as Poisson or Exponential.
+\item Add more classes of function and more parameters to offer more possibilities of user defined functions.
+\item Be more flexible on the architecture (e.\+g rethink the way readers are done to relate all readers to one abstract reader)
+\item Add different way of computing the mean like a variance reduction technique.
+\item Add a mathematical verification of the central limit theorem.
+\end{DoxyEnumerate}
+
+\subsubsection*{References}
+
+
+\begin{DoxyItemize}
+\item \href{https://en.wikipedia.org/wiki/List_of_probability_distributions}{\tt List of probability distributions}
+\item \href{https://en.wikipedia.org/wiki/Normal_distribution}{\tt Normal distribution}
+\item \href{https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)}{\tt Uniform distribution (continuous)}
+\item \href{https://en.wikipedia.org/wiki/Expected_value}{\tt Expected value}
+\item \href{https://en.wikipedia.org/wiki/Central_limit_theorem}{\tt Central limit theorem}
+\item \href{https://github.com/google/googletest}{\tt Google test library} 
+\end{DoxyItemize}

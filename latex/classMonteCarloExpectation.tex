@@ -1,0 +1,139 @@
+\hypertarget{classMonteCarloExpectation}{}\section{Monte\+Carlo\+Expectation Class Reference}
+\label{classMonteCarloExpectation}\index{Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}}
+
+
+Class to compute the monte carlo expectation of a sample Derived form \hyperlink{classAbstractExpectation}{Abstract\+Expectation} class.  
+
+
+
+
+{\ttfamily \#include $<$Monte\+Carlo\+Expectation.\+h$>$}
+
+
+
+Inheritance diagram for Monte\+Carlo\+Expectation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classMonteCarloExpectation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Monte\+Carlo\+Expectation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classMonteCarloExpectation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMonteCarloExpectation_a503c5564902dd9b808181de315b93f5c}\label{classMonteCarloExpectation_a503c5564902dd9b808181de315b93f5c}} 
+\hyperlink{classMonteCarloExpectation_a503c5564902dd9b808181de315b93f5c}{Monte\+Carlo\+Expectation} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMonteCarloExpectation_a584a93ef10f6e75ca60939c3ed0b1468}\label{classMonteCarloExpectation_a584a93ef10f6e75ca60939c3ed0b1468}} 
+\hyperlink{classMonteCarloExpectation_a584a93ef10f6e75ca60939c3ed0b1468}{$\sim$\+Monte\+Carlo\+Expectation} ()
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classMonteCarloExpectation_ad595bc1f4a61d0138fd1d55e11b4d267}{Monte\+Carlo\+Expectation} (\hyperlink{classAbstractFunc}{Abstract\+Func} $\ast$p\+Function, const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$p\+Random)
+\begin{DoxyCompactList}\small\item\em Constructor Defines the user\textquotesingle{}s function and the expectation. \end{DoxyCompactList}\item 
+double \hyperlink{classMonteCarloExpectation_a0cadc5362ae4d9073f4131ed9208053c}{get\+Expectation} () const
+\begin{DoxyCompactList}\small\item\em Returns the value of the previously computed expectation. \end{DoxyCompactList}\item 
+double \hyperlink{classMonteCarloExpectation_a3ded4ade26374189ab6d79f2c6928b0a}{evaluate\+Expectation} (const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$p\+Random)
+\begin{DoxyCompactList}\small\item\em Computes the value of the expctetation for a given function depending on the distribution of p\+Random. \end{DoxyCompactList}\item 
+double \hyperlink{classMonteCarloExpectation_a6f4489cc63ca48fcbf5f2cdd6258dfcc}{compute\+Mean} (const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$p\+Random)
+\begin{DoxyCompactList}\small\item\em Computes the mean of a given distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to compute the monte carlo expectation of a sample Derived form \hyperlink{classAbstractExpectation}{Abstract\+Expectation} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMonteCarloExpectation_ad595bc1f4a61d0138fd1d55e11b4d267}\label{classMonteCarloExpectation_ad595bc1f4a61d0138fd1d55e11b4d267}} 
+\index{Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}!Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}}
+\index{Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}!Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}}
+\subsubsection{\texorpdfstring{Monte\+Carlo\+Expectation()}{MonteCarloExpectation()}}
+{\footnotesize\ttfamily Monte\+Carlo\+Expectation\+::\+Monte\+Carlo\+Expectation (\begin{DoxyParamCaption}\item[{\hyperlink{classAbstractFunc}{Abstract\+Func} $\ast$}]{p\+Function,  }\item[{const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$}]{p\+Random }\end{DoxyParamCaption})}
+
+
+
+Constructor Defines the user\textquotesingle{}s function and the expectation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Function} & Pointer to the user defined function. \\
+\hline
+{\em p\+Random} & Pointer to the previously defined distibution. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMonteCarloExpectation_a6f4489cc63ca48fcbf5f2cdd6258dfcc}\label{classMonteCarloExpectation_a6f4489cc63ca48fcbf5f2cdd6258dfcc}} 
+\index{Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}!compute\+Mean@{compute\+Mean}}
+\index{compute\+Mean@{compute\+Mean}!Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}}
+\subsubsection{\texorpdfstring{compute\+Mean()}{computeMean()}}
+{\footnotesize\ttfamily double Monte\+Carlo\+Expectation\+::compute\+Mean (\begin{DoxyParamCaption}\item[{const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$}]{p\+Random }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Computes the mean of a given distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Random} & Pointer to the previously defined distibution. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the mean. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractExpectation_ac0fd8ea2ea546f6d01adec641886db14}{Abstract\+Expectation}.
+
+\mbox{\Hypertarget{classMonteCarloExpectation_a3ded4ade26374189ab6d79f2c6928b0a}\label{classMonteCarloExpectation_a3ded4ade26374189ab6d79f2c6928b0a}} 
+\index{Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}!evaluate\+Expectation@{evaluate\+Expectation}}
+\index{evaluate\+Expectation@{evaluate\+Expectation}!Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}}
+\subsubsection{\texorpdfstring{evaluate\+Expectation()}{evaluateExpectation()}}
+{\footnotesize\ttfamily double Monte\+Carlo\+Expectation\+::evaluate\+Expectation (\begin{DoxyParamCaption}\item[{const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$}]{p\+Random }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Computes the value of the expctetation for a given function depending on the distribution of p\+Random. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Random} & Pointer to the previously defined distibution. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the expectation. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractExpectation_a3f3bc9fdcbd4856212857fc0fa4445a5}{Abstract\+Expectation}.
+
+\mbox{\Hypertarget{classMonteCarloExpectation_a0cadc5362ae4d9073f4131ed9208053c}\label{classMonteCarloExpectation_a0cadc5362ae4d9073f4131ed9208053c}} 
+\index{Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}!get\+Expectation@{get\+Expectation}}
+\index{get\+Expectation@{get\+Expectation}!Monte\+Carlo\+Expectation@{Monte\+Carlo\+Expectation}}
+\subsubsection{\texorpdfstring{get\+Expectation()}{getExpectation()}}
+{\footnotesize\ttfamily double Monte\+Carlo\+Expectation\+::get\+Expectation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the value of the previously computed expectation. 
+
+\begin{DoxyReturn}{Returns}
+The value of the expectation. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractExpectation_a256d47c871d941e081a17194dda4d774}{Abstract\+Expectation}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Monte\+Carlo\+Expectation.\+h\item 
+Modules/Monte\+Carlo\+Expectation.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\hypertarget{classAbstractExpectation}{}\section{Abstract\+Expectation Class Reference}
+\label{classAbstractExpectation}\index{Abstract\+Expectation@{Abstract\+Expectation}}
+
+
+Abstract class for expectations.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+Expectation.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Expectation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classAbstractExpectation__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAbstractExpectation_ac2de8ff119a142ae9e6baf2bc28ee2a5}\label{classAbstractExpectation_ac2de8ff119a142ae9e6baf2bc28ee2a5}} 
+\hyperlink{classAbstractExpectation_ac2de8ff119a142ae9e6baf2bc28ee2a5}{Abstract\+Expectation} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAbstractExpectation_af1eab325a354bc1444dd80fe572cf8a0}\label{classAbstractExpectation_af1eab325a354bc1444dd80fe572cf8a0}} 
+virtual \hyperlink{classAbstractExpectation_af1eab325a354bc1444dd80fe572cf8a0}{$\sim$\+Abstract\+Expectation} ()
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classAbstractExpectation_a256d47c871d941e081a17194dda4d774}{get\+Expectation} () const =0
+\begin{DoxyCompactList}\small\item\em Abstract function to get the computed expectation of the user defined function. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classAbstractExpectation_a3f3bc9fdcbd4856212857fc0fa4445a5}{evaluate\+Expectation} (const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$p\+Random)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to compute the expectation. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classAbstractExpectation_ac0fd8ea2ea546f6d01adec641886db14}{compute\+Mean} (const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$p\+Random)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to compute the mean of random samples. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for expectations. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAbstractExpectation_ac0fd8ea2ea546f6d01adec641886db14}\label{classAbstractExpectation_ac0fd8ea2ea546f6d01adec641886db14}} 
+\index{Abstract\+Expectation@{Abstract\+Expectation}!compute\+Mean@{compute\+Mean}}
+\index{compute\+Mean@{compute\+Mean}!Abstract\+Expectation@{Abstract\+Expectation}}
+\subsubsection{\texorpdfstring{compute\+Mean()}{computeMean()}}
+{\footnotesize\ttfamily virtual double Abstract\+Expectation\+::compute\+Mean (\begin{DoxyParamCaption}\item[{const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$}]{p\+Random }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to compute the mean of random samples. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Random} & \+: p\+Random \+: Pointer to a random variables. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The mean of the random samples. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classMonteCarloExpectation_a6f4489cc63ca48fcbf5f2cdd6258dfcc}{Monte\+Carlo\+Expectation}.
+
+\mbox{\Hypertarget{classAbstractExpectation_a3f3bc9fdcbd4856212857fc0fa4445a5}\label{classAbstractExpectation_a3f3bc9fdcbd4856212857fc0fa4445a5}} 
+\index{Abstract\+Expectation@{Abstract\+Expectation}!evaluate\+Expectation@{evaluate\+Expectation}}
+\index{evaluate\+Expectation@{evaluate\+Expectation}!Abstract\+Expectation@{Abstract\+Expectation}}
+\subsubsection{\texorpdfstring{evaluate\+Expectation()}{evaluateExpectation()}}
+{\footnotesize\ttfamily virtual double Abstract\+Expectation\+::evaluate\+Expectation (\begin{DoxyParamCaption}\item[{const \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$}]{p\+Random }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to compute the expectation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Random} & \+: Pointer to a random variables. Used to evaluate the user function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The expectation of the user defined function 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classMonteCarloExpectation_a3ded4ade26374189ab6d79f2c6928b0a}{Monte\+Carlo\+Expectation}.
+
+\mbox{\Hypertarget{classAbstractExpectation_a256d47c871d941e081a17194dda4d774}\label{classAbstractExpectation_a256d47c871d941e081a17194dda4d774}} 
+\index{Abstract\+Expectation@{Abstract\+Expectation}!get\+Expectation@{get\+Expectation}}
+\index{get\+Expectation@{get\+Expectation}!Abstract\+Expectation@{Abstract\+Expectation}}
+\subsubsection{\texorpdfstring{get\+Expectation()}{getExpectation()}}
+{\footnotesize\ttfamily virtual double Abstract\+Expectation\+::get\+Expectation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to get the computed expectation of the user defined function. 
+
+\begin{DoxyReturn}{Returns}
+The computed expectation 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classMonteCarloExpectation_a0cadc5362ae4d9073f4131ed9208053c}{Monte\+Carlo\+Expectation}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Abstract\+Expectation.\+h\item 
+Modules/Abstract\+Expectation.\+cpp\end{DoxyCompactItemize}

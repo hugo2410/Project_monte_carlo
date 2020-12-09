@@ -1,0 +1,186 @@
+\hypertarget{classUniformDist}{}\section{Uniform\+Dist Class Reference}
+\label{classUniformDist}\index{Uniform\+Dist@{Uniform\+Dist}}
+
+
+Class to create an uniform distribution sample using random generator Derived from Abstract Variable class.  
+
+
+
+
+{\ttfamily \#include $<$Uniform\+Dist.\+h$>$}
+
+
+
+Inheritance diagram for Uniform\+Dist\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classUniformDist__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Uniform\+Dist\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classUniformDist__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUniformDist_aff015d27dc0cd334fa189e9a69df890b}\label{classUniformDist_aff015d27dc0cd334fa189e9a69df890b}} 
+\hyperlink{classUniformDist_aff015d27dc0cd334fa189e9a69df890b}{Uniform\+Dist} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classUniformDist_a723002562ed94ff786c30048268609cb}{Uniform\+Dist} (const int N)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classUniformDist_ade2ddd82d83472112ce24c575880134d}{Uniform\+Dist} (const int N, const int a, const int b)
+\begin{DoxyCompactList}\small\item\em Constructor Compute a sample from the standard uniform distribution of lower bound a and high bound b. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \hyperlink{classUniformDist_a60df487bfb003628e9997ebcb5aedcde}{get\+\_\+vector} () const
+\begin{DoxyCompactList}\small\item\em Return the vector of the normal sample. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classUniformDist_a18371ef0295e7aca4085015c0d844b41}{get\+\_\+mean} () const
+\begin{DoxyCompactList}\small\item\em Return the mean of the normal sample. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classUniformDist_aade143a6ff9ed9a8bee2e6b9fb2fed4c}{get\+\_\+var} () const
+\begin{DoxyCompactList}\small\item\em Return the variance of the normal sample. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classUniformDist_a6e7a871053b2eb563fcbf2f7e02fb22b}{get\+\_\+size} () const
+\begin{DoxyCompactList}\small\item\em Return the length of the normal sample. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUniformDist_addefdf54211e913830006e833a192748}\label{classUniformDist_addefdf54211e913830006e833a192748}} 
+std\+::vector$<$ double $>$ {\bfseries uniform\+Samples}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to create an uniform distribution sample using random generator Derived from Abstract Variable class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniformDist_a723002562ed94ff786c30048268609cb}\label{classUniformDist_a723002562ed94ff786c30048268609cb}} 
+\index{Uniform\+Dist@{Uniform\+Dist}!Uniform\+Dist@{Uniform\+Dist}}
+\index{Uniform\+Dist@{Uniform\+Dist}!Uniform\+Dist@{Uniform\+Dist}}
+\subsubsection{\texorpdfstring{Uniform\+Dist()}{UniformDist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Uniform\+Dist\+::\+Uniform\+Dist (\begin{DoxyParamCaption}\item[{const int}]{N }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUniformDist_ade2ddd82d83472112ce24c575880134d}\label{classUniformDist_ade2ddd82d83472112ce24c575880134d}} 
+\index{Uniform\+Dist@{Uniform\+Dist}!Uniform\+Dist@{Uniform\+Dist}}
+\index{Uniform\+Dist@{Uniform\+Dist}!Uniform\+Dist@{Uniform\+Dist}}
+\subsubsection{\texorpdfstring{Uniform\+Dist()}{UniformDist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Uniform\+Dist\+::\+Uniform\+Dist (\begin{DoxyParamCaption}\item[{const int}]{N,  }\item[{const int}]{a,  }\item[{const int}]{b }\end{DoxyParamCaption})}
+
+
+
+Constructor Compute a sample from the standard uniform distribution of lower bound a and high bound b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & \+: Positive integer defining sample size \\
+\hline
+{\em a} & \+: Integer for lower bound \\
+\hline
+{\em b} & \+: Integer for higher bound \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniformDist_a18371ef0295e7aca4085015c0d844b41}\label{classUniformDist_a18371ef0295e7aca4085015c0d844b41}} 
+\index{Uniform\+Dist@{Uniform\+Dist}!get\+\_\+mean@{get\+\_\+mean}}
+\index{get\+\_\+mean@{get\+\_\+mean}!Uniform\+Dist@{Uniform\+Dist}}
+\subsubsection{\texorpdfstring{get\+\_\+mean()}{get\_mean()}}
+{\footnotesize\ttfamily virtual double Uniform\+Dist\+::get\+\_\+mean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return the mean of the normal sample. 
+
+\begin{DoxyReturn}{Returns}
+the mean of the normal sample. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractVariable_a99ceeeecc689a9683badfdfa7ef20c45}{Abstract\+Variable}.
+
+
+
+Reimplemented in \hyperlink{classNormalDist_a947707f47873251fd7857b4a7ed977bc}{Normal\+Dist}.
+
+\mbox{\Hypertarget{classUniformDist_a6e7a871053b2eb563fcbf2f7e02fb22b}\label{classUniformDist_a6e7a871053b2eb563fcbf2f7e02fb22b}} 
+\index{Uniform\+Dist@{Uniform\+Dist}!get\+\_\+size@{get\+\_\+size}}
+\index{get\+\_\+size@{get\+\_\+size}!Uniform\+Dist@{Uniform\+Dist}}
+\subsubsection{\texorpdfstring{get\+\_\+size()}{get\_size()}}
+{\footnotesize\ttfamily virtual int Uniform\+Dist\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return the length of the normal sample. 
+
+\begin{DoxyReturn}{Returns}
+The length of the normal sample 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractVariable_a96d9b63c3d9aff4673a9c66738302766}{Abstract\+Variable}.
+
+
+
+Reimplemented in \hyperlink{classNormalDist_a6dcfba2a8149dbd527392c32b3d7a7a1}{Normal\+Dist}.
+
+\mbox{\Hypertarget{classUniformDist_aade143a6ff9ed9a8bee2e6b9fb2fed4c}\label{classUniformDist_aade143a6ff9ed9a8bee2e6b9fb2fed4c}} 
+\index{Uniform\+Dist@{Uniform\+Dist}!get\+\_\+var@{get\+\_\+var}}
+\index{get\+\_\+var@{get\+\_\+var}!Uniform\+Dist@{Uniform\+Dist}}
+\subsubsection{\texorpdfstring{get\+\_\+var()}{get\_var()}}
+{\footnotesize\ttfamily virtual double Uniform\+Dist\+::get\+\_\+var (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return the variance of the normal sample. 
+
+\begin{DoxyReturn}{Returns}
+the variance of the normal sample 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractVariable_a71d378332b0e5b3c1760bb98db5d906b}{Abstract\+Variable}.
+
+
+
+Reimplemented in \hyperlink{classNormalDist_a46bc646f126ac3c2d46bcd9ccbf01135}{Normal\+Dist}.
+
+\mbox{\Hypertarget{classUniformDist_a60df487bfb003628e9997ebcb5aedcde}\label{classUniformDist_a60df487bfb003628e9997ebcb5aedcde}} 
+\index{Uniform\+Dist@{Uniform\+Dist}!get\+\_\+vector@{get\+\_\+vector}}
+\index{get\+\_\+vector@{get\+\_\+vector}!Uniform\+Dist@{Uniform\+Dist}}
+\subsubsection{\texorpdfstring{get\+\_\+vector()}{get\_vector()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$double$>$ Uniform\+Dist\+::get\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return the vector of the normal sample. 
+
+\begin{DoxyReturn}{Returns}
+the vector of the sample 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractVariable_a0312a988d8c527d2af7615ef2fd08621}{Abstract\+Variable}.
+
+
+
+Reimplemented in \hyperlink{classNormalDist_a473e67b9d1787f6ff887f6854dbd350c}{Normal\+Dist}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Uniform\+Dist.\+h\item 
+Modules/Uniform\+Dist.\+cpp\end{DoxyCompactItemize}

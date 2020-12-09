@@ -1,0 +1,73 @@
+\hypertarget{classUniformReader}{}\section{Uniform\+Reader Class Reference}
+\label{classUniformReader}\index{Uniform\+Reader@{Uniform\+Reader}}
+
+
+Class to read and store a uniform distribution parameters Derived from \hyperlink{classAbstractReader}{Abstract\+Reader}.  
+
+
+
+
+{\ttfamily \#include $<$Uniform\+Reader.\+h$>$}
+
+
+
+Inheritance diagram for Uniform\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classUniformReader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Uniform\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classUniformReader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUniformReader_ac6ba86e0db2e3dfe4c5204295c78c5a9}\label{classUniformReader_ac6ba86e0db2e3dfe4c5204295c78c5a9}} 
+\hyperlink{classUniformReader_ac6ba86e0db2e3dfe4c5204295c78c5a9}{Uniform\+Reader} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUniformReader_a4e6558861df3bb2c14670c2b7cd46758}\label{classUniformReader_a4e6558861df3bb2c14670c2b7cd46758}} 
+\hyperlink{classUniformReader_a4e6558861df3bb2c14670c2b7cd46758}{$\sim$\+Uniform\+Reader} () override
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classUniformReader_ae4e326a00cd72cdc1afa73beebe60ddc}{read\+\_\+file} (const char $\ast$file, \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$\&p\+Random\+Variable) override
+\begin{DoxyCompactList}\small\item\em Reads file for distribution type and parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to read and store a uniform distribution parameters Derived from \hyperlink{classAbstractReader}{Abstract\+Reader}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniformReader_ae4e326a00cd72cdc1afa73beebe60ddc}\label{classUniformReader_ae4e326a00cd72cdc1afa73beebe60ddc}} 
+\index{Uniform\+Reader@{Uniform\+Reader}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!Uniform\+Reader@{Uniform\+Reader}}
+\subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
+{\footnotesize\ttfamily void Uniform\+Reader\+::read\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file,  }\item[{\hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$\&}]{p\+Random\+Variable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads file for distribution type and parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \+: File name \\
+\hline
+{\em p\+Random\+Variable} & \+: Pointer to previously to distribution \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAbstractReader_a01d009f3633d0af6d9ea8e34defda7f5}{Abstract\+Reader}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Uniform\+Reader.\+h\item 
+Modules/Uniform\+Reader.\+cpp\end{DoxyCompactItemize}

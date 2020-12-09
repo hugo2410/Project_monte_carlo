@@ -1,0 +1,4 @@
+<map id="AbstractVariable" name="AbstractVariable">
+<area shape="rect" id="node2" href="$classUniformDist.html" title="Class to create an uniform distribution sample using random generator Derived from Abstract Variable ..." alt="" coords="19,80,111,107"/>
+<area shape="rect" id="node3" href="$classNormalDist.html" title="Class to create a normal distribution sample using inverse transform sampling Derived from UniformDis..." alt="" coords="21,155,109,181"/>
+</map>

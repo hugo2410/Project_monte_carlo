@@ -1,0 +1,165 @@
+\hypertarget{classNormalDist}{}\section{Normal\+Dist Class Reference}
+\label{classNormalDist}\index{Normal\+Dist@{Normal\+Dist}}
+
+
+Class to create a normal distribution sample using inverse transform sampling Derived from \hyperlink{classUniformDist}{Uniform\+Dist} since the inverse transform sampling is based on uniform distributed sample between 0 and 1.  
+
+
+
+
+{\ttfamily \#include $<$Normal\+Dist.\+h$>$}
+
+
+
+Inheritance diagram for Normal\+Dist\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classNormalDist__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Normal\+Dist\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classNormalDist__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNormalDist_ada1fce213a28e723f692f007d5964851}\label{classNormalDist_ada1fce213a28e723f692f007d5964851}} 
+\hyperlink{classNormalDist_ada1fce213a28e723f692f007d5964851}{Normal\+Dist} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classNormalDist_acafd80c0e98d85ecac3acce4b7919b41}{Normal\+Dist} (const int N)
+\begin{DoxyCompactList}\small\item\em Constructor Compute a sample from the standard normal distribution of variance 1 centred in 0 using inverse uniform sampling. \end{DoxyCompactList}\item 
+\hyperlink{classNormalDist_ab26a2a8829a69838c683d3197420a672}{Normal\+Dist} (const int N, const double mean, const double var)
+\begin{DoxyCompactList}\small\item\em Constructor Compute a sample from the standard normal distribution of variance = var centred in mean using inverse uniform sampling. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \hyperlink{classNormalDist_a473e67b9d1787f6ff887f6854dbd350c}{get\+\_\+vector} () const
+\begin{DoxyCompactList}\small\item\em Return the vector of the normal sample. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classNormalDist_a947707f47873251fd7857b4a7ed977bc}{get\+\_\+mean} () const
+\begin{DoxyCompactList}\small\item\em Return the mean of the normal sample. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classNormalDist_a46bc646f126ac3c2d46bcd9ccbf01135}{get\+\_\+var} () const
+\begin{DoxyCompactList}\small\item\em Return the variance of the normal sample. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classNormalDist_a6dcfba2a8149dbd527392c32b3d7a7a1}{get\+\_\+size} () const
+\begin{DoxyCompactList}\small\item\em Return the length of the normal sample. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class to create a normal distribution sample using inverse transform sampling Derived from \hyperlink{classUniformDist}{Uniform\+Dist} since the inverse transform sampling is based on uniform distributed sample between 0 and 1. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNormalDist_acafd80c0e98d85ecac3acce4b7919b41}\label{classNormalDist_acafd80c0e98d85ecac3acce4b7919b41}} 
+\index{Normal\+Dist@{Normal\+Dist}!Normal\+Dist@{Normal\+Dist}}
+\index{Normal\+Dist@{Normal\+Dist}!Normal\+Dist@{Normal\+Dist}}
+\subsubsection{\texorpdfstring{Normal\+Dist()}{NormalDist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Normal\+Dist\+::\+Normal\+Dist (\begin{DoxyParamCaption}\item[{const int}]{N }\end{DoxyParamCaption})}
+
+
+
+Constructor Compute a sample from the standard normal distribution of variance 1 centred in 0 using inverse uniform sampling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & \+: Positive integer that define the size of the vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNormalDist_ab26a2a8829a69838c683d3197420a672}\label{classNormalDist_ab26a2a8829a69838c683d3197420a672}} 
+\index{Normal\+Dist@{Normal\+Dist}!Normal\+Dist@{Normal\+Dist}}
+\index{Normal\+Dist@{Normal\+Dist}!Normal\+Dist@{Normal\+Dist}}
+\subsubsection{\texorpdfstring{Normal\+Dist()}{NormalDist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Normal\+Dist\+::\+Normal\+Dist (\begin{DoxyParamCaption}\item[{const int}]{N,  }\item[{const double}]{mean,  }\item[{const double}]{var }\end{DoxyParamCaption})}
+
+
+
+Constructor Compute a sample from the standard normal distribution of variance = var centred in mean using inverse uniform sampling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & \+: Positive integer that define the size of the vector. \\
+\hline
+{\em mean} & \+: Double representing the mean of the normal distribution \\
+\hline
+{\em var} & \+: Positive double representing the variance of the normal distribution \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNormalDist_a947707f47873251fd7857b4a7ed977bc}\label{classNormalDist_a947707f47873251fd7857b4a7ed977bc}} 
+\index{Normal\+Dist@{Normal\+Dist}!get\+\_\+mean@{get\+\_\+mean}}
+\index{get\+\_\+mean@{get\+\_\+mean}!Normal\+Dist@{Normal\+Dist}}
+\subsubsection{\texorpdfstring{get\+\_\+mean()}{get\_mean()}}
+{\footnotesize\ttfamily virtual double Normal\+Dist\+::get\+\_\+mean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return the mean of the normal sample. 
+
+\begin{DoxyReturn}{Returns}
+the mean of the normal sample. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUniformDist_a18371ef0295e7aca4085015c0d844b41}{Uniform\+Dist}.
+
+\mbox{\Hypertarget{classNormalDist_a6dcfba2a8149dbd527392c32b3d7a7a1}\label{classNormalDist_a6dcfba2a8149dbd527392c32b3d7a7a1}} 
+\index{Normal\+Dist@{Normal\+Dist}!get\+\_\+size@{get\+\_\+size}}
+\index{get\+\_\+size@{get\+\_\+size}!Normal\+Dist@{Normal\+Dist}}
+\subsubsection{\texorpdfstring{get\+\_\+size()}{get\_size()}}
+{\footnotesize\ttfamily virtual int Normal\+Dist\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return the length of the normal sample. 
+
+\begin{DoxyReturn}{Returns}
+The length of the normal sample 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUniformDist_a6e7a871053b2eb563fcbf2f7e02fb22b}{Uniform\+Dist}.
+
+\mbox{\Hypertarget{classNormalDist_a46bc646f126ac3c2d46bcd9ccbf01135}\label{classNormalDist_a46bc646f126ac3c2d46bcd9ccbf01135}} 
+\index{Normal\+Dist@{Normal\+Dist}!get\+\_\+var@{get\+\_\+var}}
+\index{get\+\_\+var@{get\+\_\+var}!Normal\+Dist@{Normal\+Dist}}
+\subsubsection{\texorpdfstring{get\+\_\+var()}{get\_var()}}
+{\footnotesize\ttfamily virtual double Normal\+Dist\+::get\+\_\+var (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return the variance of the normal sample. 
+
+\begin{DoxyReturn}{Returns}
+the variance of the normal sample 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUniformDist_aade143a6ff9ed9a8bee2e6b9fb2fed4c}{Uniform\+Dist}.
+
+\mbox{\Hypertarget{classNormalDist_a473e67b9d1787f6ff887f6854dbd350c}\label{classNormalDist_a473e67b9d1787f6ff887f6854dbd350c}} 
+\index{Normal\+Dist@{Normal\+Dist}!get\+\_\+vector@{get\+\_\+vector}}
+\index{get\+\_\+vector@{get\+\_\+vector}!Normal\+Dist@{Normal\+Dist}}
+\subsubsection{\texorpdfstring{get\+\_\+vector()}{get\_vector()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$double$>$ Normal\+Dist\+::get\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return the vector of the normal sample. 
+
+\begin{DoxyReturn}{Returns}
+the vector of the sample 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classUniformDist_a60df487bfb003628e9997ebcb5aedcde}{Uniform\+Dist}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Normal\+Dist.\+h\item 
+Modules/Normal\+Dist.\+cpp\end{DoxyCompactItemize}

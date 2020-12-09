@@ -1,0 +1,77 @@
+\hypertarget{classAbstractError}{}\section{Abstract\+Error Class Reference}
+\label{classAbstractError}\index{Abstract\+Error@{Abstract\+Error}}
+
+
+Manages all errors encountered by the program.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+Error.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAbstractError__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Abstract\+Error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classAbstractError__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAbstractError_ae40c5440712bdcf91b2b7d733e2ee80b}{Abstract\+Error} ()
+\item 
+virtual \hyperlink{classAbstractError_a9b35711452ca3e32ac0609bcb493c181}{$\sim$\+Abstract\+Error} ()  throw ()
+\item 
+virtual const char $\ast$ \hyperlink{classAbstractError_a19735c7a9b5f6e84db606292967667a9}{what} () const  throw ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages all errors encountered by the program. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAbstractError_ae40c5440712bdcf91b2b7d733e2ee80b}\label{classAbstractError_ae40c5440712bdcf91b2b7d733e2ee80b}} 
+\index{Abstract\+Error@{Abstract\+Error}!Abstract\+Error@{Abstract\+Error}}
+\index{Abstract\+Error@{Abstract\+Error}!Abstract\+Error@{Abstract\+Error}}
+\subsubsection{\texorpdfstring{Abstract\+Error()}{AbstractError()}}
+{\footnotesize\ttfamily Abstract\+Error\+::\+Abstract\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Constructor. \mbox{\Hypertarget{classAbstractError_a9b35711452ca3e32ac0609bcb493c181}\label{classAbstractError_a9b35711452ca3e32ac0609bcb493c181}} 
+\index{Abstract\+Error@{Abstract\+Error}!````~Abstract\+Error@{$\sim$\+Abstract\+Error}}
+\index{````~Abstract\+Error@{$\sim$\+Abstract\+Error}!Abstract\+Error@{Abstract\+Error}}
+\subsubsection{\texorpdfstring{$\sim$\+Abstract\+Error()}{~AbstractError()}}
+{\footnotesize\ttfamily virtual Abstract\+Error\+::$\sim$\+Abstract\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throw  ) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor. Virtual to allow for subclassing. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAbstractError_a19735c7a9b5f6e84db606292967667a9}\label{classAbstractError_a19735c7a9b5f6e84db606292967667a9}} 
+\index{Abstract\+Error@{Abstract\+Error}!what@{what}}
+\index{what@{what}!Abstract\+Error@{Abstract\+Error}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Abstract\+Error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw  ) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns a pointer to the (constant) error description. \begin{DoxyReturn}{Returns}
+A pointer to a const char$\ast$. The underlying memory is in possession of the \hyperlink{classAbstractError}{Abstract\+Error} object. Callers must not attempt to free the memory. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{structWrongFormatError_a3c1c3f39ce135d19c7d0bb2fe8ddd3c1}{Wrong\+Format\+Error}, \hyperlink{structOrderError_a55140961b8a995ff9111a275cac708c8}{Order\+Error}, \hyperlink{structBoundError_a58ec01d9e329a9604cda74a8c273879a}{Bound\+Error}, \hyperlink{structVarError_a48ee904c5e61633cb6f4b9af2d093eaa}{Var\+Error}, \hyperlink{structVectSizeError_af92248320a9fb06b025662736a742c9e}{Vect\+Size\+Error}, and \hyperlink{structFileError_a7446417295daef00459e8d7e16cbb151}{File\+Error}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Abstract\+Error.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="AbstractReader" name="AbstractReader">
+<area shape="rect" id="node2" href="$classNormalReader.html" title="Class to read and store a normal distribution parameters Derived from AbstractReader. " alt="" coords="5,80,112,107"/>
+<area shape="rect" id="node3" href="$classUniformReader.html" title="Class to read and store a uniform distribution parameters Derived from AbstractReader. " alt="" coords="137,80,247,107"/>
+</map>

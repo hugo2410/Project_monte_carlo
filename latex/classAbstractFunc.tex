@@ -1,0 +1,99 @@
+\hypertarget{classAbstractFunc}{}\section{Abstract\+Func Class Reference}
+\label{classAbstractFunc}\index{Abstract\+Func@{Abstract\+Func}}
+
+
+Abstract class for functions.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+Func.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Func\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classAbstractFunc__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAbstractFunc_a50a0d29bc7047f32e009a1bdaf481bc5}\label{classAbstractFunc_a50a0d29bc7047f32e009a1bdaf481bc5}} 
+\hyperlink{classAbstractFunc_a50a0d29bc7047f32e009a1bdaf481bc5}{Abstract\+Func} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classAbstractFunc_a2f8a88c02beff30adb2eb54346e8bb0f}{Abstract\+Func} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Constructor Construct a function with coefficient a and b (e.\+g \+: f(x) = ax+b) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAbstractFunc_a9696320769335f8fea3e537b74032851}\label{classAbstractFunc_a9696320769335f8fea3e537b74032851}} 
+virtual \hyperlink{classAbstractFunc_a9696320769335f8fea3e537b74032851}{$\sim$\+Abstract\+Func} ()
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classAbstractFunc_ac98be1daa5131b9fddcfdba0a2c34871}{evaluate} (double x)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to compute the evaluation of the user function on x \mbox{[}(f(x)\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAbstractFunc_ae4a1f381c5bc27564218bdc77b2c722e}\label{classAbstractFunc_ae4a1f381c5bc27564218bdc77b2c722e}} 
+int {\bfseries coef\+\_\+a}
+\item 
+\mbox{\Hypertarget{classAbstractFunc_aefbfa8961c422c6f3c23adf0976061f2}\label{classAbstractFunc_aefbfa8961c422c6f3c23adf0976061f2}} 
+int {\bfseries coef\+\_\+b}
+\item 
+\mbox{\Hypertarget{classAbstractFunc_afb8a73dd7c2c253de9fc88efc0ad99de}\label{classAbstractFunc_afb8a73dd7c2c253de9fc88efc0ad99de}} 
+int {\bfseries order}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAbstractFunc_a2f8a88c02beff30adb2eb54346e8bb0f}\label{classAbstractFunc_a2f8a88c02beff30adb2eb54346e8bb0f}} 
+\index{Abstract\+Func@{Abstract\+Func}!Abstract\+Func@{Abstract\+Func}}
+\index{Abstract\+Func@{Abstract\+Func}!Abstract\+Func@{Abstract\+Func}}
+\subsubsection{\texorpdfstring{Abstract\+Func()}{AbstractFunc()}}
+{\footnotesize\ttfamily Abstract\+Func\+::\+Abstract\+Func (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor Construct a function with coefficient a and b (e.\+g \+: f(x) = ax+b) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \+: First Coefficient \\
+\hline
+{\em b} & \+: Second CoefficientS \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAbstractFunc_ac98be1daa5131b9fddcfdba0a2c34871}\label{classAbstractFunc_ac98be1daa5131b9fddcfdba0a2c34871}} 
+\index{Abstract\+Func@{Abstract\+Func}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Abstract\+Func@{Abstract\+Func}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily virtual double Abstract\+Func\+::evaluate (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to compute the evaluation of the user function on x \mbox{[}(f(x)\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: A random sample \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+f(x) 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classPolynomFunc_a9908fc0cf0686123a98d3186d481fa6f}{Polynom\+Func}, \hyperlink{classTrigoFunc_ac04acbf2d2b7301d6e2084c9bb8daab2}{Trigo\+Func}, and \hyperlink{classExpFunc_a338e91308f12a66e3d1989ed5f589626}{Exp\+Func}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Abstract\+Func.\+h\item 
+Modules/Abstract\+Func.\+cpp\end{DoxyCompactItemize}

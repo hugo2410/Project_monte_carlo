@@ -1,0 +1,5 @@
+<map id="AbstractFunc" name="AbstractFunc">
+<area shape="rect" id="node2" href="$classExpFunc.html" title="Exponential function class Derived from AbstractFunc. " alt="" coords="5,80,80,107"/>
+<area shape="rect" id="node3" href="$classPolynomFunc.html" title="Polynomial function class Derived from AbstractFunc. " alt="" coords="105,80,207,107"/>
+<area shape="rect" id="node4" href="$classTrigoFunc.html" title="Trigonometric function class Derived from AbstractFunc. " alt="" coords="232,80,312,107"/>
+</map>

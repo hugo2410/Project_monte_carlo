@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classAbstractReader.html" title="Abstract class for readers. " alt="" coords="5,31,119,57"/>
+<area shape="rect" id="node2" href="$classNormalReader.html" title="Class to read and store a normal distribution parameters Derived from AbstractReader. " alt="" coords="169,5,275,32"/>
+<area shape="rect" id="node3" href="$classUniformReader.html" title="Class to read and store a uniform distribution parameters Derived from AbstractReader. " alt="" coords="167,56,277,83"/>
+</map>

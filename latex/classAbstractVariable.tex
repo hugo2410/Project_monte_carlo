@@ -1,0 +1,98 @@
+\hypertarget{classAbstractVariable}{}\section{Abstract\+Variable Class Reference}
+\label{classAbstractVariable}\index{Abstract\+Variable@{Abstract\+Variable}}
+
+
+Inheritance diagram for Abstract\+Variable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classAbstractVariable__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::vector$<$ double $>$ \hyperlink{classAbstractVariable_a0312a988d8c527d2af7615ef2fd08621}{get\+\_\+vector} () const =0
+\begin{DoxyCompactList}\small\item\em Abstract function to return the vector of generated random numbers. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classAbstractVariable_a99ceeeecc689a9683badfdfa7ef20c45}{get\+\_\+mean} () const =0
+\begin{DoxyCompactList}\small\item\em Abstract function to return the mean of the distribution defined by the user. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classAbstractVariable_a71d378332b0e5b3c1760bb98db5d906b}{get\+\_\+var} () const =0
+\begin{DoxyCompactList}\small\item\em Abstract function to return the variance of the distribution defined by the user. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classAbstractVariable_a96d9b63c3d9aff4673a9c66738302766}{get\+\_\+size} () const =0
+\begin{DoxyCompactList}\small\item\em Abstract function to return the number of random numbers defined by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAbstractVariable_a99ceeeecc689a9683badfdfa7ef20c45}\label{classAbstractVariable_a99ceeeecc689a9683badfdfa7ef20c45}} 
+\index{Abstract\+Variable@{Abstract\+Variable}!get\+\_\+mean@{get\+\_\+mean}}
+\index{get\+\_\+mean@{get\+\_\+mean}!Abstract\+Variable@{Abstract\+Variable}}
+\subsubsection{\texorpdfstring{get\+\_\+mean()}{get\_mean()}}
+{\footnotesize\ttfamily virtual double Abstract\+Variable\+::get\+\_\+mean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to return the mean of the distribution defined by the user. 
+
+\begin{DoxyReturn}{Returns}
+The mean of the distribution 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classNormalDist_a947707f47873251fd7857b4a7ed977bc}{Normal\+Dist}, and \hyperlink{classUniformDist_a18371ef0295e7aca4085015c0d844b41}{Uniform\+Dist}.
+
+\mbox{\Hypertarget{classAbstractVariable_a96d9b63c3d9aff4673a9c66738302766}\label{classAbstractVariable_a96d9b63c3d9aff4673a9c66738302766}} 
+\index{Abstract\+Variable@{Abstract\+Variable}!get\+\_\+size@{get\+\_\+size}}
+\index{get\+\_\+size@{get\+\_\+size}!Abstract\+Variable@{Abstract\+Variable}}
+\subsubsection{\texorpdfstring{get\+\_\+size()}{get\_size()}}
+{\footnotesize\ttfamily virtual int Abstract\+Variable\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to return the number of random numbers defined by the user. 
+
+\begin{DoxyReturn}{Returns}
+The number of random numbers 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classNormalDist_a6dcfba2a8149dbd527392c32b3d7a7a1}{Normal\+Dist}, and \hyperlink{classUniformDist_a6e7a871053b2eb563fcbf2f7e02fb22b}{Uniform\+Dist}.
+
+\mbox{\Hypertarget{classAbstractVariable_a71d378332b0e5b3c1760bb98db5d906b}\label{classAbstractVariable_a71d378332b0e5b3c1760bb98db5d906b}} 
+\index{Abstract\+Variable@{Abstract\+Variable}!get\+\_\+var@{get\+\_\+var}}
+\index{get\+\_\+var@{get\+\_\+var}!Abstract\+Variable@{Abstract\+Variable}}
+\subsubsection{\texorpdfstring{get\+\_\+var()}{get\_var()}}
+{\footnotesize\ttfamily virtual double Abstract\+Variable\+::get\+\_\+var (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to return the variance of the distribution defined by the user. 
+
+\begin{DoxyReturn}{Returns}
+The variance of the distribution 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classNormalDist_a46bc646f126ac3c2d46bcd9ccbf01135}{Normal\+Dist}, and \hyperlink{classUniformDist_aade143a6ff9ed9a8bee2e6b9fb2fed4c}{Uniform\+Dist}.
+
+\mbox{\Hypertarget{classAbstractVariable_a0312a988d8c527d2af7615ef2fd08621}\label{classAbstractVariable_a0312a988d8c527d2af7615ef2fd08621}} 
+\index{Abstract\+Variable@{Abstract\+Variable}!get\+\_\+vector@{get\+\_\+vector}}
+\index{get\+\_\+vector@{get\+\_\+vector}!Abstract\+Variable@{Abstract\+Variable}}
+\subsubsection{\texorpdfstring{get\+\_\+vector()}{get\_vector()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$double$>$ Abstract\+Variable\+::get\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to return the vector of generated random numbers. 
+
+\begin{DoxyReturn}{Returns}
+A vector of generated random numbers 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classNormalDist_a473e67b9d1787f6ff887f6854dbd350c}{Normal\+Dist}, and \hyperlink{classUniformDist_a60df487bfb003628e9997ebcb5aedcde}{Uniform\+Dist}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Abstract\+Variable.\+h\end{DoxyCompactItemize}

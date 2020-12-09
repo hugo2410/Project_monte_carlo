@@ -1,0 +1,64 @@
+\hypertarget{classAbstractReader}{}\section{Abstract\+Reader Class Reference}
+\label{classAbstractReader}\index{Abstract\+Reader@{Abstract\+Reader}}
+
+
+Abstract class for readers.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+Reader.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Reader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classAbstractReader__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAbstractReader_afe9629707ae2c68bd9d10cc094dfcfc5}\label{classAbstractReader_afe9629707ae2c68bd9d10cc094dfcfc5}} 
+\hyperlink{classAbstractReader_afe9629707ae2c68bd9d10cc094dfcfc5}{Abstract\+Reader} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAbstractReader_a18b9335ebe51ba66d0f449f95903f0dc}\label{classAbstractReader_a18b9335ebe51ba66d0f449f95903f0dc}} 
+virtual \hyperlink{classAbstractReader_a18b9335ebe51ba66d0f449f95903f0dc}{$\sim$\+Abstract\+Reader} ()
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classAbstractReader_a01d009f3633d0af6d9ea8e34defda7f5}{read\+\_\+file} (const char $\ast$file\+\_\+name, \hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$\&p\+Random\+Variable)=0
+\begin{DoxyCompactList}\small\item\em Abstract function to read the distribution file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for readers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAbstractReader_a01d009f3633d0af6d9ea8e34defda7f5}\label{classAbstractReader_a01d009f3633d0af6d9ea8e34defda7f5}} 
+\index{Abstract\+Reader@{Abstract\+Reader}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!Abstract\+Reader@{Abstract\+Reader}}
+\subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
+{\footnotesize\ttfamily virtual void Abstract\+Reader\+::read\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{\hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$\&}]{p\+Random\+Variable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract function to read the distribution file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & \+: Distribution file name \\
+\hline
+{\em p\+Random\+Variable} & \+: Pointer to a Random variable \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classNormalReader_ae6571e3fdc414f143a5541807eded6e0}{Normal\+Reader}, and \hyperlink{classUniformReader_ae4e326a00cd72cdc1afa73beebe60ddc}{Uniform\+Reader}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Abstract\+Reader.\+h\item 
+Modules/Abstract\+Reader.\+cpp\end{DoxyCompactItemize}

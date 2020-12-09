@@ -1,0 +1,73 @@
+\hypertarget{classCentralLimitThm}{}\section{Central\+Limit\+Thm Class Reference}
+\label{classCentralLimitThm}\index{Central\+Limit\+Thm@{Central\+Limit\+Thm}}
+
+
+Class to verify the C\+TL theorem.  
+
+
+
+
+{\ttfamily \#include $<$Central\+Limit\+Thm.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCentralLimitThm_a70d886fa3a13dd2e3dbe7bc6c996fb2f}\label{classCentralLimitThm_a70d886fa3a13dd2e3dbe7bc6c996fb2f}} 
+\hyperlink{classCentralLimitThm_a70d886fa3a13dd2e3dbe7bc6c996fb2f}{Central\+Limit\+Thm} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCentralLimitThm_acd4def2fc5647a486a5c766a7f8a61b2}\label{classCentralLimitThm_acd4def2fc5647a486a5c766a7f8a61b2}} 
+\hyperlink{classCentralLimitThm_acd4def2fc5647a486a5c766a7f8a61b2}{$\sim$\+Central\+Limit\+Thm} ()
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classCentralLimitThm_a41cc29d0165ac8738d926593a43fd586}{Central\+Limit\+Thm} (\hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$p\+Random, int multiples)
+\begin{DoxyCompactList}\small\item\em Constructor Define a new csv file to save the means of generated samples of same size. \end{DoxyCompactList}\item 
+void \hyperlink{classCentralLimitThm_a3898fbea7b16e86a2632914abbe67704}{verify\+\_\+thm} (\hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$p\+Random, \hyperlink{classAbstractExpectation}{Abstract\+Expectation} $\ast$p\+Expectation)
+\begin{DoxyCompactList}\small\item\em Compute the mean of the random samples and append it to the existing csv file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to verify the C\+TL theorem. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCentralLimitThm_a41cc29d0165ac8738d926593a43fd586}\label{classCentralLimitThm_a41cc29d0165ac8738d926593a43fd586}} 
+\index{Central\+Limit\+Thm@{Central\+Limit\+Thm}!Central\+Limit\+Thm@{Central\+Limit\+Thm}}
+\index{Central\+Limit\+Thm@{Central\+Limit\+Thm}!Central\+Limit\+Thm@{Central\+Limit\+Thm}}
+\subsubsection{\texorpdfstring{Central\+Limit\+Thm()}{CentralLimitThm()}}
+{\footnotesize\ttfamily Central\+Limit\+Thm\+::\+Central\+Limit\+Thm (\begin{DoxyParamCaption}\item[{\hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$}]{p\+Random,  }\item[{int}]{multiples }\end{DoxyParamCaption})}
+
+
+
+Constructor Define a new csv file to save the means of generated samples of same size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Random} & \+: Pointer of initially generated random samples \\
+\hline
+{\em multiples} & \+: define the size of the new samples (N,2N,3N ...) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCentralLimitThm_a3898fbea7b16e86a2632914abbe67704}\label{classCentralLimitThm_a3898fbea7b16e86a2632914abbe67704}} 
+\index{Central\+Limit\+Thm@{Central\+Limit\+Thm}!verify\+\_\+thm@{verify\+\_\+thm}}
+\index{verify\+\_\+thm@{verify\+\_\+thm}!Central\+Limit\+Thm@{Central\+Limit\+Thm}}
+\subsubsection{\texorpdfstring{verify\+\_\+thm()}{verify\_thm()}}
+{\footnotesize\ttfamily void Central\+Limit\+Thm\+::verify\+\_\+thm (\begin{DoxyParamCaption}\item[{\hyperlink{classAbstractVariable}{Abstract\+Variable} $\ast$}]{p\+Random,  }\item[{\hyperlink{classAbstractExpectation}{Abstract\+Expectation} $\ast$}]{p\+Expectation }\end{DoxyParamCaption})}
+
+
+
+Compute the mean of the random samples and append it to the existing csv file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Random} & \+: Pointer of generated random samples \\
+\hline
+{\em p\+Expectation} & \+: Pointer of Monte\+Carlo Expectation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Modules/Central\+Limit\+Thm.\+h\item 
+Modules/Central\+Limit\+Thm.\+cpp\end{DoxyCompactItemize}
