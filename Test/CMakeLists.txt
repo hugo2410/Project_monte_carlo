@@ -12,7 +12,7 @@ add_subdirectory(lib/googletest)
 add_executable(Reader_test Reader_test.cpp)
 add_executable(NormalDist_test NormalDist_test.cpp)
 add_executable(UniformDist_test UniformDist_test.cpp)
-add_executable(MonteCarloExpectation_test MonteCarloExpectation_test.cpp CTL_test.cpp)
+add_executable(MonteCarloExpectation_test MonteCarloExpectation_test.cpp)
 
 
 target_link_libraries(Reader_test gtest gtest_main Modules)

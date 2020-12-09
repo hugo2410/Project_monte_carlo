@@ -7,7 +7,9 @@
 
 
 #include "AbstractVariable.h"
-
+/**
+ *
+ */
 class AbstractExpectation {
 public:
     /**

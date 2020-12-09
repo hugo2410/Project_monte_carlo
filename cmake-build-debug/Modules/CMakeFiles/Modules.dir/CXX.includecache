@@ -14,15 +14,19 @@ exception
 iostream
 -
 
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractExpectation.cpp
+AbstractExpectation.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractExpectation.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractExpectation.h
+AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
+
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
 AbstractError.hpp
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractError.hpp
 AbstractVariable.h
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
-
-/home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.cpp
-AbstractReader.h
-/home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.h
 
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.h
 AbstractError.hpp
@@ -35,6 +39,20 @@ AbstractFunc.h
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
 vector
 -
+
+/home/hugo/MA3/Project_monte_carlo/Modules/CentralLimitThm.cpp
+bits/ios_base.h
+-
+fstream
+-
+CentralLimitThm.h
+/home/hugo/MA3/Project_monte_carlo/Modules/CentralLimitThm.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/CentralLimitThm.h
+AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
+AbstractExpectation.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractExpectation.h
 
 /home/hugo/MA3/Project_monte_carlo/Modules/ExpFunc.h
 AbstractFunc.h
@@ -59,6 +77,22 @@ AbstractReader.h
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.h
 AbstractFunc.h
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/MonteCarloExpectation.cpp
+MonteCarloExpectation.h
+/home/hugo/MA3/Project_monte_carlo/Modules/MonteCarloExpectation.h
+AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
+AbstractFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/MonteCarloExpectation.h
+AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
+AbstractFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
+AbstractExpectation.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractExpectation.h
 
 /home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.h
 vector
@@ -87,6 +121,20 @@ iostream
 /home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.h
 AbstractFunc.h
 /home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/StatisticalMoment.cpp
+tgmath.h
+-
+fstream
+-
+StatisticalMoment.h
+/home/hugo/MA3/Project_monte_carlo/Modules/StatisticalMoment.h
+AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
+
+/home/hugo/MA3/Project_monte_carlo/Modules/StatisticalMoment.h
+AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
 
 /home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.h
 AbstractFunc.h

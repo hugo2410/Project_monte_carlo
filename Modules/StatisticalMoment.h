@@ -23,6 +23,11 @@ public:
     StatisticalMoment(AbstractVariable *pRandom);
 
     ~StatisticalMoment();
+    /**.
+     * \brief Writes statistical moment to a csv file depending on a given order.
+     * @param file : String containing the file name to write the statistical moment to.
+     * @param order : Positive Integer that defines statistical order
+     */
     void write_csv(const char* file,int order);
 
 private:

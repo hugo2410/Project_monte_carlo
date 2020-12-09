@@ -318,9 +318,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/CTL_test.cpp">
-			<Option target="MonteCarloExpectation_test"/>
-		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/MonteCarloExpectation_test.cpp">
 			<Option target="MonteCarloExpectation_test"/>
 		</Unit>
