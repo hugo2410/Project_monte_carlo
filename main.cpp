@@ -37,6 +37,7 @@ int main(int argc, char *argv[]) {
     AbstractVariable *pRandom = 0;
     AbstractVariable *pRandomCTL = 0;
     AbstractReader *pReader;
+    FunctReader *pFuncReader;
     AbstractFunc *pFunction ;
     AbstractExpectation *pExpectation;
     CentralLimitThm *pCThm;
@@ -48,8 +49,8 @@ int main(int argc, char *argv[]) {
         function_file_name = argv[2];
         dist_type = argv[3];
 
-        pReader = new FunctReader;
-        pReader->read_file(function_file_name, pFunction, order);
+        pFuncReader = new FunctReader;
+        pFuncReader->read_file(function_file_name, pFunction, order);
 
         if (strcmp(dist_type, "N") == 0) {
             pReader = new NormalReader;
@@ -81,15 +82,15 @@ int main(int argc, char *argv[]) {
     cout << pExpectation->getExpectation() << endl;
     //////////////////////////////////////MOMENT//////////////////////////////////////////////////
     StatisticalMoment *pMoment = new StatisticalMoment(pRandom);
-    pMoment->write_csv("moments.csv",order);
+    pMoment->write_csv("output/moments.csv",order);
     cout << "Moment written !" << endl;
     delete pMoment;
     delete pFunction;
     //////////////////////////////////////CTL//////////////////////////////////////////////////
     cout << "Verifying Central Limit Theorem !" << endl;
-    for(int j = 1;j<=10;++j) {
+    for(int j = 1;j<=3;++j) {
         pCThm = new CentralLimitThm(pRandom,j);
-        for (int i = 1; i <= 100; ++i) {
+        for (int i = 1; i <= 5; ++i) {
             pRandomCTL = new NormalDist(j * pRandom->get_size(), pRandom->get_mean(), pRandom->get_var());
             pCThm ->verify_thm(pRandomCTL,pExpectation);
         }

@@ -9,7 +9,7 @@
 #include "AbstractReader.h"
 #include "AbstractFunc.h"
 
-class FunctReader : public AbstractReader {
+class FunctReader  {
 public:
     /**
      * \brief Default Constructor
@@ -19,13 +19,6 @@ public:
      * \brief Default Destructor
      */
     ~FunctReader();
-    /**
-     * \brief Abstract function to Read file for distribution type and parameters
-     * @param file : File name
-     * @param pRandomVariable : Pointer to previously to distribution
-     */
-
-    void read_file(const char *file,AbstractVariable* &pRandomVariable) override;
     /**
      * \brief Read file for user function type and coefficients
      * @param file : file name

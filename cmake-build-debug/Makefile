@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/137/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /app/extra/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/137/bin/cmake/linux/bin/cmake -E rm -f
+RM = /app/extra/clion/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hugo/MA3/Project_monte_carlo
+CMAKE_SOURCE_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
+CMAKE_BINARY_DIR = /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/137/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/app/extra/clion/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/137/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/app/extra/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hugo/MA3/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named monte_carlo_run
+# Target rules for targets named project9_exe
 
 # Build rule for target.
-monte_carlo_run: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 monte_carlo_run
-.PHONY : monte_carlo_run
+project9_exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project9_exe
+.PHONY : project9_exe
 
 # fast build rule for target.
-monte_carlo_run/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/build
-.PHONY : monte_carlo_run/fast
+project9_exe/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9_exe.dir/build.make CMakeFiles/project9_exe.dir/build
+.PHONY : project9_exe/fast
 
 #=============================================================================
 # Target rules for targets named Reader_test
@@ -240,7 +240,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9_exe.dir/build.make CMakeFiles/project9_exe.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -249,7 +249,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9_exe.dir/build.make CMakeFiles/project9_exe.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -258,7 +258,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monte_carlo_run.dir/build.make CMakeFiles/monte_carlo_run.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9_exe.dir/build.make CMakeFiles/project9_exe.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -276,7 +276,7 @@ help:
 	@echo "... UniformDist_test"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... monte_carlo_run"
+	@echo "... project9_exe"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

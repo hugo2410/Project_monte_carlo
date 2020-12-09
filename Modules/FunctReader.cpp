@@ -59,5 +59,3 @@ void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &orde
         }
     }
 }
-
-void FunctReader::read_file(const char *file,AbstractVariable* &pRandomUniform) {}
