@@ -54,8 +54,7 @@ void FunctReader::read_file(const char* file, AbstractFunc* &pFunction,int &orde
         }
         default:
         {
-            std::cout << "Wrong File Format ! " << std::endl; //QUITTER PROGRAMME
-            break;
+            throw WrongFormatError();
         }
     }
 }

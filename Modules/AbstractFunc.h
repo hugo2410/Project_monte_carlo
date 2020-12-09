@@ -5,7 +5,7 @@
 #ifndef PROJECT_MONTE_CARLO_ABSTRACTFUNC_H
 #define PROJECT_MONTE_CARLO_ABSTRACTFUNC_H
 
-#include "AbstractError.hpp"
+#include "AbstractError.h"
 #include "AbstractVariable.h"
 /**
  * \brief Abstract class for functions

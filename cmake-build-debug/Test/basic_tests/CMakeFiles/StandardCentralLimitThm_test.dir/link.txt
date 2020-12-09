@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/StandardCentralLimitThm_test.dir/StandardCentralLimitThm_test.cpp.o  -o StandardCentralLimitThm_test  ../../lib/libgtestd.a ../../lib/libgtest_maind.a -lmonte_carlo ../../lib/libgtestd.a -lpthread 

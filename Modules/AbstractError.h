@@ -63,4 +63,9 @@ struct OrderError : public AbstractError{
         return "Order must be a striclty positive integer!";
     }
 };
+struct WrongFormatError : public AbstractError{
+    const char * what () const throw () override {
+        return "The Function file does not specify any function type!";
+    }
+};
 #endif /* ERROR_HPP_*/

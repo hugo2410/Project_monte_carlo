@@ -24,7 +24,7 @@
 #include "UniformReader.h"
 #include "ExpFunc.h"
 #include "AbstractVariable.h"
-#include "AbstractError.hpp"
+#include "AbstractError.h"
 
 using namespace std;
 
@@ -50,8 +50,12 @@ int main(int argc, char *argv[]) {
         dist_type = argv[3];
 
         pFuncReader = new FunctReader;
-        pFuncReader->read_file(function_file_name, pFunction, order);
-
+        try {
+            pFuncReader->read_file(function_file_name, pFunction, order);
+        }catch(AbstractError& e){
+        cerr << "Exception thrown: " << e.what() << endl;
+        return -1;
+        }
         if (strcmp(dist_type, "N") == 0) {
             pReader = new NormalReader;
         } else if (strcmp(dist_type, "U") == 0)
