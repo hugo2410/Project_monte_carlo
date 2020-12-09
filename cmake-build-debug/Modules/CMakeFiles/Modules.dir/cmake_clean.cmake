@@ -8,7 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o"
   "CMakeFiles/Modules.dir/NormalDist.cpp.o"
   "CMakeFiles/Modules.dir/NormalReader.cpp.o"
-  "CMakeFiles/Modules.dir/PolynomlFunc.cpp.o"
+  "CMakeFiles/Modules.dir/PolynomFunc.cpp.o"
   "CMakeFiles/Modules.dir/StatisticalMoment.cpp.o"
   "CMakeFiles/Modules.dir/TrigoFunc.cpp.o"
   "CMakeFiles/Modules.dir/UniformDist.cpp.o"

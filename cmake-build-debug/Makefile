@@ -144,17 +144,30 @@ project9_exe/fast:
 .PHONY : project9_exe/fast
 
 #=============================================================================
-# Target rules for targets named Reader_test
+# Target rules for targets named MonteCarloExpectation_test
 
 # Build rule for target.
-Reader_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Reader_test
-.PHONY : Reader_test
+MonteCarloExpectation_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MonteCarloExpectation_test
+.PHONY : MonteCarloExpectation_test
 
 # fast build rule for target.
-Reader_test/fast:
-	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Reader_test.dir/build.make Test/CMakeFiles/Reader_test.dir/build
-.PHONY : Reader_test/fast
+MonteCarloExpectation_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/MonteCarloExpectation_test.dir/build.make Test/CMakeFiles/MonteCarloExpectation_test.dir/build
+.PHONY : MonteCarloExpectation_test/fast
+
+#=============================================================================
+# Target rules for targets named RunAllTests
+
+# Build rule for target.
+RunAllTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RunAllTests
+.PHONY : RunAllTests
+
+# fast build rule for target.
+RunAllTests/fast:
+	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/RunAllTests.dir/build.make Test/CMakeFiles/RunAllTests.dir/build
+.PHONY : RunAllTests/fast
 
 #=============================================================================
 # Target rules for targets named NormalDist_test
@@ -170,6 +183,19 @@ NormalDist_test/fast:
 .PHONY : NormalDist_test/fast
 
 #=============================================================================
+# Target rules for targets named Reader_test
+
+# Build rule for target.
+Reader_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Reader_test
+.PHONY : Reader_test
+
+# fast build rule for target.
+Reader_test/fast:
+	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Reader_test.dir/build.make Test/CMakeFiles/Reader_test.dir/build
+.PHONY : Reader_test/fast
+
+#=============================================================================
 # Target rules for targets named UniformDist_test
 
 # Build rule for target.
@@ -181,19 +207,6 @@ UniformDist_test: cmake_check_build_system
 UniformDist_test/fast:
 	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/UniformDist_test.dir/build.make Test/CMakeFiles/UniformDist_test.dir/build
 .PHONY : UniformDist_test/fast
-
-#=============================================================================
-# Target rules for targets named MonteCarloExpectation_test
-
-# Build rule for target.
-MonteCarloExpectation_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MonteCarloExpectation_test
-.PHONY : MonteCarloExpectation_test
-
-# fast build rule for target.
-MonteCarloExpectation_test/fast:
-	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/MonteCarloExpectation_test.dir/build.make Test/CMakeFiles/MonteCarloExpectation_test.dir/build
-.PHONY : MonteCarloExpectation_test/fast
 
 #=============================================================================
 # Target rules for targets named gtest_main
@@ -273,6 +286,7 @@ help:
 	@echo "... MonteCarloExpectation_test"
 	@echo "... NormalDist_test"
 	@echo "... Reader_test"
+	@echo "... RunAllTests"
 	@echo "... UniformDist_test"
 	@echo "... gtest"
 	@echo "... gtest_main"

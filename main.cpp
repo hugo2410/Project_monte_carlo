@@ -19,7 +19,7 @@
 
 #include "AbstractReader.h"
 #include "AbstractFunc.h"
-#include "PolynomlFunc.h"
+#include "PolynomFunc.h"
 #include "NormalReader.h"
 #include "UniformReader.h"
 #include "ExpFunc.h"

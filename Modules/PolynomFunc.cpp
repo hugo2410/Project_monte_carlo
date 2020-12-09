@@ -2,7 +2,7 @@
 // Created by hugo on 28/11/2020.
 //
 
-#include "PolynomlFunc.h"
+#include "PolynomFunc.h"
 
 PolynomFunc::PolynomFunc() {}
 PolynomFunc::~PolynomFunc() {}
