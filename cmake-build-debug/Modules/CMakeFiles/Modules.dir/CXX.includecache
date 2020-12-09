@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractError.h
 string
 -
 exception
@@ -14,37 +14,21 @@ exception
 iostream
 -
 
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.h
-AbstractError.hpp
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractError.hpp
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
+AbstractError.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractError.h
 AbstractVariable.h
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
 
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h
 vector
 -
 
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.h
-vector
--
-UniformDist.h
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.h
+/home/hugo/MA3/Project_monte_carlo/Modules/PolynomFunc.cpp
+PolynomFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/PolynomFunc.h
 
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.cpp
-fstream
--
-NormalReader.h
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.h
-NormalDist.h
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalDist.h
-
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/NormalReader.h
-AbstractReader.h
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractReader.h
-AbstractVariable.h
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
-
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/UniformDist.h
-AbstractVariable.h
-/home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/Modules/AbstractVariable.h
+/home/hugo/MA3/Project_monte_carlo/Modules/PolynomFunc.h
+AbstractFunc.h
+/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h
 

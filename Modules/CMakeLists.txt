@@ -14,7 +14,7 @@ set(HEADER_FILES
         AbstractVariable.h
         AbstractFunc.h
         TrigoFunc.h
-        PolynomlFunc.h
+        PolynomFunc.h
         CentralLimitThm.h
         )
 
@@ -25,6 +25,6 @@ set(SOURCE_FILES
         UniformReader.cpp
         UniformDist.cpp
         FunctReader.cpp
-        NormalDist.cpp   AbstractFunc.cpp  TrigoFunc.cpp  PolynomlFunc.cpp  ExpFunc.cpp AbstractExpectation.cpp StatisticalMoment.cpp StatisticalMoment.h CentralLimitThm.cpp)
+        NormalDist.cpp   AbstractFunc.cpp  TrigoFunc.cpp PolynomFunc.cpp ExpFunc.cpp AbstractExpectation.cpp StatisticalMoment.cpp StatisticalMoment.h CentralLimitThm.cpp)
 
 add_library(Modules STATIC ${SOURCE_FILES} ${HEADER_FILES})

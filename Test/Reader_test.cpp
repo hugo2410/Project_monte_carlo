@@ -50,7 +50,7 @@ public:
     AbstractVariable* pRandomsample;
     AbstractReader *pNormal ;
     AbstractReader* pUniform ;
-    AbstractReader* pFunc;
+    FunctReader* pFunc;
     AbstractFunc * pFunction ;
 
     int order ;

@@ -388,32 +388,32 @@ NormalReader.cpp.s:
 	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/NormalReader.cpp.s
 .PHONY : NormalReader.cpp.s
 
-PolynomlFunc.o: PolynomlFunc.cpp.o
+PolynomFunc.o: PolynomFunc.cpp.o
 
-.PHONY : PolynomlFunc.o
+.PHONY : PolynomFunc.o
 
 # target to build an object file
-PolynomlFunc.cpp.o:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o
-.PHONY : PolynomlFunc.cpp.o
+PolynomFunc.cpp.o:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.o
+.PHONY : PolynomFunc.cpp.o
 
-PolynomlFunc.i: PolynomlFunc.cpp.i
+PolynomFunc.i: PolynomFunc.cpp.i
 
-.PHONY : PolynomlFunc.i
+.PHONY : PolynomFunc.i
 
 # target to preprocess a source file
-PolynomlFunc.cpp.i:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.i
-.PHONY : PolynomlFunc.cpp.i
+PolynomFunc.cpp.i:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.i
+.PHONY : PolynomFunc.cpp.i
 
-PolynomlFunc.s: PolynomlFunc.cpp.s
+PolynomFunc.s: PolynomFunc.cpp.s
 
-.PHONY : PolynomlFunc.s
+.PHONY : PolynomFunc.s
 
 # target to generate assembly for a file
-PolynomlFunc.cpp.s:
-	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.s
-.PHONY : PolynomlFunc.cpp.s
+PolynomFunc.cpp.s:
+	cd /home/hugo/MA3/Project_monte_carlo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.s
+.PHONY : PolynomFunc.cpp.s
 
 StatisticalMoment.o: StatisticalMoment.cpp.o
 
@@ -559,9 +559,9 @@ help:
 	@echo "... NormalReader.o"
 	@echo "... NormalReader.i"
 	@echo "... NormalReader.s"
-	@echo "... PolynomlFunc.o"
-	@echo "... PolynomlFunc.i"
-	@echo "... PolynomlFunc.s"
+	@echo "... PolynomFunc.o"
+	@echo "... PolynomFunc.i"
+	@echo "... PolynomFunc.s"
 	@echo "... StatisticalMoment.o"
 	@echo "... StatisticalMoment.i"
 	@echo "... StatisticalMoment.s"

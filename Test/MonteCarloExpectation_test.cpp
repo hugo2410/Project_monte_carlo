@@ -52,7 +52,7 @@ public:
     AbstractVariable* pUniformsample;
     MonteCarloExpectation* pMontecarlo_uniform ;
     MonteCarloExpectation* pMontecarlo_normal;
-    AbstractReader *pReader;
+    FunctReader *pReader;
     AbstractFunc * pFunction ;
     MonteCarloExpectation* pMontecarlo;
     double mean_uniform ;

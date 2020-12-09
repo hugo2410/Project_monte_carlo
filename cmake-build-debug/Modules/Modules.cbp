@@ -124,10 +124,10 @@
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalReader.h">
 			<Option target="Modules"/>
 		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.cpp">
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomFunc.cpp">
 			<Option target="Modules"/>
 		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.h">
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomFunc.h">
 			<Option target="Modules"/>
 		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/StatisticalMoment.cpp">

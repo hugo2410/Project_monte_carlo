@@ -13,7 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/hugo/MA3/Project_monte_carlo/Modules/MonteCarloExpectation.cpp" "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/MonteCarloExpectation.cpp.o"
   "/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.cpp" "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/NormalDist.cpp.o"
   "/home/hugo/MA3/Project_monte_carlo/Modules/NormalReader.cpp" "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/NormalReader.cpp.o"
-  "/home/hugo/MA3/Project_monte_carlo/Modules/PolynomlFunc.cpp" "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/PolynomlFunc.cpp.o"
+  "/home/hugo/MA3/Project_monte_carlo/Modules/PolynomFunc.cpp" "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/PolynomFunc.cpp.o"
   "/home/hugo/MA3/Project_monte_carlo/Modules/StatisticalMoment.cpp" "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/StatisticalMoment.cpp.o"
   "/home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.cpp" "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/TrigoFunc.cpp.o"
   "/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.cpp" "/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/CMakeFiles/Modules.dir/UniformDist.cpp.o"

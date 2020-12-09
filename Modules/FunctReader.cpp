@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include "FunctReader.h"
-#include "PolynomlFunc.h"
+#include "PolynomFunc.h"
 #include "ExpFunc.h"
 #include "TrigoFunc.h"
 
