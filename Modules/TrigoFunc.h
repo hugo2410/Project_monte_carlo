@@ -7,6 +7,10 @@
 
 #include "AbstractFunc.h"
 
+/**
+ * \brief Trigonometric function class
+ * Derived from AbstractFunc
+ */
 class TrigoFunc:public AbstractFunc {
 public:
     /**

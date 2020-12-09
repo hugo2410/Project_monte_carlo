@@ -7,7 +7,10 @@
 
 #include "AbstractReader.h"
 
-
+/**
+ * \brief Class to read and store a uniform distribution parameters
+ * Derived from AbstractReader
+ */
 class UniformReader: public AbstractReader{
 public:
     /**

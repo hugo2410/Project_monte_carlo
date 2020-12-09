@@ -8,6 +8,9 @@
 
 #include "AbstractVariable.h"
 
+/**
+ * \brief Class to compute the statistical moments of a given sample
+ */
 class StatisticalMoment {
 public:
     /**
@@ -32,7 +35,6 @@ public:
 
 private:
     AbstractVariable *randomNumbers;
-
 };
 
 

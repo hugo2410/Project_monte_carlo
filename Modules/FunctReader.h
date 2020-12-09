@@ -8,7 +8,9 @@
 
 #include "AbstractReader.h"
 #include "AbstractFunc.h"
-
+/**
+ * \brief Function reader class
+ */
 class FunctReader  {
 public:
     /**

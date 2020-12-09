@@ -9,7 +9,10 @@
 #include "AbstractVariable.h"
 #include "AbstractFunc.h"
 #include "AbstractExpectation.h"
-
+/**
+ * \brief Class to compute the monte carlo expectation of a sample
+ * Derived form AbstractExpectation class
+ */
 class MonteCarloExpectation: public AbstractExpectation {
 public:
 

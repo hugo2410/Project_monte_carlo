@@ -7,7 +7,9 @@
 
 #include "AbstractError.hpp"
 #include "AbstractVariable.h"
-
+/**
+ * \brief Abstract class for functions
+ */
 class AbstractFunc {
 public:
 

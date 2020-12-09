@@ -6,7 +6,10 @@
 #define PROJECT_MONTE_CARLO_EXPFUNC_H
 
 #include "AbstractFunc.h"
-
+/**
+ * \brief Exponential function class
+ * Derived from AbstractFunc
+ */
 class ExpFunc : public AbstractFunc{
 public:
     /**

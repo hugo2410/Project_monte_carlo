@@ -9,7 +9,10 @@
 #include "AbstractReader.h"
 #include "AbstractVariable.h"
 
-
+/**
+ * \brief Class to read and store a normal distribution parameters
+ * Derived from AbstractReader
+ */
 class NormalReader:public AbstractReader {
 public:
     /**

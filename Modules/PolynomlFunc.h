@@ -6,7 +6,10 @@
 #define PROJECT_MONTE_CARLO_POLYNOMLFUNC_H
 
 #include "AbstractFunc.h"
-
+/**
+ * \brief Polynomial function class
+ * Derived from AbstractFunc
+ */
 class PolynomFunc: public AbstractFunc {
 
 public:

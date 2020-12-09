@@ -9,7 +9,10 @@
 #include <vector>
 #include "UniformDist.h"
 
-
+/**
+ * \brief Class to create a normal distribution sample using inverse transform sampling
+ * Derived from UniformDist since the inverse transform sampling is based on uniform distributed sample between 0 and 1
+ */
 class NormalDist: public UniformDist{
 public:
     /**

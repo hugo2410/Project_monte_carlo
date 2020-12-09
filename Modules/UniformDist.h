@@ -7,6 +7,10 @@
 
 #include "AbstractVariable.h"
 
+/**
+ * \brief Class to create an uniform distribution sample using random generator
+ * Derived from Abstract Variable class
+ */
 class UniformDist : public AbstractVariable{
 public:
     /**

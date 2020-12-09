@@ -8,7 +8,9 @@
 
 #include "AbstractVariable.h"
 #include "AbstractExpectation.h"
-
+/**
+ * \brief Class to verify the CTL theorem
+ */
 class CentralLimitThm {
 public:
     /**

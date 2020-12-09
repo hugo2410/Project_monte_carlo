@@ -8,7 +8,7 @@
 
 #include "AbstractVariable.h"
 /**
- *
+ * \brief Abstract class for expectations
  */
 class AbstractExpectation {
 public:
