@@ -31,8 +31,8 @@ int main(int argc, char *argv[]) {
     const char *function_file_name;
     const char *dist_type;
     int order;
-    int multiples = 3; // positive integer for generating maximum sample size multiples*N
-    int CTLsampleSize = 5; // The number of sample to generate of size multiples*N
+    int multiples = 5; // positive integer for generating maximum sample size multiples*N
+    int CTLsampleSize = 50; // The number of sample to generate of size multiples*N
     AbstractVariable *pRandom = 0;
     AbstractVariable *pRandomCTL = 0;
     AbstractReader *pReader;
