@@ -6,7 +6,7 @@
 
 #include "TrigoFunc.h"
 
-//TrigoFunc::TrigoFunc() {}
+TrigoFunc::TrigoFunc() {}
 TrigoFunc::~TrigoFunc() {}
 
 

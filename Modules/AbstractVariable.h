@@ -7,7 +7,7 @@
 
 #include <vector>
 /**
- * \brief
+ * \brief Abstract Class that defines a random generated sample from a given distribution
  */
 class AbstractVariable{
 public:

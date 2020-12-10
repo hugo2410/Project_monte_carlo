@@ -8,7 +8,7 @@
 #include "AbstractError.h"
 #include "AbstractVariable.h"
 /**
- * \brief Abstract class for functions
+ * \brief Abstract class for functions definition
  */
 class AbstractFunc {
 public:

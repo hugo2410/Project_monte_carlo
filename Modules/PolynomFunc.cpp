@@ -4,7 +4,7 @@
 
 #include "PolynomFunc.h"
 
-//PolynomFunc::PolynomFunc() {}
+PolynomFunc::PolynomFunc() {}
 PolynomFunc::~PolynomFunc() {}
 
 

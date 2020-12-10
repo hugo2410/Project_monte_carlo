@@ -10,7 +10,7 @@
 #include <iostream>
 
 /**
- * \brief Manages all errors encountered by the program.
+ * \brief Abstract Error Class to Manage all errors encountered by the program.
  */
 class AbstractError : public std::exception {
 protected:

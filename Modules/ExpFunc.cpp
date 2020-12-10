@@ -10,5 +10,5 @@ ExpFunc::ExpFunc()  {}
 ExpFunc::~ExpFunc() {}
 
 double ExpFunc:: evaluate(double x){
-    return coef_b*exp(coef_a*x);
+    return coef_a*exp(coef_b*x);
 };
