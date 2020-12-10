@@ -19,7 +19,7 @@ public:
     /**
      * \brief Default Destructor
      */
-    ~ExpFunc();
+    ~ExpFunc() override ;
     /**
      * \brief Constructor
      *      Define the function "be*xp(ax)"

@@ -13,10 +13,9 @@
 class AbstractFunc {
 public:
 
-    /**
-     * \brief Default Constructor
-     */
-    AbstractFunc();
+    AbstractFunc(){};
+
+    virtual ~AbstractFunc(){};
     /**
      * \brief Constructor
      * Construct a function with coefficient a and b (e.g : f(x) = ax+b)
@@ -24,10 +23,6 @@ public:
      * @param b : Second CoefficientS
      */
     AbstractFunc(int a, int b):coef_a(a),coef_b(b){}
-    /**
-     * \brief Default Destructor
-     */
-    virtual ~AbstractFunc();
 
     /**
      * \brief Abstract function to compute the evaluation of the user function on x [(f(x)]

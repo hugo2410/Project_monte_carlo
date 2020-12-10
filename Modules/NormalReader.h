@@ -23,7 +23,7 @@ public:
     /**
      * \brief: Default Destructor
      */
-    ~NormalReader() override;
+    ~NormalReader() ;
 
     /**
      **\brief Reads file for distribution type and parameters

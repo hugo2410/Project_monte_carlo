@@ -12,14 +12,7 @@
  */
 class AbstractExpectation {
 public:
-    /**
-     * \brief Default Constructor
-     */
-    AbstractExpectation();
-    /**
-     * \brief Default Destructor
-     */
-    virtual ~AbstractExpectation();
+
     /**
      * \brief Abstract function to get the computed expectation of the user defined function
      * @return The computed expectation

@@ -20,7 +20,7 @@ public:
     /**
      * \brief Default Destructor
      */
-    ~UniformReader() override;
+    ~UniformReader() ;
     /**
      *\brief Reads file for distribution type and parameters
      * @param file : File name

@@ -16,17 +16,19 @@ class AbstractError : public std::exception {
 protected:
 
 public:
-    /** Constructor.
+    /**
+     * \brief Default Constructor.
      */
     explicit
     AbstractError() {}
 
-    /** Destructor.
+    /** \brief Default Destructor.
      *  Virtual to allow for subclassing.
      */
     virtual ~AbstractError() throw () {}
 
-    /** Returns a pointer to the (constant) error description.
+    /**
+     * \brief Returns a pointer to the (constant) error description.
      *  @return A pointer to a const char*. The underlying memory
      *  is in possession of the AbstractError object. Callers must
      *  not attempt to free the memory.

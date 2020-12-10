@@ -20,7 +20,7 @@ public:
     /**
      * \brief: Default Destructor
      */
-    ~TrigoFunc() override;
+    ~TrigoFunc();
     /**
      * \brief Constructor
      *        Define the function "aCos(bx)"

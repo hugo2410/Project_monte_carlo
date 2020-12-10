@@ -4,9 +4,8 @@
 
 #include "PolynomFunc.h"
 
-PolynomFunc::PolynomFunc() {}
+//PolynomFunc::PolynomFunc() {}
 PolynomFunc::~PolynomFunc() {}
-
 
 
 double PolynomFunc:: evaluate(double x){

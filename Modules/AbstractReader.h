@@ -11,16 +11,6 @@
  */
 class AbstractReader {
 public:
-
-    /**
-     * \brief Default Constructor
-     */
-    AbstractReader();
-
-    /**
-     * \brief Default Destructor
-     */
-    virtual ~AbstractReader();
     /**
      * \brief Abstract function to read the distribution file
      * @param file_name : Distribution file name
