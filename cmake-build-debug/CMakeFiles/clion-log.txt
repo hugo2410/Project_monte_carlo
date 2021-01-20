@@ -1,6 +1,6 @@
-/app/extra/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo
--- The C compiler identification is GNU 10.2.0
--- The CXX compiler identification is GNU 10.2.0
+/snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/hugo/MA3/Project_monte_carlo
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc - works
 -- Detecting C compiler ABI info
@@ -18,7 +18,7 @@ CMake Warning at Test/lib/googletest/CMakeLists.txt:54 (project):
   expanded to nothing.
 
 
--- Found PythonInterp: /usr/bin/python (found version "3.8.6") 
+-- Found PythonInterp: /usr/bin/python (found version "2.7.18") 
 -- Looking for pthread.h
 -- Looking for pthread.h - found
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
@@ -30,4 +30,4 @@ CMake Warning at Test/lib/googletest/CMakeLists.txt:54 (project):
 -- Found Threads: TRUE  
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/mehdi/Documents/MA3/git_PCSP/Project_monte_carlo/cmake-build-debug
+-- Build files have been written to: /home/hugo/MA3/Project_monte_carlo/cmake-build-debug
