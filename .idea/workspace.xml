@@ -37,19 +37,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="cmake clean">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/df_function.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Default_files/df_function.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/df_normal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Default_files/df_normal.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/CentralLimitThm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/CentralLimitThm.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/MonteCarloExpectation_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/MonteCarloExpectation_test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Reader_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Reader_test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualization.py" afterDir="false" />
-    </list>
+    <list default="true" id="29280ede-bff2-4e7a-8182-6ac519fa5ecf" name="Default Changelist" comment="cmake clean" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +183,7 @@
       <workItem from="1607523816539" duration="1375000" />
       <workItem from="1607607420205" duration="2206000" />
       <workItem from="1607626868475" duration="2082000" />
-      <workItem from="1611153215849" duration="4592000" />
+      <workItem from="1611153215849" duration="4849000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606232472143</created>
