@@ -10,7 +10,7 @@
 #include "MonteCarloExpectation.h"
 #include <cmath>
 
-#define TEST_PATH_FUNC "../Test_files/Functest.txt"
+#define TEST_PATH_FUNC "../../../src/Test_files/Functest.txt"
 #define TEST_SIZE 1000
 #define TEST_UPPER_BOUND 1
 #define TEST_LOWER_BOUND -1

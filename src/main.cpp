@@ -41,33 +41,37 @@ int main(int argc, char *argv[]) {
     AbstractExpectation *pExpectation;
     CentralLimitThm *pCThm;
 
+    if(argc != 4) {
+        cerr << "Missing arguments. Please refer to README" << endl;
+        file_name = "../../src/Default_files/df_normal.txt";
+        function_file_name = "../../src/Default_files/df_function.txt";
+        dist_type = "N";
+        //return -1;
+    }
 
     if(argc == 4) {
 
         file_name = argv[1];
         function_file_name = argv[2];
         dist_type = argv[3];
+    }
 
-        pFuncReader = new FunctReader;
-        try {
-            pFuncReader->read_file(function_file_name, pFunction, order);
-        }catch(AbstractError& e){
-        cerr << "Exception thrown: " << e.what() << endl;
+    pFuncReader = new FunctReader;
+    try {
+        pFuncReader->read_file(function_file_name, pFunction, order);
+    }catch(AbstractError& e){
+    cerr << "Exception thrown: " << e.what() << endl;
+    return -1;
+    }
+    if (strcmp(dist_type, "N") == 0) {
+        pReader = new NormalReader;
+    } else if (strcmp(dist_type, "U") == 0)
+        pReader = new UniformReader;
+    else {
+        cerr << "Wrong distribution type. Please refer to README" << endl;
         return -1;
-        }
-        if (strcmp(dist_type, "N") == 0) {
-            pReader = new NormalReader;
-        } else if (strcmp(dist_type, "U") == 0)
-            pReader = new UniformReader;
-        else{
-            cerr << "Wrong distribution type. Please refer to README" << endl;
-            return -1;
-        }
     }
-    else{
-            cerr << "Missing arguments. Please refer to README" << endl;
-            return -1;
-    }
+
 
     try{
         pReader->read_file(file_name,pRandom);
@@ -84,7 +88,7 @@ int main(int argc, char *argv[]) {
     cout << "Expectation Calculated for user function : " << pExpectation->getExpectation()  << endl;
     //////////////////////////////////////MOMENT/////////////////////////////////////////////////
     StatisticalMoment *pMoment = new StatisticalMoment(pRandom);
-    pMoment->write_csv("output/moments.csv",order);
+    pMoment->write_csv("../../src/output/moments.csv",order);
     cout << "Moment written !" << endl;
     delete pMoment;
     delete pFunction;

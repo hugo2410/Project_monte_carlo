@@ -15,9 +15,19 @@ The objective of the project is the creation of a Monte Carlo algorithm in a mod
 * The graphical verification of Central Limit Theorem (CTL)
 
 ### How It Works
+To build all executables please execute the following commands:
+* mkdir build
+* cd build
+* cmake ..
+* make
+* cd src 
+* ./Project9 
 
-To run the executable, the following information must be written to the terminal : 
+To run the executable with a specific function and distribution, you must give the paths of these files when executing the programm.
+If no files are given it will run with the default arguments which be found in src/Default_files: a normal distribution.
 
+
+Example of how to run the programm: 
 './project9  name_of_distribution_file name_of_function_file distribution type' .
 
 
@@ -70,7 +80,11 @@ This project possesses 5 unit test programs:
   It also tests if the expectation is close to the theoretical value for both distributions.
 * RunAllTests this runs all the test described above in one go, to make it easier for the user.
 
-All necessary Test files for the test can be found in cmake-build-debug/Test_files. 
+To run these tests execute the following commands:
+* cd build/src/Test
+* ./RunAllTests
+
+All necessary Test files for the test can be found in src/Test_files. 
 These unit tests are all run with the Google test library which is included in the lib directory of the Test project
 ### Doxygen
 The documentation was designed for doxygen 1.8.16 or higher.

@@ -15,7 +15,7 @@ import os
 
 
 #path to the directory where to find the files
-directory = "cmake-build-debug/output"
+directory = "output"
 
 #defines subplots settings
 fig,ax = plt.subplots(nrows = 1, ncols = 2, sharex = False, sharey = False, figsize = (19, 10))
@@ -70,7 +70,7 @@ fig.savefig("CTLTheorem.png")
 fig1=plt.figure(figsize=(10,10))
 
 #Reads moments file
-df=pd.read_csv("cmake-build-debug/output/moments.csv", header=None)
+df=pd.read_csv("output/moments.csv", header=None)
 
 #Separate dataframe columns as multiple data is separated by ";"
 df_separated=df.iloc[1:,0].str.split(pat=";",expand=True).astype(float)
