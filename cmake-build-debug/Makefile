@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Project_Monte_carlo
+# Target rules for targets named Project9
 
 # Build rule for target.
-Project_Monte_carlo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Project_Monte_carlo
-.PHONY : Project_Monte_carlo
+Project9: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Project9
+.PHONY : Project9
 
 # fast build rule for target.
-Project_Monte_carlo/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/build
-.PHONY : Project_Monte_carlo/fast
+Project9/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/Project9.dir/build.make src/CMakeFiles/Project9.dir/build
+.PHONY : Project9/fast
 
 #=============================================================================
 # Target rules for targets named MonteCarloExpectation_test
@@ -153,7 +153,7 @@ MonteCarloExpectation_test: cmake_check_build_system
 
 # fast build rule for target.
 MonteCarloExpectation_test/fast:
-	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/MonteCarloExpectation_test.dir/build.make Test/CMakeFiles/MonteCarloExpectation_test.dir/build
+	$(MAKE) $(MAKESILENT) -f src/Test/CMakeFiles/MonteCarloExpectation_test.dir/build.make src/Test/CMakeFiles/MonteCarloExpectation_test.dir/build
 .PHONY : MonteCarloExpectation_test/fast
 
 #=============================================================================
@@ -166,7 +166,7 @@ RunAllTests: cmake_check_build_system
 
 # fast build rule for target.
 RunAllTests/fast:
-	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/RunAllTests.dir/build.make Test/CMakeFiles/RunAllTests.dir/build
+	$(MAKE) $(MAKESILENT) -f src/Test/CMakeFiles/RunAllTests.dir/build.make src/Test/CMakeFiles/RunAllTests.dir/build
 .PHONY : RunAllTests/fast
 
 #=============================================================================
@@ -179,7 +179,7 @@ NormalDist_test: cmake_check_build_system
 
 # fast build rule for target.
 NormalDist_test/fast:
-	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/NormalDist_test.dir/build.make Test/CMakeFiles/NormalDist_test.dir/build
+	$(MAKE) $(MAKESILENT) -f src/Test/CMakeFiles/NormalDist_test.dir/build.make src/Test/CMakeFiles/NormalDist_test.dir/build
 .PHONY : NormalDist_test/fast
 
 #=============================================================================
@@ -192,7 +192,7 @@ Reader_test: cmake_check_build_system
 
 # fast build rule for target.
 Reader_test/fast:
-	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/Reader_test.dir/build.make Test/CMakeFiles/Reader_test.dir/build
+	$(MAKE) $(MAKESILENT) -f src/Test/CMakeFiles/Reader_test.dir/build.make src/Test/CMakeFiles/Reader_test.dir/build
 .PHONY : Reader_test/fast
 
 #=============================================================================
@@ -205,7 +205,7 @@ UniformDist_test: cmake_check_build_system
 
 # fast build rule for target.
 UniformDist_test/fast:
-	$(MAKE) $(MAKESILENT) -f Test/CMakeFiles/UniformDist_test.dir/build.make Test/CMakeFiles/UniformDist_test.dir/build
+	$(MAKE) $(MAKESILENT) -f src/Test/CMakeFiles/UniformDist_test.dir/build.make src/Test/CMakeFiles/UniformDist_test.dir/build
 .PHONY : UniformDist_test/fast
 
 #=============================================================================
@@ -218,7 +218,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make Test/lib/googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) $(MAKESILENT) -f src/Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make src/Test/lib/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
@@ -231,7 +231,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) $(MAKESILENT) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) $(MAKESILENT) -f src/Test/lib/googletest/CMakeFiles/gtest.dir/build.make src/Test/lib/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 #=============================================================================
@@ -244,35 +244,8 @@ Modules: cmake_check_build_system
 
 # fast build rule for target.
 Modules/fast:
-	$(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/build
+	$(MAKE) $(MAKESILENT) -f src/Modules/CMakeFiles/Modules.dir/build.make src/Modules/CMakeFiles/Modules.dir/build
 .PHONY : Modules/fast
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -285,15 +258,12 @@ help:
 	@echo "... Modules"
 	@echo "... MonteCarloExpectation_test"
 	@echo "... NormalDist_test"
-	@echo "... Project_Monte_carlo"
+	@echo "... Project9"
 	@echo "... Reader_test"
 	@echo "... RunAllTests"
 	@echo "... UniformDist_test"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 
