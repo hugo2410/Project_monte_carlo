@@ -236,10 +236,10 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Modules_BINARY_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules
+Modules_BINARY_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules
 
 //Value Computed by CMake
-Modules_SOURCE_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/src/Modules
+Modules_SOURCE_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/Modules
 
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
@@ -249,6 +249,12 @@ ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
+
+//Value Computed by CMake
+Project9_BINARY_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src
+
+//Value Computed by CMake
+Project9_SOURCE_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/src
 
 //Value Computed by CMake
 Project_Monte_carlo_BINARY_DIR:STATIC=/home/hugo/MA3/Project_monte_carlo/cmake-build-debug

@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named project9
+# Target rules for targets named Project_Monte_carlo
 
 # Build rule for target.
-project9: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project9
-.PHONY : project9
+Project_Monte_carlo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Project_Monte_carlo
+.PHONY : Project_Monte_carlo
 
 # fast build rule for target.
-project9/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9.dir/build.make CMakeFiles/project9.dir/build
-.PHONY : project9/fast
+Project_Monte_carlo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/build
+.PHONY : Project_Monte_carlo/fast
 
 #=============================================================================
 # Target rules for targets named MonteCarloExpectation_test
@@ -244,35 +244,35 @@ Modules: cmake_check_build_system
 
 # fast build rule for target.
 Modules/fast:
-	$(MAKE) $(MAKESILENT) -f src/Modules/CMakeFiles/Modules.dir/build.make src/Modules/CMakeFiles/Modules.dir/build
+	$(MAKE) $(MAKESILENT) -f Modules/CMakeFiles/Modules.dir/build.make Modules/CMakeFiles/Modules.dir/build
 .PHONY : Modules/fast
 
-src/main.o: src/main.cpp.o
+main.o: main.cpp.o
 
-.PHONY : src/main.o
+.PHONY : main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9.dir/build.make CMakeFiles/project9.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/main.i: src/main.cpp.i
+main.i: main.cpp.i
 
-.PHONY : src/main.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9.dir/build.make CMakeFiles/project9.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/main.s: src/main.cpp.s
+main.s: main.cpp.s
 
-.PHONY : src/main.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project9.dir/build.make CMakeFiles/project9.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Monte_carlo.dir/build.make CMakeFiles/Project_Monte_carlo.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -285,15 +285,15 @@ help:
 	@echo "... Modules"
 	@echo "... MonteCarloExpectation_test"
 	@echo "... NormalDist_test"
+	@echo "... Project_Monte_carlo"
 	@echo "... Reader_test"
 	@echo "... RunAllTests"
 	@echo "... UniformDist_test"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... project9"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/cmake_install.cmake")
+  include("/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

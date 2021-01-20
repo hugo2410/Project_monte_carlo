@@ -1,3 +1,3 @@
 project(Project9)
 
-add_subdirectory(Modules)
+add_subdirectory(../Modules)

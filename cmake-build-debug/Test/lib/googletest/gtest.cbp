@@ -5,7 +5,7 @@
 		<Option title="gtest"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\Modules\;CMake Files\Test\;CMake Files\Test\lib\;CMake Files\Test\lib\googletest\;CMake Files\Test\lib\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Modules\;CMake Files\Test\;CMake Files\Test\lib\;CMake Files\Test\lib\googletest\;CMake Files\Test\lib\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Test/lib/googletest"/>
@@ -24,8 +24,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -50,8 +49,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -76,8 +74,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -102,8 +99,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -131,8 +127,8 @@
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\src\Modules\"/>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Modules\"/>
 		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Test\"/>

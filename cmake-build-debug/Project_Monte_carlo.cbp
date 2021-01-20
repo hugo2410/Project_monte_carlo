@@ -5,7 +5,7 @@
 		<Option title="Project_Monte_carlo"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\Modules\;CMake Files\Test\;CMake Files\Test\lib\;CMake Files\Test\lib\googletest\;CMake Files\Test\lib\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Modules\;CMake Files\Test\;CMake Files\Test\lib\;CMake Files\Test\lib\googletest\;CMake Files\Test\lib\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug"/>
@@ -37,14 +37,14 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="project9">
-				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/project9" prefix_auto="0" extension_auto="0"/>
+			<Target title="Project_Monte_carlo">
+				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Project_Monte_carlo" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -54,20 +54,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 project9"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_Monte_carlo"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="project9/fast">
-				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/project9" prefix_auto="0" extension_auto="0"/>
+			<Target title="Project_Monte_carlo/fast">
+				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Project_Monte_carlo" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -77,7 +77,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 project9/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_Monte_carlo/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -90,8 +90,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -116,8 +115,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -142,8 +140,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -168,8 +165,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -194,8 +190,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -220,8 +215,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -246,8 +240,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -272,8 +265,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -298,8 +290,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -324,8 +315,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -350,8 +340,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -376,8 +365,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -402,8 +390,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -428,8 +415,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
-					<Add directory="/include"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/include"/>
 					<Add directory="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
@@ -448,13 +434,13 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Modules">
-				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/libModules.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules"/>
+				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/libModules.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -464,20 +450,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/Makefile&quot;  VERBOSE=1 Modules"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 Modules"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Modules/fast">
-				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/libModules.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules"/>
+				<Option output="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/libModules.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/hugo/MA3/Project_monte_carlo/src/Modules"/>
+					<Add directory="/home/hugo/MA3/Project_monte_carlo/Modules"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -487,13 +473,94 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/Makefile&quot;  VERBOSE=1 Modules/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/src/Modules/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 Modules/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hugo/MA3/Project_monte_carlo/cmake-build-debug/Modules/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractError.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractExpectation.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractFunc.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractReader.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/AbstractVariable.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/CentralLimitThm.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/CentralLimitThm.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/ExpFunc.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/ExpFunc.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/FunctReader.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/FunctReader.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/MonteCarloExpectation.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/MonteCarloExpectation.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalDist.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalReader.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/NormalReader.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomFunc.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/PolynomFunc.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/StatisticalMoment.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/StatisticalMoment.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/TrigoFunc.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/UniformDist.h">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/UniformReader.cpp">
+			<Option target="Modules"/>
+		</Unit>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/UniformReader.h">
+			<Option target="Modules"/>
+		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/MonteCarloExpectation_test.cpp">
 			<Option target="MonteCarloExpectation_test"/>
 			<Option target="RunAllTests"/>
@@ -516,95 +583,14 @@
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/AbstractError.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/AbstractExpectation.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/AbstractFunc.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/AbstractReader.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/AbstractVariable.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/CentralLimitThm.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/CentralLimitThm.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/ExpFunc.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/ExpFunc.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/FunctReader.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/FunctReader.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/MonteCarloExpectation.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/MonteCarloExpectation.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/NormalDist.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/NormalDist.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/NormalReader.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/NormalReader.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/PolynomFunc.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/PolynomFunc.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/StatisticalMoment.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/StatisticalMoment.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/TrigoFunc.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/TrigoFunc.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/UniformDist.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/UniformDist.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/UniformReader.cpp">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/UniformReader.h">
-			<Option target="Modules"/>
-		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/main.cpp">
-			<Option target="project9"/>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/main.cpp">
+			<Option target="Project_Monte_carlo"/>
 		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/hugo/MA3/Project_monte_carlo/src/Modules/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\src\Modules\"/>
+		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Modules/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Modules\"/>
 		</Unit>
 		<Unit filename="/home/hugo/MA3/Project_monte_carlo/Test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Test\"/>
