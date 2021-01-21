@@ -34,11 +34,6 @@ Example of how to run the programm:
 The program returns an output directory containing a 'moments.csv' file with moment results and several 
 'sample_means.csv' to verify the CTL theorem.
 
-If run in CLion IDE the arguments are saved to run with the default files to allow to be run directly:
-* test_function.txt
-* test_normal.txt 
-* 'N' as distribution type.
-
 
 To plot the results, the 'visualization.py' script should be run. It ouputs 3 graphs : 
 A visualization of the moments, 2 visualizations of the CTL theorem : The normal distribution of the sample means and 
